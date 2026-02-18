@@ -15,6 +15,7 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Build
+site/
 _site/
 .jekyll-cache/
 .sass-cache/

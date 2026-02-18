@@ -1,0 +1,69 @@
+site_name: "Statistical Mechanics — But Make It Make Sense"
+site_description: "A conversational walkthrough of Kerson Huang's Statistical Mechanics, with MD simulations."
+site_url: https://crisnapatel.github.io/statistical-mechanics/
+repo_url: https://github.com/crisnapatel/statistical-mechanics
+repo_name: crisnapatel/statistical-mechanics
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - content.code.copy
+    - content.tabs.link
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  # Math
+  - pymdownx.arithmatex:
+      generic: true
+  # Code blocks
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  # Admonitions (Key Insight, MD Connection, etc.)
+  - admonition
+  - pymdownx.details
+  # Content tabs (Python / LAMMPS side by side)
+  - pymdownx.tabbed:
+      alternate_style: true
+  # Formatting
+  - pymdownx.mark
+  - pymdownx.tilde
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+extra_javascript:
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/crisnapatel
+
+nav:
+  - Home: index.md
+  - Reading Order: reading-order.md
+  # Chapters will be added as we write them
+  # - "Ch 6 — Classical Statistical Mechanics":
+  #   - Overview: ch06/index.md
+  #   - Phase Space: ch06/phase-space.md
