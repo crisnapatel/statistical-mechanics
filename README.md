@@ -6,7 +6,7 @@ A conversational, no-nonsense walkthrough of statistical mechanics for people wh
 
 ## What is this?
 
-This project takes the content from Kerson Huang's *Statistical Mechanics* (2nd Edition) and re-explains it chapter by chapter in a conversational style inspired by creators like [NetworkChuck](https://www.youtube.com/@NetworkChuck) and [Theo (t3.gg)](https://www.youtube.com/@t3dotgg).
+This project covers statistical mechanics concepts in a conversational style inspired by creators like [NetworkChuck](https://www.youtube.com/@NetworkChuck) and [Theo (t3.gg)](https://www.youtube.com/@t3dotgg). We follow the topic ordering from Kerson Huang's *Statistical Mechanics* (2nd Edition) as a guide.
 
 Where it helps, we run **actual MD simulations** (LAMMPS) to demonstrate the physics — not just equations, but real data from real systems.
 
