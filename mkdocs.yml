@@ -63,7 +63,8 @@ extra:
 nav:
   - Home: index.md
   - Reading Order: reading-order.md
-  # Chapters will be added as we write them
-  # - "Ch 6 — Classical Statistical Mechanics":
-  #   - Overview: ch06/index.md
-  #   - Phase Space: ch06/phase-space.md
+  - "Ch 6 — Classical Statistical Mechanics":
+    - Overview: ch06/index.md
+    - "6.1 The Postulate": ch06/6.1-postulate.md
+    - "6.2 Microcanonical Ensemble": ch06/6.2-microcanonical-ensemble.md
+    - "6.4 Equipartition Theorem": ch06/6.4-equipartition.md
