@@ -63,8 +63,41 @@ extra:
 nav:
   - Home: index.md
   - Reading Order: reading-order.md
+  - "Ch 4 — Equilibrium State of a Dilute Gas":
+    - Overview: ch04/index.md
+    - "4.2 Maxwell-Boltzmann Distribution": ch04/4.2-maxwell-boltzmann.md
+    - "4.3 Most Probable Distribution": ch04/4.3-most-probable.md
   - "Ch 6 — Classical Statistical Mechanics":
     - Overview: ch06/index.md
+    - "Thermodynamic Potentials": thermodynamic-potentials.md
+    - "6.0 Foundations": ch06/6.0-foundations.md
     - "6.1 The Postulate": ch06/6.1-postulate.md
     - "6.2 Microcanonical Ensemble": ch06/6.2-microcanonical-ensemble.md
     - "6.4 Equipartition Theorem": ch06/6.4-equipartition.md
+    - "6.6 Gibbs Paradox": ch06/6.6-gibbs-paradox.md
+  - "Ch 7 — Canonical & Grand Canonical Ensemble":
+    - Overview: ch07/index.md
+    - "7.1 The Canonical Ensemble": ch07/7.1-canonical-ensemble.md
+    - "7.2 Energy Fluctuations": ch07/7.2-energy-fluctuations.md
+    - "7.3 Grand Canonical Ensemble": ch07/7.3-grand-canonical.md
+    - "7.4 Density Fluctuations": ch07/7.4-density-fluctuations.md
+    - "7.5 The Chemical Potential": ch07/7.5-chemical-potential.md
+    - "7.6 Equivalence of Ensembles": ch07/7.6-equivalence.md
+  - "Practical MD Topics":
+    - "Brownian Motion & Diffusion": brownian-motion.md
+    - "Uncertainty & Sampling Quality": uncertainty-sampling.md
+    - "Which Thermostat? Which Barostat?": which-thermostat.md
+    - "Your Force Field Is a Lie": force-fields.md
+    - "Finite Size & Periodic Images": finite-size.md
+    - "Free Energy Isn't Free": free-energy.md
+    - "The Radial Distribution Function": rdf.md
+    - "Time Integration": time-integration.md
+    - "Enhanced Sampling": enhanced-sampling.md
+    - "Pressure in a Box": pressure.md
+    - "Phase Transitions in a Box": phase-transitions.md
+    - "Long-Range Electrostatics": long-range-electrostatics.md
+    - "Coarse-Graining": coarse-graining.md
+    - "Rare Events & TST": rare-events.md
+    - "Neighbors, Cutoffs & Pair Interactions": neighbors-cutoffs.md
+    - "Constraints & Rigid Bodies": constraints.md
+    - "Non-Equilibrium MD": nemd.md

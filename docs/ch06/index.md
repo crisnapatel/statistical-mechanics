@@ -5,12 +5,13 @@
 
 ## Sections
 
+- [6.0 Foundations: Phase Space, Ensembles, and Liouville's Theorem](6.0-foundations.md)
 - [6.1 The Postulate of Classical Statistical Mechanics](6.1-postulate.md)
 - [6.2 The Microcanonical Ensemble](6.2-microcanonical-ensemble.md)
 - [6.4 The Equipartition Theorem](6.4-equipartition.md)
+- [6.6 The Gibbs Paradox](6.6-gibbs-paradox.md)
 
 <!-- Coming as we read:
 - [6.3 Derivation of Thermodynamics](6.3-thermodynamics.md)
 - [6.5 Classical Ideal Gas](6.5-ideal-gas.md)
-- [6.6 Gibbs Paradox](6.6-gibbs-paradox.md)
 -->
