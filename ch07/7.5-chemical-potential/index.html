@@ -1,0 +1,1744 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A conversational walkthrough of Kerson Huang's Statistical Mechanics, with MD simulations.">
+      
+      
+      
+        <link rel="canonical" href="https://crisnapatel.github.io/statistical-mechanics/ch07/7.5-chemical-potential/">
+      
+      
+        <link rel="prev" href="../7.4-density-fluctuations/">
+      
+      
+        <link rel="next" href="../7.6-equivalence/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
+    
+    
+      
+        <title>7.5 The Chemical Potential - Statistical Mechanics — But Make It Make Sense</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#75-the-chemical-potential" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Statistical Mechanics — But Make It Make Sense" class="md-header__button md-logo" aria-label="Statistical Mechanics — But Make It Make Sense" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Statistical Mechanics — But Make It Make Sense
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              7.5 The Chemical Potential
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/crisnapatel/statistical-mechanics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    crisnapatel/statistical-mechanics
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Statistical Mechanics — But Make It Make Sense" class="md-nav__button md-logo" aria-label="Statistical Mechanics — But Make It Make Sense" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Statistical Mechanics — But Make It Make Sense
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/crisnapatel/statistical-mechanics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    crisnapatel/statistical-mechanics
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reading-order/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reading Order
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ch 4 — Equilibrium State of a Dilute Gas
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Ch 4 — Equilibrium State of a Dilute Gas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch04/4.2-maxwell-boltzmann/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.2 Maxwell-Boltzmann Distribution
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch04/4.3-most-probable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.3 Most Probable Distribution
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ch 6 — Classical Statistical Mechanics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Ch 6 — Classical Statistical Mechanics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../thermodynamic-potentials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Thermodynamic Potentials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch06/6.0-foundations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.0 Foundations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch06/6.1-postulate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.1 The Postulate
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch06/6.2-microcanonical-ensemble/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.2 Microcanonical Ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch06/6.4-equipartition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.4 Equipartition Theorem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch06/6.6-gibbs-paradox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.6 Gibbs Paradox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ch 7 — Canonical & Grand Canonical Ensemble
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Ch 7 — Canonical & Grand Canonical Ensemble
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7.1-canonical-ensemble/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.1 The Canonical Ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7.2-energy-fluctuations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.2 Energy Fluctuations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7.3-grand-canonical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.3 Grand Canonical Ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7.4-density-fluctuations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.4 Density Fluctuations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    7.5 The Chemical Potential
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.5 The Chemical Potential
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-most-confusing-quantity-in-thermodynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      The most confusing quantity in thermodynamics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-should-you-care" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why should you care?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-bad-intuition-mu-is-the-energy-per-particle" class="md-nav__link">
+    <span class="md-ellipsis">
+      The bad intuition: "\(\mu\) is the energy per particle"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-thermodynamic-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      The thermodynamic definition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ideal-gas-chemical-potential" class="md-nav__link">
+    <span class="md-ellipsis">
+      The ideal gas chemical potential
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-i-chose-mu-03-ev-for-the-gcmc-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      How I chose \(\mu = -0.3\) eV for the GCMC simulation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-particles-flow-from-high-mu-to-low-mu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why particles flow from high \(\mu\) to low \(\mu\)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chemical-equilibrium" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chemical equilibrium
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-about-antiparticles" class="md-nav__link">
+    <span class="md-ellipsis">
+      What about antiparticles?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7.6-equivalence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.6 Equivalence of Ensembles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Practical MD Topics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Practical MD Topics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../brownian-motion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Brownian Motion & Diffusion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uncertainty-sampling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uncertainty & Sampling Quality
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../which-thermostat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Which Thermostat? Which Barostat?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../force-fields/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Your Force Field Is a Lie
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../finite-size/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Finite Size & Periodic Images
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../free-energy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Free Energy Isn't Free
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rdf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The Radial Distribution Function
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../time-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Time Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enhanced-sampling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enhanced Sampling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pressure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pressure in a Box
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-transitions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Phase Transitions in a Box
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../long-range-electrostatics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Long-Range Electrostatics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coarse-graining/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Coarse-Graining
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rare-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rare Events & TST
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../neighbors-cutoffs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Neighbors, Cutoffs & Pair Interactions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../constraints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Constraints & Rigid Bodies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nemd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Non-Equilibrium MD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-most-confusing-quantity-in-thermodynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      The most confusing quantity in thermodynamics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-should-you-care" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why should you care?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-bad-intuition-mu-is-the-energy-per-particle" class="md-nav__link">
+    <span class="md-ellipsis">
+      The bad intuition: "\(\mu\) is the energy per particle"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-thermodynamic-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      The thermodynamic definition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ideal-gas-chemical-potential" class="md-nav__link">
+    <span class="md-ellipsis">
+      The ideal gas chemical potential
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-i-chose-mu-03-ev-for-the-gcmc-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      How I chose \(\mu = -0.3\) eV for the GCMC simulation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-particles-flow-from-high-mu-to-low-mu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why particles flow from high \(\mu\) to low \(\mu\)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chemical-equilibrium" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chemical equilibrium
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-about-antiparticles" class="md-nav__link">
+    <span class="md-ellipsis">
+      What about antiparticles?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="75-the-chemical-potential">7.5 The Chemical Potential<a class="headerlink" href="#75-the-chemical-potential" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Huang, <em>Statistical Mechanics</em> 2ed, Section 7.5</p>
+</div>
+<h2 id="the-most-confusing-quantity-in-thermodynamics">The most confusing quantity in thermodynamics<a class="headerlink" href="#the-most-confusing-quantity-in-thermodynamics" title="Permanent link">&para;</a></h2>
+<p>I'm just going to say it. The chemical potential confused me more than anything else in statistical mechanics. Temperature? Fine. You feel hot, you feel cold. Pressure? Makes sense. Push on a wall. Energy? Sure. Things move, things interact.</p>
+<p>But chemical potential? What even <em>is</em> it? It's not the energy per particle (that's a trap, and we'll get there). It's not the potential energy. It shows up with a weird sign convention. It's negative for an ideal gas at normal conditions, which feels wrong. And every textbook defines it as "the quantity conjugate to particle number" and moves on like that explains anything.</p>
+<p>Here's what finally made it click for me: <strong>the chemical potential is the free energy cost of adding one more particle to the system.</strong> Not the energy cost. The <em>free energy</em> cost. That distinction is everything.</p>
+<h2 id="why-should-you-care">Why should you care?<a class="headerlink" href="#why-should-you-care" title="Permanent link">&para;</a></h2>
+<p>If you've been following along, you've already used the chemical potential without fully understanding it. In section 7.3, it controlled the fugacity <span class="arithmatex">\(z = e^{\beta\mu}\)</span>. In section 7.4, I set <span class="arithmatex">\(\mu = -0.3\)</span> eV for the GCMC simulation and got <span class="arithmatex">\(\langle N \rangle \approx 65\)</span> atoms out. But where did that number come from?</p>
+<p>This section answers three questions:</p>
+<ul>
+<li><strong>What is <span class="arithmatex">\(\mu\)</span>, exactly?</strong> The thermodynamic definition, with the physical picture behind it.</li>
+<li><strong>How do you calculate it?</strong> The ideal gas formula, which is the one we used for our GCMC simulation.</li>
+<li><strong>Why is it negative?</strong> This trips everyone up. We'll make it make sense.</li>
+</ul>
+<p>And along the way we'll see why the chemical potential is the key to understanding chemical reactions, phase equilibrium, and why particles flow from one region to another.</p>
+<h2 id="the-bad-intuition-mu-is-the-energy-per-particle">The bad intuition: "<span class="arithmatex">\(\mu\)</span> is the energy per particle"<a class="headerlink" href="#the-bad-intuition-mu-is-the-energy-per-particle" title="Permanent link">&para;</a></h2>
+<p>This is the most common misconception. The total energy is <span class="arithmatex">\(U\)</span>, you have <span class="arithmatex">\(N\)</span> particles, so <span class="arithmatex">\(\mu = U/N\)</span>?</p>
+<p>Nope. Not even close.</p>
+<p>Here's why. When you add a particle to a system, two things change:</p>
+<ol>
+<li><strong>Energy goes up</strong>: The new particle brings kinetic energy and interacts with existing particles. That costs energy.</li>
+<li><strong>Entropy goes up</strong>: There's now one more particle that can be anywhere in the box, in any momentum state. More microstates. More entropy.</li>
+</ol>
+<p>The chemical potential is the <em>balance</em> between these two. It's the change in free energy <span class="arithmatex">\(A = U - TS\)</span>, not just the change in energy:</p>
+<div class="arithmatex">\[\mu = \left(\frac{\partial A}{\partial N}\right)_{V,T} = \left(\frac{\partial U}{\partial N}\right)_{V,T} - T\left(\frac{\partial S}{\partial N}\right)_{V,T}\]</div>
+<p>The entropy gain from adding a particle to a dilute gas is large (lots of empty space to explore). So the <span class="arithmatex">\(-T\partial S / \partial N\)</span> term is large and negative. It dominates. That's why <span class="arithmatex">\(\mu\)</span> is <em>negative</em> for a dilute ideal gas. Adding a particle lowers the free energy because the entropy gain outweighs the energy cost.</p>
+<p>And that's not weird. That's the system saying "yes, I want more particles, I have room." A negative <span class="arithmatex">\(\mu\)</span> means the system is happy to accept more particles. A positive <span class="arithmatex">\(\mu\)</span> means the system is full, and adding another particle would cost free energy.</p>
+<p>One-line summary: <span class="arithmatex">\(\mu\)</span> is the price tag for adding a particle, measured in free energy, not energy.</p>
+<h2 id="the-thermodynamic-definition">The thermodynamic definition<a class="headerlink" href="#the-thermodynamic-definition" title="Permanent link">&para;</a></h2>
+<p>Huang starts from the generalized form of the first law. When particle number can change, the fundamental relation picks up an extra term:</p>
+<div class="arithmatex">\[dA = -P\,dV - S\,dT + \mu\,dN\]</div>
+<p>That's the definition. <span class="arithmatex">\(\mu\)</span> is the thing multiplying <span class="arithmatex">\(dN\)</span> in the free energy differential. Just like <span class="arithmatex">\(-P\)</span> multiplies <span class="arithmatex">\(dV\)</span> (pressure does work when volume changes) and <span class="arithmatex">\(-S\)</span> multiplies <span class="arithmatex">\(dT\)</span> (entropy carries heat when temperature changes), <span class="arithmatex">\(\mu\)</span> multiplies <span class="arithmatex">\(dN\)</span> (chemical potential does work when particle number changes).</p>
+<p>From this you get the equivalent Maxwell relations:</p>
+<div class="arithmatex">\[\mu = \left(\frac{\partial A}{\partial N}\right)_{V,T} = \left(\frac{\partial G}{\partial N}\right)_{P,T}\]</div>
+<p>Both definitions are used. The first (constant <span class="arithmatex">\(V\)</span> and <span class="arithmatex">\(T\)</span>) is natural for the canonical ensemble. The second (constant <span class="arithmatex">\(P\)</span> and <span class="arithmatex">\(T\)</span>) is natural for experiments at atmospheric pressure. They give the same <span class="arithmatex">\(\mu\)</span>.</p>
+<p>And the first law of thermodynamics generalizes too:</p>
+<div class="arithmatex">\[dU = -P\,dV + T\,dS + \mu\,dN\]</div>
+<p>That <span class="arithmatex">\(\mu\,dN\)</span> term is the energy brought in by the new particles, corrected for the entropy they carry. If you've been writing <span class="arithmatex">\(dU = TdS - PdV\)</span> and wondering "but what if atoms can enter and leave?", this is the answer.</p>
+<div class="admonition tip">
+<p class="admonition-title">Key Insight</p>
+<p>The chemical potential plays the same role for particle number that temperature plays for energy. Temperature controls the flow of energy between systems: heat flows from high <span class="arithmatex">\(T\)</span> to low <span class="arithmatex">\(T\)</span>. Chemical potential controls the flow of particles: particles flow from high <span class="arithmatex">\(\mu\)</span> to low <span class="arithmatex">\(\mu\)</span>. Two systems in equilibrium have the same <span class="arithmatex">\(T\)</span> (thermal equilibrium) and the same <span class="arithmatex">\(\mu\)</span> (chemical equilibrium). That's the principle behind every GCMC simulation: you set <span class="arithmatex">\(\mu\)</span> equal to the reservoir's chemical potential, and particles flow until equilibrium is reached.</p>
+</div>
+<h2 id="the-ideal-gas-chemical-potential">The ideal gas chemical potential<a class="headerlink" href="#the-ideal-gas-chemical-potential" title="Permanent link">&para;</a></h2>
+<p>Ready? Let's do this.</p>
+<p>Start from the ideal gas partition function (we derived this in section 6.6 with the correct <span class="arithmatex">\(N!\)</span>):</p>
+<div class="arithmatex">\[Q_N = \frac{1}{N!}\left(\frac{V}{\Lambda^3}\right)^N\]</div>
+<p>where <span class="arithmatex">\(\Lambda = \sqrt{2\pi\hbar^2 / mkT}\)</span> is the thermal de Broglie wavelength. Use Stirling's approximation to get the free energy:</p>
+<div class="arithmatex">\[A = -kT \log Q_N = -kTN\left[\log\left(\frac{V}{N\Lambda^3}\right) + 1\right]\]</div>
+<p>Now differentiate with respect to <span class="arithmatex">\(N\)</span>:</p>
+<div class="arithmatex">\[\mu = \frac{\partial A}{\partial N} = kT \log\left(\frac{N\Lambda^3}{V}\right) = kT \log(n\Lambda^3)\]</div>
+<p>Done. The ideal gas chemical potential:</p>
+<div class="arithmatex">\[\boxed{\mu_{\text{ideal}} = kT \log(n\Lambda^3)}\]</div>
+<p>where <span class="arithmatex">\(n = N/V\)</span> is the number density and <span class="arithmatex">\(\Lambda = \sqrt{2\pi\hbar^2/mkT}\)</span> is the thermal wavelength.</p>
+<p>Let me unpack this. The argument of the logarithm is <span class="arithmatex">\(n\Lambda^3\)</span>, which is the number of particles in a cube of side <span class="arithmatex">\(\Lambda\)</span>. For classical gases at normal conditions, this number is <em>tiny</em>. For argon at room temperature: <span class="arithmatex">\(\Lambda \approx 0.16\)</span> A, so <span class="arithmatex">\(\Lambda^3 \approx 0.004\)</span> A<span class="arithmatex">\(^3\)</span>. At atmospheric pressure, <span class="arithmatex">\(n \approx 2.5 \times 10^{-5}\)</span> A<span class="arithmatex">\(^{-3}\)</span>. So <span class="arithmatex">\(n\Lambda^3 \approx 10^{-7}\)</span>.</p>
+<p>The log of <span class="arithmatex">\(10^{-7}\)</span> is about <span class="arithmatex">\(-16\)</span>. Times <span class="arithmatex">\(kT \approx 0.026\)</span> eV at 300 K:</p>
+<div class="arithmatex">\[\mu \approx 0.026 \times (-16) \approx -0.4 \text{ eV}\]</div>
+<p>Negative. Very negative. That's the entropy term dominating. The gas is so dilute that every new particle has a vast amount of empty phase space to explore. The system desperately wants more particles (from a free energy perspective).</p>
+<p>And now you see why <span class="arithmatex">\(\mu\)</span> gets <em>less</em> negative as you compress the gas (increase <span class="arithmatex">\(n\)</span>). More particles means less room per particle, less entropy gain, higher <span class="arithmatex">\(\mu\)</span>. At some point <span class="arithmatex">\(\mu\)</span> becomes positive. That's the system saying "I'm full. Stop adding particles."</p>
+<h2 id="how-i-chose-mu-03-ev-for-the-gcmc-simulation">How I chose <span class="arithmatex">\(\mu = -0.3\)</span> eV for the GCMC simulation<a class="headerlink" href="#how-i-chose-mu-03-ev-for-the-gcmc-simulation" title="Permanent link">&para;</a></h2>
+<p>Here's the calculation I actually did for section 7.4. I wanted <span class="arithmatex">\(\langle N \rangle \approx 50\)</span>-<span class="arithmatex">\(60\)</span> argon atoms in a 30 <span class="arithmatex">\(\times\)</span> 30 <span class="arithmatex">\(\times\)</span> 30 A box at 300 K. How do I pick <span class="arithmatex">\(\mu\)</span>?</p>
+<p>In the grand canonical ensemble, for an ideal gas:</p>
+<div class="arithmatex">\[\langle N \rangle = e^{\beta\mu} \cdot \frac{V}{\Lambda^3}\]</div>
+<p>This is just the ideal gas partition function with <span class="arithmatex">\(z^N\)</span> weighting, summed over <span class="arithmatex">\(N\)</span>. Invert it:</p>
+<div class="arithmatex">\[\mu = kT \log\left(\frac{\langle N \rangle \Lambda^3}{V}\right)\]</div>
+<p>Plug in the numbers:</p>
+<ul>
+<li><span class="arithmatex">\(V = 30^3 = 27000\)</span> A<span class="arithmatex">\(^3\)</span></li>
+<li><span class="arithmatex">\(\Lambda = 0.16\)</span> A for argon at 300 K, so <span class="arithmatex">\(\Lambda^3 = 0.004\)</span> A<span class="arithmatex">\(^3\)</span></li>
+<li>Target <span class="arithmatex">\(\langle N \rangle = 50\)</span></li>
+</ul>
+<div class="arithmatex">\[\mu = 0.02585 \times \log\left(\frac{50 \times 0.004}{27000}\right) = 0.02585 \times \log(7.4 \times 10^{-6}) = 0.02585 \times (-11.8) = -0.305 \text{ eV}\]</div>
+<p>Rounded to <span class="arithmatex">\(\mu = -0.3\)</span> eV. And the simulation gave <span class="arithmatex">\(\langle N \rangle = 64.5\)</span>, which is close to the ideal gas prediction (the small discrepancy comes from LJ interactions making it not <em>exactly</em> ideal).</p>
+<p>That's it. For a dilute gas, you just invert the ideal gas formula. Pick the <span class="arithmatex">\(\langle N \rangle\)</span> you want, solve for <span class="arithmatex">\(\mu\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">MD Connection</p>
+<p>For dense systems, this ideal gas trick doesn't work. The chemical potential has two parts: <span class="arithmatex">\(\mu = \mu_{\text{ideal}} + \mu_{\text{excess}}\)</span>. The ideal part is the formula above (<span class="arithmatex">\(kT\log(n\Lambda^3)\)</span>), which is easy. The excess part accounts for interactions (LJ forces, electrostatics, etc.), and that's the hard part. Methods like <strong>Widom insertion</strong> (insert a test particle, measure the energy change, average over configurations) or <strong>thermodynamic integration</strong> are needed. LAMMPS can compute these, but they require careful setup and long sampling. For our dilute gas at 300 K, <span class="arithmatex">\(\mu_{\text{excess}} \approx 0\)</span>, so the ideal gas formula was enough.</p>
+</div>
+<h2 id="why-particles-flow-from-high-mu-to-low-mu">Why particles flow from high <span class="arithmatex">\(\mu\)</span> to low <span class="arithmatex">\(\mu\)</span><a class="headerlink" href="#why-particles-flow-from-high-mu-to-low-mu" title="Permanent link">&para;</a></h2>
+<p>Here's an analogy that might help. Think of <span class="arithmatex">\(\mu\)</span> as water pressure in connected pipes. Water flows from high pressure to low pressure until the pressure equalizes.</p>
+<p>Particles do the same with chemical potential. If two systems are connected (particles can move between them), particles flow from the system with higher <span class="arithmatex">\(\mu\)</span> to the one with lower <span class="arithmatex">\(\mu\)</span>. At equilibrium, <span class="arithmatex">\(\mu_1 = \mu_2\)</span>.</p>
+<p>That's why GCMC works. You set <span class="arithmatex">\(\mu\)</span> in LAMMPS to match the reservoir's chemical potential. If the system currently has too few particles (its <span class="arithmatex">\(\mu\)</span> is lower than the reservoir's), insertions are favored. If it has too many (its <span class="arithmatex">\(\mu\)</span> is higher), deletions are favored. The system reaches equilibrium when its <span class="arithmatex">\(\mu\)</span> matches the reservoir.</p>
+<p>This also explains phase equilibrium. A liquid and its vapor coexist when <span class="arithmatex">\(\mu_{\text{liquid}} = \mu_{\text{vapor}}\)</span> at the same <span class="arithmatex">\(T\)</span> and <span class="arithmatex">\(P\)</span>. That equality determines the vapor pressure curve.</p>
+<h2 id="chemical-equilibrium">Chemical equilibrium<a class="headerlink" href="#chemical-equilibrium" title="Permanent link">&para;</a></h2>
+<p>Huang applies the chemical potential to chemical reactions, and the result is elegant.</p>
+<p>Consider a reaction like <span class="arithmatex">\(2H_2 + O_2 \rightleftharpoons 2H_2O\)</span>. At equilibrium (constant <span class="arithmatex">\(T\)</span> and <span class="arithmatex">\(V\)</span>), the Helmholtz free energy is minimized. Any small change in the number of each species must leave <span class="arithmatex">\(A\)</span> unchanged to first order.</p>
+<p>Since the species are linked by stoichiometry (<span class="arithmatex">\(\delta N_i = \nu_i \, \delta N\)</span> where <span class="arithmatex">\(\nu_i\)</span> are the stoichiometric coefficients), minimizing <span class="arithmatex">\(A\)</span> gives:</p>
+<div class="arithmatex">\[\boxed{\sum_{i} \mu_i \nu_i = 0}\]</div>
+<p>That's the condition for chemical equilibrium. The chemical potentials of all species, weighted by their stoichiometric coefficients, must sum to zero. For the water reaction: <span class="arithmatex">\(2\mu_{H_2} + \mu_{O_2} = 2\mu_{H_2O}\)</span>.</p>
+<p>This is powerful. If you know the chemical potential of each species (from the partition function, or from simulation), you can predict the equilibrium composition of any reaction. It's the bridge between statistical mechanics and chemistry.</p>
+<h2 id="what-about-antiparticles">What about antiparticles?<a class="headerlink" href="#what-about-antiparticles" title="Permanent link">&para;</a></h2>
+<p>Huang has a beautiful digression here that I can't resist mentioning. Why is particle number conserved at all?</p>
+<p>It isn't, fundamentally. Electrons can be created and destroyed via pair production: <span class="arithmatex">\(e^+ + e^- \rightleftharpoons \gamma\)</span>. But the <em>net</em> number (electrons minus positrons) is conserved. At low temperatures (<span class="arithmatex">\(kT \ll mc^2\)</span>), there's not enough thermal energy to create pairs, so the number of each type is effectively fixed.</p>
+<p>How low is "low"? The rest energy of an electron corresponds to <span class="arithmatex">\(6 \times 10^9\)</span> K. For a proton, 2000 times higher. So unless you're inside a star, particle number conservation is an incredibly good approximation.</p>
+<p>The chemical potential, from this perspective, is the Lagrange multiplier that enforces conservation of particle number. It's the "price" the system pays for the constraint of having a fixed number of particles. Deep stuff, but not something you need to worry about in your LAMMPS simulations.</p>
+<h2 id="takeaway">Takeaway<a class="headerlink" href="#takeaway" title="Permanent link">&para;</a></h2>
+<p>The chemical potential <span class="arithmatex">\(\mu = \partial A / \partial N\)</span> is the free energy cost of adding one particle. For an ideal gas, <span class="arithmatex">\(\mu = kT\log(n\Lambda^3)\)</span>, which is negative at normal conditions because the entropy gain from adding a particle to a dilute system outweighs the energy cost. Particles flow from high <span class="arithmatex">\(\mu\)</span> to low <span class="arithmatex">\(\mu\)</span>, just like heat flows from high <span class="arithmatex">\(T\)</span> to low <span class="arithmatex">\(T\)</span>. In GCMC simulations, you set <span class="arithmatex">\(\mu\)</span> to match the reservoir, and the equilibrium <span class="arithmatex">\(\langle N \rangle\)</span> falls out. For dilute systems, invert the ideal gas formula. For dense systems, you need Widom insertion or thermodynamic integration. The chemical potential is the bridge between statistical mechanics and chemistry, and once it clicks, half of thermodynamics suddenly makes sense.</p>
+<details class="question">
+<summary>Check Your Understanding</summary>
+<ol>
+<li>You keep compressing an ideal gas, watching <span class="arithmatex">\(\mu = kT \log(n\Lambda^3)\)</span> climb from deeply negative toward zero. At what density does <span class="arithmatex">\(\mu\)</span> actually hit zero? And what does it physically mean when <span class="arithmatex">\(\mu\)</span> crosses from negative to positive?</li>
+<li>Your friend insists <span class="arithmatex">\(\mu = U/N\)</span>. For an ideal gas, <span class="arithmatex">\(U/N = \frac{3}{2}kT\)</span>. But <span class="arithmatex">\(\mu = kT\log(n\Lambda^3)\)</span>, which is negative. Those aren't even the same sign. What's the piece your friend is forgetting?</li>
+<li>You set up a GCMC run where the reservoir has <span class="arithmatex">\(\mu = -0.3\)</span> eV but the system's current effective <span class="arithmatex">\(\mu\)</span> is <span class="arithmatex">\(-0.5\)</span> eV. Which way do particles flow? Does the system gain or lose atoms?</li>
+<li>You want your GCMC box to equilibrate at 10 atoms instead of 50. Do you crank <span class="arithmatex">\(\mu\)</span> more negative or less negative?</li>
+</ol>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/crisnapatel" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

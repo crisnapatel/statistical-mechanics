@@ -1,0 +1,1821 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A conversational walkthrough of Kerson Huang's Statistical Mechanics, with MD simulations.">
+      
+      
+      
+        <link rel="canonical" href="https://crisnapatel.github.io/statistical-mechanics/ch04/4.2-maxwell-boltzmann/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../4.3-most-probable/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
+    
+    
+      
+        <title>4.2 Maxwell-Boltzmann Distribution - Statistical Mechanics — But Make It Make Sense</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#42-the-maxwell-boltzmann-distribution" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Statistical Mechanics — But Make It Make Sense" class="md-header__button md-logo" aria-label="Statistical Mechanics — But Make It Make Sense" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Statistical Mechanics — But Make It Make Sense
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4.2 Maxwell-Boltzmann Distribution
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/crisnapatel/statistical-mechanics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    crisnapatel/statistical-mechanics
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Statistical Mechanics — But Make It Make Sense" class="md-nav__button md-logo" aria-label="Statistical Mechanics — But Make It Make Sense" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Statistical Mechanics — But Make It Make Sense
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/crisnapatel/statistical-mechanics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    crisnapatel/statistical-mechanics
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reading-order/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reading Order
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ch 4 — Equilibrium State of a Dilute Gas
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Ch 4 — Equilibrium State of a Dilute Gas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    4.2 Maxwell-Boltzmann Distribution
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.2 Maxwell-Boltzmann Distribution
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ive-been-lying-to-my-simulations-for-years" class="md-nav__link">
+    <span class="md-ellipsis">
+      I've been lying to my simulations for years.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-should-you-care" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why should you care?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-bad-intuition-all-speeds-are-equally-likely" class="md-nav__link">
+    <span class="md-ellipsis">
+      The bad intuition: "all speeds are equally likely"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-derivation-collisions-tell-you-everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      The derivation: collisions tell you everything
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pinning-down-the-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pinning down the constants
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-pressure-trick" class="md-nav__link">
+    <span class="md-ellipsis">
+      The pressure trick
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      The formula
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-speed-distribution-the-shape-you-actually-see" class="md-nav__link">
+    <span class="md-ellipsis">
+      The speed distribution: the shape you actually see
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#let-me-show-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let me show you.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-forces-the-barometric-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      External forces: the barometric formula
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.3-most-probable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.3 Most Probable Distribution
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ch 6 — Classical Statistical Mechanics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Ch 6 — Classical Statistical Mechanics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../thermodynamic-potentials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Thermodynamic Potentials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch06/6.0-foundations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.0 Foundations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch06/6.1-postulate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.1 The Postulate
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch06/6.2-microcanonical-ensemble/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.2 Microcanonical Ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch06/6.4-equipartition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.4 Equipartition Theorem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch06/6.6-gibbs-paradox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.6 Gibbs Paradox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ch 7 — Canonical & Grand Canonical Ensemble
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Ch 7 — Canonical & Grand Canonical Ensemble
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch07/7.1-canonical-ensemble/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.1 The Canonical Ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch07/7.2-energy-fluctuations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.2 Energy Fluctuations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch07/7.3-grand-canonical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.3 Grand Canonical Ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch07/7.4-density-fluctuations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.4 Density Fluctuations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch07/7.5-chemical-potential/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.5 The Chemical Potential
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch07/7.6-equivalence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.6 Equivalence of Ensembles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Practical MD Topics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Practical MD Topics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../brownian-motion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Brownian Motion & Diffusion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uncertainty-sampling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uncertainty & Sampling Quality
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../which-thermostat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Which Thermostat? Which Barostat?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../force-fields/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Your Force Field Is a Lie
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../finite-size/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Finite Size & Periodic Images
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../free-energy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Free Energy Isn't Free
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rdf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The Radial Distribution Function
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../time-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Time Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enhanced-sampling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enhanced Sampling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pressure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pressure in a Box
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-transitions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Phase Transitions in a Box
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../long-range-electrostatics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Long-Range Electrostatics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coarse-graining/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Coarse-Graining
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rare-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rare Events & TST
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../neighbors-cutoffs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Neighbors, Cutoffs & Pair Interactions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../constraints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Constraints & Rigid Bodies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nemd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Non-Equilibrium MD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ive-been-lying-to-my-simulations-for-years" class="md-nav__link">
+    <span class="md-ellipsis">
+      I've been lying to my simulations for years.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-should-you-care" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why should you care?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-bad-intuition-all-speeds-are-equally-likely" class="md-nav__link">
+    <span class="md-ellipsis">
+      The bad intuition: "all speeds are equally likely"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-derivation-collisions-tell-you-everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      The derivation: collisions tell you everything
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pinning-down-the-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pinning down the constants
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-pressure-trick" class="md-nav__link">
+    <span class="md-ellipsis">
+      The pressure trick
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      The formula
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-speed-distribution-the-shape-you-actually-see" class="md-nav__link">
+    <span class="md-ellipsis">
+      The speed distribution: the shape you actually see
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#let-me-show-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      Let me show you.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-forces-the-barometric-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      External forces: the barometric formula
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="42-the-maxwell-boltzmann-distribution">4.2 The Maxwell-Boltzmann Distribution<a class="headerlink" href="#42-the-maxwell-boltzmann-distribution" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Huang, <em>Statistical Mechanics</em> 2ed, Section 4.2</p>
+</div>
+<h2 id="ive-been-lying-to-my-simulations-for-years">I've been lying to my simulations for years.<a class="headerlink" href="#ive-been-lying-to-my-simulations-for-years" title="Permanent link">&para;</a></h2>
+<p>OK, not <em>lying</em> exactly. But every single time I wrote <code>velocity all create 300.0 12345</code>, I had no idea what that line was actually doing. "Initialize velocities at 300 K." Cool. Next line. Move on. Don't think about it.</p>
+<p>Then one day I actually thought about it. Where do those velocities come from? Like, LAMMPS is picking a speed for each atom. How? Randomly? Uniformly between 0 and some max? All the same speed but random directions?</p>
+<p>Nope. It draws from a very specific distribution. A Gaussian. And <em>that</em> Gaussian is the Maxwell-Boltzmann distribution. And the reason it's <em>that</em> specific Gaussian and not some other one? That's what took me down a rabbit hole. And I'm taking you with me.</p>
+<p>Let's go.</p>
+<h2 id="why-should-you-care">Why should you care?<a class="headerlink" href="#why-should-you-care" title="Permanent link">&para;</a></h2>
+<p>Because you use this distribution every day and probably don't realize it.</p>
+<ul>
+<li><strong>Every simulation you've ever run</strong> starts with <code>velocity all create</code>. That command draws from MB. If it drew from some other distribution, your system would start out of equilibrium, spend the first chunk of your simulation fixing itself, and waste your compute time. MB is the right starting point. The <em>only</em> right starting point.</li>
+<li><strong>That temperature formula</strong> you know by heart, <span class="arithmatex">\(\frac{1}{2}m\langle v^2 \rangle = \frac{3}{2}k_BT\)</span>? It's not a definition someone made up. It <em>falls out</em> of the MB distribution. It's a consequence, not an assumption.</li>
+<li><strong>Validation</strong>: Want to know if your simulation is actually in equilibrium? Histogram the velocities. If the histogram doesn't match MB, something is broken. Full stop.</li>
+</ul>
+<h2 id="the-bad-intuition-all-speeds-are-equally-likely">The bad intuition: "all speeds are equally likely"<a class="headerlink" href="#the-bad-intuition-all-speeds-are-equally-likely" title="Permanent link">&para;</a></h2>
+<p>And I'm sure you're thinking, "Equal probability of microstates means equal probability of velocities, right?"</p>
+<p>Wrong. So wrong.</p>
+<p>Here's why. Think about 3D momentum space. The states with speed between <span class="arithmatex">\(v\)</span> and <span class="arithmatex">\(v + dv\)</span> live on a spherical shell of radius <span class="arithmatex">\(v\)</span>. That shell has surface area <span class="arithmatex">\(4\pi v^2\)</span>. Bigger <span class="arithmatex">\(v\)</span>? Bigger shell. More states.</p>
+<p>But the Boltzmann factor <span class="arithmatex">\(e^{-mv^2/2k_BT}\)</span> says higher speeds are exponentially <em>less</em> likely per state.</p>
+<p>So you've got two things fighting each other. Geometry says "more fast states!" Boltzmann says "fast states are expensive!" The tug-of-war between these two creates a peak. Not uniform. Not symmetric. A very specific, lopsided distribution with a single maximum.</p>
+<p>Who wins? Neither. They compromise. And the compromise is the Maxwell-Boltzmann distribution.</p>
+<p>Let me show you what this looks like with real atoms.</p>
+<figure>
+  <img alt="3D velocity space" src="../../assets/plots/ch04-mb-3d-velocity.png" width="600" />
+<br />
+<figcaption>4,000 velocity snapshots from our 108-atom argon simulation, pooled across many timesteps. Each dot is one atom at one instant. The blue shell highlights snapshots near the most probable speed (1.9 Å/ps). The red shell is at 4.0 Å/ps. Same shell thickness, but the inner shell caught 895 samples and the outer shell only 130. Seven times fewer. The Boltzmann factor won that round.</figcaption>
+</figure>
+<p>That cloud of dots? Those are real velocities from our 108-atom argon box, pooled across hundreds of frames. Each dot is one atom at one timestep (the same atom shows up many times, once per frame, with a different velocity each time). The cloud is spherical (isotropic, no preferred direction) and densest near the center (low-speed states are most populated per unit volume). But the blue shell at <span class="arithmatex">\(v_0 = 1.9\)</span> Å/ps has way more <em>total</em> atoms than the center, because the shell is bigger. That's the <span class="arithmatex">\(4\pi v^2\)</span> factor doing its thing.</p>
+<p>Now look at the competition broken down:</p>
+<figure>
+  <img alt="The tug-of-war" src="../../assets/plots/ch04-mb-tug-of-war.png" width="700" />
+<br />
+<figcaption>The tug-of-war that creates the peak. Blue dashed: shell volume (grows as v-squared, more states at higher speeds). Red dashed: Boltzmann factor (decays exponentially, each state less probable). Purple solid: their product, the actual speed distribution. The shaded bands correspond to the two shells from the 3D plot above.</figcaption>
+</figure>
+<p>The blue dashed line (<span class="arithmatex">\(4\pi v^2\)</span>) rockets upward. The red dashed line (<span class="arithmatex">\(e^{-mv^2/2k_BT}\)</span>) plummets. Their product (purple) peaks at <span class="arithmatex">\(v_0\)</span> and then dies. That peak is the Maxwell-Boltzmann distribution. The whole thing, geometry vs exponential decay, in one picture.</p>
+<h2 id="the-derivation-collisions-tell-you-everything">The derivation: collisions tell you everything<a class="headerlink" href="#the-derivation-collisions-tell-you-everything" title="Permanent link">&para;</a></h2>
+<p>Here's where it gets cool. Huang derives the whole thing from one simple idea: <strong>in equilibrium, collisions don't change the distribution.</strong></p>
+<p>Two molecules collide. Momenta before: <span class="arithmatex">\(\mathbf{p}_1\)</span>, <span class="arithmatex">\(\mathbf{p}_2\)</span>. Momenta after: <span class="arithmatex">\(\mathbf{p}_1'\)</span>, <span class="arithmatex">\(\mathbf{p}_2'\)</span>. The condition for equilibrium:</p>
+<div class="arithmatex">\[f_0(\mathbf{p}_1)f_0(\mathbf{p}_2) = f_0(\mathbf{p}_1')f_0(\mathbf{p}_2')\]</div>
+<p>Every collision produces exactly as many molecules of each type as it consumes. The distribution doesn't budge.</p>
+<p>Now watch this. Take the log of both sides:</p>
+<div class="arithmatex">\[\log f_0(\mathbf{p}_1) + \log f_0(\mathbf{p}_2) = \log f_0(\mathbf{p}_1') + \log f_0(\mathbf{p}_2')\]</div>
+<p>Stare at that. The left side is before the collision. The right side is after. They're equal. That means <span class="arithmatex">\(\log f_0(\mathbf{p})\)</span> is a <strong>conserved quantity</strong> in collisions. It's additive (it sums over particles), and it's conserved (same before and after).</p>
+<p>What quantities are conserved in a collision? Energy. Momentum. And that's it (for spinless molecules). So <span class="arithmatex">\(\log f_0\)</span> must be a linear combination of these:</p>
+<div class="arithmatex">\[\log f_0(\mathbf{p}) = -A(\mathbf{p} - \mathbf{p}_0)^2 + \log C\]</div>
+<p>Exponentiate:</p>
+<div class="arithmatex">\[f_0(\mathbf{p}) = C \, e^{-A(\mathbf{p} - \mathbf{p}_0)^2}\]</div>
+<p>That's a Gaussian. We got a Gaussian from nothing but "collisions conserve energy and momentum." That's it. That's the whole argument.</p>
+<p>If the gas isn't moving as a whole, <span class="arithmatex">\(\mathbf{p}_0 = 0\)</span>. Five constants total: <span class="arithmatex">\(C\)</span>, <span class="arithmatex">\(A\)</span>, and three components of <span class="arithmatex">\(\mathbf{p}_0\)</span>. We need to pin down <span class="arithmatex">\(C\)</span> and <span class="arithmatex">\(A\)</span>.</p>
+<h2 id="pinning-down-the-constants">Pinning down the constants<a class="headerlink" href="#pinning-down-the-constants" title="Permanent link">&para;</a></h2>
+<p>Baby steps. Two conditions, two unknowns.</p>
+<p><strong>Condition 1</strong>: There are <span class="arithmatex">\(n = N/V\)</span> molecules per unit volume. So <span class="arithmatex">\(f_0\)</span> must integrate to <span class="arithmatex">\(n\)</span>:</p>
+<div class="arithmatex">\[n = C \int d^3p \, e^{-Ap^2} = C\left(\frac{\pi}{A}\right)^{3/2}\]</div>
+<p>That's just a Gaussian integral in 3D. Gives us <span class="arithmatex">\(C = n(A/\pi)^{3/2}\)</span>. One down.</p>
+<p><strong>Condition 2</strong>: The average kinetic energy per molecule is <span class="arithmatex">\(\epsilon\)</span>. Setting <span class="arithmatex">\(\mathbf{p}_0 = 0\)</span>:</p>
+<div class="arithmatex">\[\epsilon = \frac{1}{n}\int d^3p\, \frac{p^2}{2m}\, f_0(\mathbf{p}) = \frac{3}{4Am}\]</div>
+<p>You need the Gaussian moment <span class="arithmatex">\(\int x^2 e^{-\lambda x^2} dx = \sqrt{\pi}/(2\lambda^{3/2})\)</span> to get there. So <span class="arithmatex">\(A = 3/(4\epsilon m)\)</span>. Two down.</p>
+<p>But we still don't know <span class="arithmatex">\(\epsilon\)</span>. We need one more piece of physics.</p>
+<h2 id="the-pressure-trick">The pressure trick<a class="headerlink" href="#the-pressure-trick" title="Permanent link">&para;</a></h2>
+<p>This is slick. Huang connects <span class="arithmatex">\(\epsilon\)</span> to something we can measure: pressure.</p>
+<p>Picture a wall. Molecules slam into it and bounce off. A molecule with <span class="arithmatex">\(x\)</span>-momentum <span class="arithmatex">\(p_x\)</span> (heading toward the wall) bounces back with <span class="arithmatex">\(-p_x\)</span>. Momentum transferred: <span class="arithmatex">\(2p_x\)</span>. The number hitting per second per unit area: <span class="arithmatex">\(v_x f_0(\mathbf{p})\, d^3p\)</span> (only counting <span class="arithmatex">\(v_x &gt; 0\)</span>, obviously). Add it all up:</p>
+<div class="arithmatex">\[P = \int_{v_x &gt; 0} d^3p\, (2p_x v_x) f_0(\mathbf{p}) = \frac{1}{m}\int d^3p\, p_x^2 f_0(\mathbf{p})\]</div>
+<p>Now here's the trick. <span class="arithmatex">\(f_0\)</span> depends only on <span class="arithmatex">\(|\mathbf{p}|\)</span>, not on direction. So <span class="arithmatex">\(\langle p_x^2 \rangle = \langle p_y^2 \rangle = \langle p_z^2 \rangle = \frac{1}{3}\langle p^2 \rangle\)</span>. That turns the integral into:</p>
+<div class="arithmatex">\[P = \frac{2}{3}n\epsilon\]</div>
+<p>Compare with the ideal gas law <span class="arithmatex">\(P = nk_BT\)</span>:</p>
+<div class="arithmatex">\[\epsilon = \frac{3}{2}k_BT\]</div>
+<p>THAT'S where <span class="arithmatex">\(\frac{3}{2}k_BT\)</span> comes from. Not a definition. Not an assumption someone pulled out of the air. It's the kinetic energy per molecule that makes the pressure come out right. The <span class="arithmatex">\(3\)</span> is the three spatial dimensions. Each one contributes <span class="arithmatex">\(\frac{1}{2}k_BT\)</span>. That's equipartition, showing up before we've even formally stated it.</p>
+<p>Done. Beautiful.</p>
+<h2 id="the-formula">The formula<a class="headerlink" href="#the-formula" title="Permanent link">&para;</a></h2>
+<p>Ready? Here it is. The Maxwell-Boltzmann distribution for a gas at rest:</p>
+<div class="arithmatex">\[\boxed{f_0(\mathbf{p}) = \frac{n}{(2\pi mk_BT)^{3/2}} \exp\!\left(-\frac{\mathbf{p}^2}{2mk_BT}\right)}\]</div>
+<p>In terms of velocity (<span class="arithmatex">\(\mathbf{v} = \mathbf{p}/m\)</span>):</p>
+<div class="arithmatex">\[f_0(\mathbf{v}) = n\left(\frac{m}{2\pi k_BT}\right)^{3/2} \exp\!\left(-\frac{m\mathbf{v}^2}{2k_BT}\right)\]</div>
+<p>OK, stop. Look at that. Really look at it.</p>
+<p>It's a Gaussian. Just a Gaussian. Each velocity component, <span class="arithmatex">\(v_x\)</span>, <span class="arithmatex">\(v_y\)</span>, <span class="arithmatex">\(v_z\)</span>, is independently drawn from a normal distribution with mean zero and variance <span class="arithmatex">\(k_BT/m\)</span>.</p>
+<p>No correlations between components. No weird coupling. No dependence on what the other molecules are doing. Just three independent coin flips from the same bell curve.</p>
+<p>If you followed that, congratulations. You just derived the velocity distribution that every MD code on the planet uses to initialize simulations.</p>
+<div class="admonition tip">
+<p class="admonition-title">Key Insight</p>
+<p>Here's the part that blew my mind. This distribution doesn't care about the collision cross section. Doesn't matter if your molecules interact via Lennard-Jones, Coulomb, or hard spheres. As long as <em>some</em> interactions exist (so collisions happen and the system can equilibrate), the result is the same Gaussian. Argon, water, methane, DNA in solution. Same distribution. Always. The interactions control how <em>fast</em> you get to equilibrium. They don't change what equilibrium <em>looks like</em>.</p>
+</div>
+<h2 id="the-speed-distribution-the-shape-you-actually-see">The speed distribution: the shape you actually see<a class="headerlink" href="#the-speed-distribution-the-shape-you-actually-see" title="Permanent link">&para;</a></h2>
+<p>The formula above gives the probability for the velocity <em>vector</em>. But if you histogram speeds (<span class="arithmatex">\(v = |\mathbf{v}|\)</span>) from your simulation, you see a different shape. That's because you need to multiply by the spherical shell volume <span class="arithmatex">\(4\pi v^2\)</span>:</p>
+<div class="arithmatex">\[f(v) = 4\pi n \left(\frac{m}{2\pi k_BT}\right)^{3/2} v^2 \exp\!\left(-\frac{mv^2}{2k_BT}\right)\]</div>
+<p>This is NOT a Gaussian. It's a Gaussian times <span class="arithmatex">\(v^2\)</span>, and that changes everything. At low <span class="arithmatex">\(v\)</span>: the <span class="arithmatex">\(v^2\)</span> factor is winning (function goes up). At high <span class="arithmatex">\(v\)</span>: the exponential is crushing everything (function drops to zero). In between: a peak. One single maximum.</p>
+<figure>
+  <img alt="MB speed distribution at different temperatures" src="../../assets/plots/ch04-mb-speed-theory.png" width="700" />
+<br />
+<figcaption>The Maxwell-Boltzmann speed distribution for argon at five temperatures. Higher temperature = broader distribution shifted to higher speeds. Dots mark the most probable speed at each temperature. The area under each curve is the same (normalized to particle density).</figcaption>
+</figure>
+<p>Look at that. At 87 K (liquid argon), the distribution is tall and narrow. Most atoms crawl along at ~2 Å/ps. At 1000 K? The peak is squashed flat, and atoms are cruising at 7 Å/ps. Same molecule, same mass. Temperature just dials the width.</p>
+<p>Three speeds you need to know:</p>
+<table>
+<thead>
+<tr>
+<th>Speed</th>
+<th>Formula</th>
+<th>Ar at 87 K</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Most probable <span class="arithmatex">\(v_0\)</span></td>
+<td><span class="arithmatex">\(\sqrt{2k_BT/m}\)</span></td>
+<td>1.90 Å/ps</td>
+<td>Where the peak lives</td>
+</tr>
+<tr>
+<td>Mean <span class="arithmatex">\(\langle v \rangle\)</span></td>
+<td><span class="arithmatex">\(\sqrt{8k_BT/(\pi m)}\)</span></td>
+<td>2.15 Å/ps</td>
+<td>Average of all speeds</td>
+</tr>
+<tr>
+<td>RMS <span class="arithmatex">\(v_\text{rms}\)</span></td>
+<td><span class="arithmatex">\(\sqrt{3k_BT/m}\)</span></td>
+<td>2.33 Å/ps</td>
+<td>The one in <span class="arithmatex">\(\frac{1}{2}mv_\text{rms}^2 = \frac{3}{2}k_BT\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Always in this order: <span class="arithmatex">\(v_0 &lt; \langle v \rangle &lt; v_\text{rms}\)</span>. The ratios are locked at <span class="arithmatex">\(1 : 1.128 : 1.225\)</span>. Temperature doesn't matter. Mass doesn't matter. It's geometry.</p>
+<h2 id="let-me-show-you">Let me show you.<a class="headerlink" href="#let-me-show-you" title="Permanent link">&para;</a></h2>
+<p>OK, enough theory. I pulled 86,508 velocity samples from our argon NVT simulation (108 atoms, 87 K, 801 production frames from <a href="../../ch07/7.2-energy-fluctuations/">Chapter 7</a>) and compared them to the prediction. Zero fitting. Zero adjustable parameters. Just the formula and the data.</p>
+<figure>
+  <img alt="Simulation vs MB theory" src="../../assets/plots/ch04-mb-simulation.png" width="100%" />
+<br />
+<figcaption><b>Left</b>: Histogram of a single velocity component from argon NVT at 87 K, overlaid with the Gaussian prediction. The stats box shows theory vs measured standard deviation. <b>Right</b>: Speed distribution from simulation vs MB theory, with the most probable speed, mean speed, and RMS speed marked.</figcaption>
+</figure>
+<p>Look at the left panel. Blue histogram: every single <span class="arithmatex">\(v_x\)</span> measurement from 801 frames. Red curve: the theoretical Gaussian with <span class="arithmatex">\(\sigma = \sqrt{k_BT/m} = 1.35\)</span> Å/ps.</p>
+<p>They're on top of each other. Measured <span class="arithmatex">\(\sigma_{v_x} = 1.341\)</span> Å/ps. Predicted: 1.346 Å/ps. Agreement to 0.4%.</p>
+<p>86,508 velocity samples. Zero adjustable parameters. 0.4% agreement.</p>
+<p>That's not close. That's <em>exact</em>. A formula derived from "collisions conserve energy and momentum" predicts the velocity of every argon atom in a box to better than half a percent. From first principles.</p>
+<p>That's crazy.</p>
+<p>Right panel: same thing for the speed distribution. The <span class="arithmatex">\(v^2\)</span>-weighted version. Theory and simulation stacked right on top of each other. The three vertical lines (<span class="arithmatex">\(v_0\)</span>, <span class="arithmatex">\(\langle v\rangle\)</span>, <span class="arithmatex">\(v_\text{rms}\)</span>) land exactly where they should.</p>
+<div class="admonition note">
+<p class="admonition-title">MD Connection</p>
+<p>So what does <code>velocity all create 87.0 12345</code> actually do? Now you know. For each atom, LAMMPS draws <span class="arithmatex">\(v_x\)</span>, <span class="arithmatex">\(v_y\)</span>, <span class="arithmatex">\(v_z\)</span> independently from a Gaussian with <span class="arithmatex">\(\sigma = \sqrt{k_BT/m}\)</span>. Then it removes the center-of-mass velocity (so the box doesn't drift) and rescales to hit <em>exactly</em> <span class="arithmatex">\(T = 87\)</span> K.</p>
+<p>But here's the beautiful part. You could initialize with <em>garbage</em> velocities. All atoms moving right. Half the atoms frozen. Doesn't matter. Collisions will fix it. The Boltzmann transport equation guarantees that any distribution relaxes to MB. Give it a few picoseconds. The MB distribution is the attractor. The only stable equilibrium. Everything else decays into it.</p>
+<p>It's like gravity for velocity distributions.</p>
+</div>
+<h2 id="external-forces-the-barometric-formula">External forces: the barometric formula<a class="headerlink" href="#external-forces-the-barometric-formula" title="Permanent link">&para;</a></h2>
+<p>What if there's a gravitational field? Or any conservative force <span class="arithmatex">\(\mathbf{F} = -\nabla\phi(\mathbf{r})\)</span>?</p>
+<p>Huang shows the distribution just picks up a Boltzmann factor in the potential:</p>
+<div class="arithmatex">\[f(\mathbf{r}, \mathbf{p}) = f_0(\mathbf{p})\, e^{-\phi(\mathbf{r})/k_BT}\]</div>
+<p>The velocities are still MB (same Gaussian everywhere). But the <em>density</em> now depends on position. For gravity (<span class="arithmatex">\(\phi = mgz\)</span>):</p>
+<div class="arithmatex">\[n(z) = n(0)\, e^{-mgz/k_BT}\]</div>
+<p>The <strong>barometric formula</strong>. Density drops exponentially with altitude. Scale height: <span class="arithmatex">\(k_BT/(mg) \approx 8.5\)</span> km for nitrogen at room temperature. That's why the atmosphere thins out as you go up. That's why your ears pop on airplanes. That's why Everest needs supplemental oxygen. One exponential.</p>
+<div class="admonition note">
+<p class="admonition-title">MD Connection</p>
+<p>If you slap a <code>fix gravity</code> on your LAMMPS simulation, the z-density profile will follow this exponential. Histogram the atom z-coordinates, fit to <span class="arithmatex">\(e^{-mgz/k_BT}\)</span>, extract <span class="arithmatex">\(T\)</span>. If it matches your thermostat setting, your simulation is correct. People actually use this as a thermostat validation test.</p>
+</div>
+<h2 id="takeaway">Takeaway<a class="headerlink" href="#takeaway" title="Permanent link">&para;</a></h2>
+<p>The Maxwell-Boltzmann distribution is a Gaussian in each velocity component with width <span class="arithmatex">\(\sqrt{k_BT/m}\)</span>. It falls out of one fact: collisions conserve energy and momentum. It's universal (independent of interaction details), it's the unique equilibrium attractor, and it's hiding inside every <code>velocity all create</code> command you've ever typed. The speed distribution gets a <span class="arithmatex">\(v^2\)</span> factor that makes it asymmetric, with three characteristic speeds locked in a fixed ratio. We tested it against 86,508 real velocity samples. Agreement: 0.4%. Not bad for a 150-year-old formula.</p>
+<details class="question">
+<summary>Check Your Understanding</summary>
+<ol>
+<li>You histogram the <em>speed</em> from your simulation and get that classic asymmetric MB curve. Your labmate histograms a single component, <span class="arithmatex">\(v_x\)</span>, from the same data. They get a completely different shape. What shape, and why did the <span class="arithmatex">\(v^2\)</span> factor vanish?</li>
+<li>The RMS speed is always bigger than the mean speed. Always. Not just for MB, for <em>any</em> distribution. Why? (Hint: think about what squaring does to outliers.)</li>
+<li>You initialize your LAMMPS simulation with every atom at exactly the same speed, just random directions. What does the velocity distribution look like after 1 ps? After 100 ps? What's physically driving it toward MB?</li>
+<li>Here's a weird one. The barometric formula says density drops with altitude. But the velocity distribution at every height is the <em>same</em> Gaussian. If faster molecules can climb higher, why don't they pile up at the top?</li>
+</ol>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/crisnapatel" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://crisnapatel.github.io/statistical-mechanics/reading-order/">
+        <link rel="canonical" href="https://crisnapatel.github.io/statistical-mechanics/constraints/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../neighbors-cutoffs/">
       
       
-        <link rel="next" href="../ch04/">
+        <link rel="next" href="../nemd/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Reading Order - Statistical Mechanics — But Make It Make Sense</title>
+        <title>Constraints & Rigid Bodies - Statistical Mechanics — But Make It Make Sense</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reading-order-for-md-practitioners" class="md-skip">
+        <a href="#constraints-and-rigid-bodies-freezing-degrees-of-freedom" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reading Order
+              Constraints & Rigid Bodies
             
           </span>
         </div>
@@ -279,32 +279,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Reading Order
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../reading-order/" class="md-nav__link">
         
   
   
@@ -315,53 +293,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-idea" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Idea
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#suggested-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      Suggested Path
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#or-just-follow-the-book" class="md-nav__link">
-    <span class="md-ellipsis">
-      Or Just Follow the Book
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -917,8 +848,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -929,13 +862,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
@@ -951,7 +882,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Practical MD Topics
@@ -1307,10 +1238,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../constraints/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Constraints & Rigid Bodies
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1321,6 +1274,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#youre-paying-to-simulate-vibrations-you-dont-care-about" class="md-nav__link">
+    <span class="md-ellipsis">
+      You're paying to simulate vibrations you don't care about.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shake-and-rattle" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHAKE and RATTLE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      What you gain
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rigid-bodies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rigid bodies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-statistical-mechanics" class="md-nav__link">
+    <span class="md-ellipsis">
+      The statistical mechanics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1383,27 +1410,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-idea" class="md-nav__link">
+  <a href="#youre-paying-to-simulate-vibrations-you-dont-care-about" class="md-nav__link">
     <span class="md-ellipsis">
-      The Idea
+      You're paying to simulate vibrations you don't care about.
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#suggested-path" class="md-nav__link">
+  <a href="#shake-and-rattle" class="md-nav__link">
     <span class="md-ellipsis">
-      Suggested Path
+      SHAKE and RATTLE
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#or-just-follow-the-book" class="md-nav__link">
+  <a href="#what-you-gain" class="md-nav__link">
     <span class="md-ellipsis">
-      Or Just Follow the Book
+      What you gain
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rigid-bodies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rigid bodies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-statistical-mechanics" class="md-nav__link">
+    <span class="md-ellipsis">
+      The statistical mechanics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
     </span>
   </a>
   
@@ -1428,125 +1482,59 @@
   
 
 
-<h1 id="reading-order-for-md-practitioners">Reading Order for MD Practitioners<a class="headerlink" href="#reading-order-for-md-practitioners" title="Permanent link">&para;</a></h1>
-<p>Huang's book follows the standard graduate course order. That's fine if you're taking a course. But if you're coming from <strong>molecular dynamics simulations</strong> and want to understand the physics underneath what you're already doing, here's a suggested path.</p>
-<h2 id="the-idea">The Idea<a class="headerlink" href="#the-idea" title="Permanent link">&para;</a></h2>
-<p>Start from what your simulation computes. Build outward to the theory.</p>
-<h2 id="suggested-path">Suggested Path<a class="headerlink" href="#suggested-path" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Step</th>
-<th>Topic</th>
-<th>Huang Chapters</th>
-<th>Why this order</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>What is statistical mechanics?</td>
-<td>Ch 6 intro</td>
-<td>Frame the whole subject</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Phase space &amp; microstates</td>
-<td>Ch 6.0–6.2</td>
-<td>"What your simulation is actually computing"</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Velocity initialization</td>
-<td>Ch 4.2</td>
-<td>"Where your atom velocities come from"</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Ensembles</td>
-<td>Ch 6–7</td>
-<td>"What your thermostat/barostat enforces"</td>
-</tr>
-<tr>
-<td>4b</td>
-<td>Which thermostat? Which barostat?</td>
-<td><a href="../which-thermostat/">Thermostat page</a></td>
-<td>"Which <code>fix</code> for which job?"</td>
-</tr>
-<tr>
-<td>4c</td>
-<td>Your force field is a lie</td>
-<td><a href="../force-fields/">Force Field page</a></td>
-<td>"What <code>pair_coeff</code> actually means"</td>
-</tr>
-<tr>
-<td>4d</td>
-<td>Finite size &amp; periodic images</td>
-<td><a href="../finite-size/">Finite Size page</a></td>
-<td>"What <code>boundary p p p</code> really means"</td>
-</tr>
-<tr>
-<td>4e</td>
-<td>Free energy isn't free</td>
-<td><a href="../free-energy/">Free Energy page</a></td>
-<td>"Why <span class="arithmatex">\(\Delta G\)</span> is so hard to compute"</td>
-</tr>
-<tr>
-<td>4f</td>
-<td>The radial distribution function</td>
-<td><a href="../rdf/">RDF page</a></td>
-<td>"Your simulation's fingerprint"</td>
-</tr>
-<tr>
-<td>5</td>
-<td>The partition function</td>
-<td>Ch 7</td>
-<td>The one function that generates everything</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Thermodynamic potentials</td>
-<td><a href="../thermodynamic-potentials/">Potentials page</a></td>
-<td>"Which energy is my simulation minimizing?"</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Connecting to thermodynamics</td>
-<td>Ch 7–8</td>
-<td>Bridge micro → macro</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Brownian motion &amp; diffusion</td>
-<td><a href="../brownian-motion/">Brownian Motion page</a></td>
-<td>"Why does <code>compute msd</code> work?"</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Uncertainty &amp; sampling</td>
-<td><a href="../uncertainty-sampling/">Uncertainty page</a></td>
-<td>"Are my error bars honest?"</td>
-</tr>
-<tr>
-<td>10</td>
-<td>Ideal gas</td>
-<td>Ch 8</td>
-<td>First real calculation</td>
-</tr>
-<tr>
-<td>11</td>
-<td>Interacting systems</td>
-<td>Later chapters</td>
-<td>Where MD actually lives</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is a suggestion, not a rule. Every chapter page also shows its Huang chapter number so you can follow the book's order if you prefer.</p>
+<h1 id="constraints-and-rigid-bodies-freezing-degrees-of-freedom">Constraints and Rigid Bodies: Freezing Degrees of Freedom<a class="headerlink" href="#constraints-and-rigid-bodies-freezing-degrees-of-freedom" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Practical MD topic — connects to <a href="../time-integration/">Time Integration</a> and the equipartition theorem. Sometimes the best thing to do with a degree of freedom is remove it.</p>
 </div>
-<h2 id="or-just-follow-the-book">Or Just Follow the Book<a class="headerlink" href="#or-just-follow-the-book" title="Permanent link">&para;</a></h2>
-<p>Each chapter page maps directly to Huang's chapters. If you're reading the book alongside this site, just go chapter by chapter — every page tells you exactly where in the book it corresponds to.</p>
+<h2 id="youre-paying-to-simulate-vibrations-you-dont-care-about">You're paying to simulate vibrations you don't care about.<a class="headerlink" href="#youre-paying-to-simulate-vibrations-you-dont-care-about" title="Permanent link">&para;</a></h2>
+<p>Every C-H bond in your simulation vibrates at ~<span class="arithmatex">\(10^{14}\)</span> Hz. That's 100 THz. One oscillation per 10 femtoseconds. To integrate that motion accurately, you need a timestep of ~1 fs. Which means: the fastest, most boring degree of freedom in your system (a quantum-mechanical vibration that has almost zero effect on any thermodynamic property) determines how fast your entire simulation can run.</p>
+<p>What if you just froze it?</p>
+<p>That's what constraints do. You declare: "this bond has a fixed length." The integrator enforces that constraint by applying corrective forces at each step. The fast vibration is gone. Your timestep can be larger. Your simulation is faster. And for most properties, the results are identical.</p>
+<h2 id="shake-and-rattle">SHAKE and RATTLE<a class="headerlink" href="#shake-and-rattle" title="Permanent link">&para;</a></h2>
+<p><strong>SHAKE</strong> (1977) is the original constraint algorithm. After each Verlet position update, it iteratively adjusts positions to satisfy the constraint <span class="arithmatex">\(|\mathbf{r}_i - \mathbf{r}_j| = d_0\)</span> (fixed bond length). The iteration converges in 3-5 cycles for simple constraints.</p>
+<p><strong>RATTLE</strong> (1983) extends SHAKE to velocity Verlet. It constrains both positions and velocities, ensuring the velocities are consistent with the constraints (no velocity component along the constrained bond).</p>
+<p>Both algorithms apply constraint forces that are perpendicular to the bond (or, more precisely, along the bond direction). These forces don't do work in the constrained direction, so they don't add or remove energy. The constrained system samples the correct distribution on the constraint surface.</p>
+<p>In LAMMPS: <code>fix shake all shake 1e-4 100 0 t 1 2</code> constrains bonds involving atom types 1 and 2. The <code>1e-4</code> is the tolerance, <code>100</code> is the max iterations per step. For water: <code>fix shake all shake 1e-4 100 0 b 1 a 1</code> constrains bond type 1 and angle type 1 (both O-H bonds and the H-O-H angle).</p>
+<h2 id="what-you-gain">What you gain<a class="headerlink" href="#what-you-gain" title="Permanent link">&para;</a></h2>
+<p>Constraining X-H bonds (the fastest vibrations) lets you increase the timestep from 1 fs to 2 fs. That's a factor of 2 speedup for free.</p>
+<p>Constraining all bonds (not just X-H) might let you push to 2.5-3 fs, though this is more aggressive and requires validation. Some force fields (like CHARMM) include bond flexibility in their parameterization, so constraining all bonds changes the effective potential slightly.</p>
+<p>For rigid water models (SPC, SPC/E, TIP3P), constraining all three internal degrees of freedom (two O-H bonds + one H-O-H angle) is standard. The model was parameterized with these constraints. Using flexible water with a rigid-water force field is wrong; using rigid water with a flexible-water force field is also wrong. Match the constraint to the model.</p>
+<h2 id="rigid-bodies">Rigid bodies<a class="headerlink" href="#rigid-bodies" title="Permanent link">&para;</a></h2>
+<p>Constraints freeze specific internal coordinates (bond lengths, sometimes angles). <strong>Rigid bodies</strong> go further: they freeze all internal degrees of freedom. The molecule translates and rotates as a unit, with no internal motion at all.</p>
+<p>This is appropriate for small, rigid molecules (water, CO<span class="arithmatex">\(_2\)</span>, benzene) where the internal vibrations are quantum-mechanically frozen anyway and have negligible coupling to the translations and rotations.</p>
+<p>In LAMMPS: <code>fix rigid</code> or <code>fix rigid/small</code> treats groups of atoms as rigid bodies. Each body has 6 degrees of freedom (3 translational + 3 rotational) regardless of how many atoms it contains. For water, this reduces from 9 degrees of freedom (3 atoms <span class="arithmatex">\(\times\)</span> 3) to 6.</p>
+<div class="admonition tip">
+<p class="admonition-title">Key Insight</p>
+<p>Constraints and rigid bodies change the number of degrees of freedom, which affects how temperature is computed. If you constrain <span class="arithmatex">\(N_c\)</span> bonds, you have <span class="arithmatex">\(3N - N_c\)</span> remaining degrees of freedom. Temperature should be calculated from <span class="arithmatex">\(\langle K \rangle = \frac{1}{2}(3N - N_c) k_B T\)</span>, not <span class="arithmatex">\(\frac{1}{2}(3N) k_B T\)</span>. LAMMPS handles this automatically if you use <code>fix shake</code> or <code>fix rigid</code>, but if you're doing manual temperature calculations, get the count right.</p>
+</div>
+<h2 id="the-statistical-mechanics">The statistical mechanics<a class="headerlink" href="#the-statistical-mechanics" title="Permanent link">&para;</a></h2>
+<p>Constraining a degree of freedom removes it from the partition function. The constrained partition function is:</p>
+<div class="arithmatex">\[Z_\text{constrained} = \int e^{-\beta H} \prod_k \delta(g_k(\{\mathbf{r}\})) \, d\{\mathbf{r}\}\]</div>
+<p>where <span class="arithmatex">\(g_k = 0\)</span> defines the constraints. The delta functions restrict the integral to the constraint surface.</p>
+<p>For thermodynamic properties that don't depend on the constrained coordinates (average energy of the unconstrained modes, diffusion, <span class="arithmatex">\(g(r)\)</span> beyond the constrained bond length), the constrained and unconstrained simulations give the same results.</p>
+<p>For properties that DO depend on the constrained coordinates (vibrational spectra, certain entropy calculations), the results are obviously different. If you need vibrational properties, don't constrain those vibrations.</p>
+<div class="admonition note">
+<p class="admonition-title">MD Connection</p>
+<p>Quick reference for LAMMPS constraints:</p>
+<ul>
+<li><code>fix shake</code> — constrain bonds and/or angles. Use for O-H bonds, C-H bonds, rigid water.</li>
+<li><code>fix rigid</code> — entire molecule as rigid body. Use for small rigid molecules.</li>
+<li><code>fix rigid/small</code> — optimized version for many small rigid bodies (water).</li>
+<li>After applying constraints, check that <code>fix_modify</code> reports the correct number of degrees of freedom. If temperature is wrong after adding constraints, the DOF count is probably off.</li>
+</ul>
+</div>
+<h2 id="takeaway">Takeaway<a class="headerlink" href="#takeaway" title="Permanent link">&para;</a></h2>
+<p>Constraints freeze fast vibrations (X-H bonds at ~<span class="arithmatex">\(10^{14}\)</span> Hz) that limit the timestep but don't affect most thermodynamic properties. SHAKE/RATTLE enforce fixed bond lengths within velocity-Verlet integration, enabling 2 fs timesteps (2x speedup). Rigid body fixes go further, freezing all internal motion. Constraints change the number of degrees of freedom, affecting temperature calculations. Match constraints to the force field: rigid water for rigid-water models, flexible water for flexible models. Don't constrain degrees of freedom you want to measure.</p>
+<details class="question">
+<summary>Check Your Understanding</summary>
+<ol>
+<li>You constrain all O-H bonds with SHAKE and increase <span class="arithmatex">\(\Delta t\)</span> from 1 fs to 2 fs. Your diffusion coefficient changes by 1%. Is this expected? What's the likely cause?</li>
+<li>You run SPC/E water with <code>fix rigid/small</code> (fully rigid) and with <code>fix shake</code> (bonds and angle constrained). Both should give the same dynamics since SPC/E is a rigid model. But the temperatures differ slightly. What went wrong?</li>
+<li>Someone uses a flexible water model (SPC/Fw) but adds <code>fix shake</code> to constrain the O-H bonds "for speed." Is this valid? What changes about the thermodynamics?</li>
+<li>After adding <code>fix shake</code>, you notice the reported temperature drops from 300 K to 285 K, even though the thermostat target is still 300 K. What happened?</li>
+<li>You want to compute the vibrational spectrum (velocity autocorrelation function) of liquid water. Can you use rigid water for this? What about SHAKE-constrained water?</li>
+</ol>
+</details>
 
 
 

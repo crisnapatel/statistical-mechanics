@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://crisnapatel.github.io/statistical-mechanics/reading-order/">
+        <link rel="canonical" href="https://crisnapatel.github.io/statistical-mechanics/long-range-electrostatics/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../phase-transitions/">
       
       
-        <link rel="next" href="../ch04/">
+        <link rel="next" href="../coarse-graining/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Reading Order - Statistical Mechanics — But Make It Make Sense</title>
+        <title>Long-Range Electrostatics - Statistical Mechanics — But Make It Make Sense</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reading-order-for-md-practitioners" class="md-skip">
+        <a href="#long-range-electrostatics-ewald-pppm-and-slowly-convergent-series" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reading Order
+              Long-Range Electrostatics
             
           </span>
         </div>
@@ -279,32 +279,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Reading Order
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../reading-order/" class="md-nav__link">
         
   
   
@@ -315,53 +293,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-idea" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Idea
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#suggested-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      Suggested Path
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#or-just-follow-the-book" class="md-nav__link">
-    <span class="md-ellipsis">
-      Or Just Follow the Book
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -917,8 +848,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -929,13 +862,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
@@ -951,7 +882,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Practical MD Topics
@@ -1215,10 +1146,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../long-range-electrostatics/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Long-Range Electrostatics
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1229,6 +1182,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#you-cant-just-cut-off-coulomb" class="md-nav__link">
+    <span class="md-ellipsis">
+      You can't just cut off Coulomb.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ewald-trick" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Ewald trick
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-cost-problem-on32" class="md-nav__link">
+    <span class="md-ellipsis">
+      The cost problem: \(O(N^{3/2})\)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pppm-pme-spme-making-it-on-log-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      PPPM, PME, SPME: making it \(O(N \log N)\)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternatives-reaction-field-wolf-dsf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternatives: reaction field, Wolf, DSF
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-tin-foil-boundary-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      The tin-foil boundary condition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1383,27 +1419,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-idea" class="md-nav__link">
+  <a href="#you-cant-just-cut-off-coulomb" class="md-nav__link">
     <span class="md-ellipsis">
-      The Idea
+      You can't just cut off Coulomb.
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#suggested-path" class="md-nav__link">
+  <a href="#the-ewald-trick" class="md-nav__link">
     <span class="md-ellipsis">
-      Suggested Path
+      The Ewald trick
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#or-just-follow-the-book" class="md-nav__link">
+  <a href="#the-cost-problem-on32" class="md-nav__link">
     <span class="md-ellipsis">
-      Or Just Follow the Book
+      The cost problem: \(O(N^{3/2})\)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pppm-pme-spme-making-it-on-log-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      PPPM, PME, SPME: making it \(O(N \log N)\)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternatives-reaction-field-wolf-dsf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternatives: reaction field, Wolf, DSF
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-tin-foil-boundary-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      The tin-foil boundary condition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
     </span>
   </a>
   
@@ -1428,125 +1500,78 @@
   
 
 
-<h1 id="reading-order-for-md-practitioners">Reading Order for MD Practitioners<a class="headerlink" href="#reading-order-for-md-practitioners" title="Permanent link">&para;</a></h1>
-<p>Huang's book follows the standard graduate course order. That's fine if you're taking a course. But if you're coming from <strong>molecular dynamics simulations</strong> and want to understand the physics underneath what you're already doing, here's a suggested path.</p>
-<h2 id="the-idea">The Idea<a class="headerlink" href="#the-idea" title="Permanent link">&para;</a></h2>
-<p>Start from what your simulation computes. Build outward to the theory.</p>
-<h2 id="suggested-path">Suggested Path<a class="headerlink" href="#suggested-path" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Step</th>
-<th>Topic</th>
-<th>Huang Chapters</th>
-<th>Why this order</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>What is statistical mechanics?</td>
-<td>Ch 6 intro</td>
-<td>Frame the whole subject</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Phase space &amp; microstates</td>
-<td>Ch 6.0–6.2</td>
-<td>"What your simulation is actually computing"</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Velocity initialization</td>
-<td>Ch 4.2</td>
-<td>"Where your atom velocities come from"</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Ensembles</td>
-<td>Ch 6–7</td>
-<td>"What your thermostat/barostat enforces"</td>
-</tr>
-<tr>
-<td>4b</td>
-<td>Which thermostat? Which barostat?</td>
-<td><a href="../which-thermostat/">Thermostat page</a></td>
-<td>"Which <code>fix</code> for which job?"</td>
-</tr>
-<tr>
-<td>4c</td>
-<td>Your force field is a lie</td>
-<td><a href="../force-fields/">Force Field page</a></td>
-<td>"What <code>pair_coeff</code> actually means"</td>
-</tr>
-<tr>
-<td>4d</td>
-<td>Finite size &amp; periodic images</td>
-<td><a href="../finite-size/">Finite Size page</a></td>
-<td>"What <code>boundary p p p</code> really means"</td>
-</tr>
-<tr>
-<td>4e</td>
-<td>Free energy isn't free</td>
-<td><a href="../free-energy/">Free Energy page</a></td>
-<td>"Why <span class="arithmatex">\(\Delta G\)</span> is so hard to compute"</td>
-</tr>
-<tr>
-<td>4f</td>
-<td>The radial distribution function</td>
-<td><a href="../rdf/">RDF page</a></td>
-<td>"Your simulation's fingerprint"</td>
-</tr>
-<tr>
-<td>5</td>
-<td>The partition function</td>
-<td>Ch 7</td>
-<td>The one function that generates everything</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Thermodynamic potentials</td>
-<td><a href="../thermodynamic-potentials/">Potentials page</a></td>
-<td>"Which energy is my simulation minimizing?"</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Connecting to thermodynamics</td>
-<td>Ch 7–8</td>
-<td>Bridge micro → macro</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Brownian motion &amp; diffusion</td>
-<td><a href="../brownian-motion/">Brownian Motion page</a></td>
-<td>"Why does <code>compute msd</code> work?"</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Uncertainty &amp; sampling</td>
-<td><a href="../uncertainty-sampling/">Uncertainty page</a></td>
-<td>"Are my error bars honest?"</td>
-</tr>
-<tr>
-<td>10</td>
-<td>Ideal gas</td>
-<td>Ch 8</td>
-<td>First real calculation</td>
-</tr>
-<tr>
-<td>11</td>
-<td>Interacting systems</td>
-<td>Later chapters</td>
-<td>Where MD actually lives</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is a suggestion, not a rule. Every chapter page also shows its Huang chapter number so you can follow the book's order if you prefer.</p>
+<h1 id="long-range-electrostatics-ewald-pppm-and-slowly-convergent-series">Long-Range Electrostatics: Ewald, PPPM, and Slowly Convergent Series<a class="headerlink" href="#long-range-electrostatics-ewald-pppm-and-slowly-convergent-series" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Practical MD topic — connects to <a href="../finite-size/">Finite Size</a> and <a href="../force-fields/">Force Fields</a>. If you simulate anything with charges, you need to understand this.</p>
 </div>
-<h2 id="or-just-follow-the-book">Or Just Follow the Book<a class="headerlink" href="#or-just-follow-the-book" title="Permanent link">&para;</a></h2>
-<p>Each chapter page maps directly to Huang's chapters. If you're reading the book alongside this site, just go chapter by chapter — every page tells you exactly where in the book it corresponds to.</p>
+<h2 id="you-cant-just-cut-off-coulomb">You can't just cut off Coulomb.<a class="headerlink" href="#you-cant-just-cut-off-coulomb" title="Permanent link">&para;</a></h2>
+<p>For Lennard-Jones interactions, a cutoff at <span class="arithmatex">\(2.5\sigma\)</span> captures 99% of the energy. The potential decays as <span class="arithmatex">\(r^{-6}\)</span>. By 3 atomic diameters, there's essentially nothing left. Truncate it. Apply a tail correction. Move on.</p>
+<p>Coulomb interactions decay as <span class="arithmatex">\(1/r\)</span>. That's not fast enough. In 3D, the integral <span class="arithmatex">\(\int_0^\infty (1/r) \cdot 4\pi r^2 \, dr\)</span> diverges. The contribution from atoms 10 nm away is smaller than from atoms 1 nm away, sure, but it never becomes negligible. The sum of all Coulombic interactions in a periodic system is conditionally convergent: the answer depends on the order you add the terms.</p>
+<p>If you truncate Coulomb at a cutoff, you get artifacts. Sharp. Serious. The electric field has a discontinuity at <span class="arithmatex">\(r_\text{cut}\)</span>. Charges near the cutoff boundary feel artificial forces. The energy depends on which atoms happen to be near the cutoff surface. For ionic systems, truncation can shift the energy by 10-30%. For proteins in water, it can produce incorrect solvation structures and wrong conformational energies.</p>
+<p>You can't truncate Coulomb. You need a smarter approach. That's Ewald summation.</p>
+<h2 id="the-ewald-trick">The Ewald trick<a class="headerlink" href="#the-ewald-trick" title="Permanent link">&para;</a></h2>
+<p>Paul Peter Ewald (1921) solved this for crystallographers, a century ago. The idea is gorgeous.</p>
+<p>You have a sum of <span class="arithmatex">\(1/r\)</span> terms over all periodic images that doesn't converge well. Ewald's trick: split each point charge into two parts.</p>
+<ol>
+<li>
+<p><strong>A screened charge</strong>: the original point charge surrounded by a diffuse Gaussian cloud of opposite charge. This screened interaction decays fast (like <span class="arithmatex">\(\text{erfc}(r)/r\)</span>, which goes to zero exponentially). You can sum this in real space with a cutoff, just like LJ.</p>
+</li>
+<li>
+<p><strong>A compensating smooth charge distribution</strong>: the negative of those Gaussian clouds. This is a smooth, slowly varying charge density. Its electrostatic energy is most naturally computed in reciprocal (Fourier) space, where it converges rapidly.</p>
+</li>
+<li>
+<p><strong>A self-energy correction</strong>: you added Gaussian clouds centered on each charge. The interaction of each charge with its own cloud has to be subtracted. This is computed once and is trivial.</p>
+</li>
+</ol>
+<p>The total energy is:</p>
+<div class="arithmatex">\[E_\text{Coulomb} = E_\text{real} + E_\text{reciprocal} - E_\text{self}\]</div>
+<p>The real-space sum converges fast because <span class="arithmatex">\(\text{erfc}(\alpha r)/r\)</span> decays exponentially. The reciprocal-space sum converges fast because the Fourier transform of the smooth Gaussian distributions is concentrated at low <span class="arithmatex">\(k\)</span>. The parameter <span class="arithmatex">\(\alpha\)</span> controls the split: large <span class="arithmatex">\(\alpha\)</span> puts more work in reciprocal space (fewer <span class="arithmatex">\(k\)</span>-vectors but more real-space screening), small <span class="arithmatex">\(\alpha\)</span> puts more work in real space (more pairs to sum but fewer <span class="arithmatex">\(k\)</span>-vectors).</p>
+<div class="admonition tip">
+<p class="admonition-title">Key Insight</p>
+<p>Ewald doesn't approximate the Coulomb sum. It computes it exactly (to within numerical precision). The "trick" is purely mathematical: splitting one poorly convergent sum into two rapidly convergent sums. The parameter <span class="arithmatex">\(\alpha\)</span> controls the split but doesn't affect the answer. Any <span class="arithmatex">\(\alpha\)</span> gives the same total energy.</p>
+</div>
+<h2 id="the-cost-problem-on32">The cost problem: <span class="arithmatex">\(O(N^{3/2})\)</span><a class="headerlink" href="#the-cost-problem-on32" title="Permanent link">&para;</a></h2>
+<p>For <span class="arithmatex">\(N\)</span> charges, the real-space sum has <span class="arithmatex">\(O(N)\)</span> terms (with a cutoff). The reciprocal-space sum has <span class="arithmatex">\(O(N^{1/2})\)</span> <span class="arithmatex">\(k\)</span>-vectors, but evaluating each one costs <span class="arithmatex">\(O(N)\)</span> (you sum over all charges). Total: <span class="arithmatex">\(O(N^{3/2})\)</span>.</p>
+<p>For 1,000 atoms, fine. For 100,000 atoms, expensive. For a million atoms, prohibitive.</p>
+<h2 id="pppm-pme-spme-making-it-on-log-n">PPPM, PME, SPME: making it <span class="arithmatex">\(O(N \log N)\)</span><a class="headerlink" href="#pppm-pme-spme-making-it-on-log-n" title="Permanent link">&para;</a></h2>
+<p>The solution: instead of evaluating the reciprocal-space sum analytically, interpolate the charges onto a regular grid and use the Fast Fourier Transform (FFT).</p>
+<p><strong>Particle-Particle Particle-Mesh (PPPM)</strong>: Assign charges to a 3D grid using interpolation. Solve Poisson's equation on the grid using FFT. Interpolate the forces back to the particles. The real-space part is still done particle-to-particle (hence the first "PP"). Total cost: <span class="arithmatex">\(O(N \log N)\)</span> for the mesh part, <span class="arithmatex">\(O(N)\)</span> for the real part.</p>
+<p><strong>Particle Mesh Ewald (PME)</strong> and <strong>Smooth PME (SPME)</strong>: Same idea, different interpolation schemes. SPME uses B-splines for the charge assignment, giving smooth forces and better energy conservation. This is what GROMACS and AMBER use.</p>
+<p>In LAMMPS, all of this is handled by <code>kspace_style</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>kspace_style pppm 1e-4
+</code></pre></div>
+<p>The <code>1e-4</code> is the desired relative force accuracy. LAMMPS automatically chooses the grid spacing, real-space cutoff, and <span class="arithmatex">\(\alpha\)</span> to meet this target. You don't need to tune any of it.</p>
+<div class="admonition note">
+<p class="admonition-title">MD Connection</p>
+<p>In LAMMPS:</p>
+<ul>
+<li><code>kspace_style ewald 1e-4</code> — exact Ewald (<span class="arithmatex">\(O(N^{3/2})\)</span>). Use for small systems or benchmarking.</li>
+<li><code>kspace_style pppm 1e-4</code> — PPPM (<span class="arithmatex">\(O(N \log N)\)</span>). Use this for everything.</li>
+<li>The accuracy parameter (<span class="arithmatex">\(10^{-4}\)</span>) is the relative RMS force error. Tighter accuracy = finer grid = slower. For most work, <span class="arithmatex">\(10^{-4}\)</span> to <span class="arithmatex">\(10^{-5}\)</span> is fine. For free energy calculations, use <span class="arithmatex">\(10^{-5}\)</span> or tighter.</li>
+<li><code>pair_style lj/cut/coul/long 10.0</code> — LJ with cutoff, Coulomb handled by kspace. The <code>long</code> means "the long-range part goes to the kspace solver."</li>
+</ul>
+</div>
+<h2 id="alternatives-reaction-field-wolf-dsf">Alternatives: reaction field, Wolf, DSF<a class="headerlink" href="#alternatives-reaction-field-wolf-dsf" title="Permanent link">&para;</a></h2>
+<p>Not everyone uses Ewald. Some alternatives:</p>
+<p><strong>Reaction field</strong>: Treats everything beyond <span class="arithmatex">\(r_\text{cut}\)</span> as a dielectric continuum. Cheap but approximate. Works OK for bulk water but fails for heterogeneous systems (membranes, interfaces).</p>
+<p><strong>Wolf method</strong>: A clever truncation scheme that achieves charge neutrality within the cutoff sphere. Faster than Ewald, surprisingly accurate for some systems, but not systematically improvable and not recommended for production unless you've carefully validated it.</p>
+<p><strong>Damped shifted force (DSF)</strong>: Similar spirit to Wolf but with better energy conservation. Gaining popularity for large-scale simulations where Ewald is too expensive.</p>
+<p>For most work, just use PPPM. It's fast, accurate, and well-tested. The alternatives exist for special situations (very large systems, GPU codes where FFTs are expensive, non-periodic systems).</p>
+<h2 id="the-tin-foil-boundary-condition">The tin-foil boundary condition<a class="headerlink" href="#the-tin-foil-boundary-condition" title="Permanent link">&para;</a></h2>
+<p>One subtle point. The Ewald sum assumes your periodic system is surrounded by a conducting medium at infinity (the "tin-foil" boundary condition). This means the average electric field in the box is zero. The macroscopic dipole moment of the simulation cell produces no long-range field.</p>
+<p>If your system has a net dipole (which it shouldn't for a neutral periodic system, but can happen for polar systems with a preferred orientation), the tin-foil boundary condition zeroes it out. For most simulations, this is correct. For simulations of polar interfaces (water surfaces, ferroelectric materials), it's a constraint you need to be aware of.</p>
+<h2 id="takeaway">Takeaway<a class="headerlink" href="#takeaway" title="Permanent link">&para;</a></h2>
+<p>Coulomb interactions decay too slowly for simple cutoffs. Ewald summation splits the <span class="arithmatex">\(1/r\)</span> sum into a fast-converging real-space sum and a fast-converging reciprocal-space sum, computing the exact Coulomb energy. PPPM/PME use FFTs to reduce the cost from <span class="arithmatex">\(O(N^{3/2})\)</span> to <span class="arithmatex">\(O(N \log N)\)</span>. In LAMMPS: <code>kspace_style pppm 1e-4</code> handles everything automatically. Always use Ewald-based methods for charged systems. Truncating Coulomb introduces artifacts that are worse than whatever computational savings you gain.</p>
+<details class="question">
+<summary>Check Your Understanding</summary>
+<ol>
+<li>You simulate a protein in water using <code>pair_style lj/cut/coul/cut 10.0</code> (note: <code>coul/cut</code>, not <code>coul/long</code>). This means Coulomb interactions are truncated at 10 Å with no long-range solver. Your solvation free energy is wrong by 15 kcal/mol. Is this error expected?</li>
+<li>Someone increases the PPPM accuracy from <span class="arithmatex">\(10^{-4}\)</span> to <span class="arithmatex">\(10^{-6}\)</span> and their simulation becomes 3x slower. Their computed energy changes by 0.01%. Was the extra accuracy worth it?</li>
+<li>Why can't you fix the Coulomb truncation problem by just using a really large cutoff (say 30 Å)? What's still wrong, and why is Ewald fundamentally different from a large cutoff?</li>
+<li>Your system is a single NaCl ion pair in a periodic box of water. The Na<span class="arithmatex">\(^+\)</span> and Cl<span class="arithmatex">\(^-\)</span> interact not only with each other but with all their periodic images. How does this affect the computed binding free energy, and what correction would you need?</li>
+<li>The Ewald parameter <span class="arithmatex">\(\alpha\)</span> doesn't affect the total energy (it just shifts work between real and reciprocal space). So why does LAMMPS let you tune it via the accuracy parameter?</li>
+</ol>
+</details>
 
 
 

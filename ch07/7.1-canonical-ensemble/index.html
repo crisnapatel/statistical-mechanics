@@ -1,0 +1,1861 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A conversational walkthrough of Kerson Huang's Statistical Mechanics, with MD simulations.">
+      
+      
+      
+        <link rel="canonical" href="https://crisnapatel.github.io/statistical-mechanics/ch07/7.1-canonical-ensemble/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../7.2-energy-fluctuations/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
+    
+    
+      
+        <title>7.1 The Canonical Ensemble - Statistical Mechanics — But Make It Make Sense</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#71-the-canonical-ensemble" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Statistical Mechanics — But Make It Make Sense" class="md-header__button md-logo" aria-label="Statistical Mechanics — But Make It Make Sense" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Statistical Mechanics — But Make It Make Sense
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              7.1 The Canonical Ensemble
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/crisnapatel/statistical-mechanics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    crisnapatel/statistical-mechanics
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Statistical Mechanics — But Make It Make Sense" class="md-nav__button md-logo" aria-label="Statistical Mechanics — But Make It Make Sense" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Statistical Mechanics — But Make It Make Sense
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/crisnapatel/statistical-mechanics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    crisnapatel/statistical-mechanics
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reading-order/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reading Order
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ch 4 — Equilibrium State of a Dilute Gas
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Ch 4 — Equilibrium State of a Dilute Gas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch04/4.2-maxwell-boltzmann/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.2 Maxwell-Boltzmann Distribution
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch04/4.3-most-probable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.3 Most Probable Distribution
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ch 6 — Classical Statistical Mechanics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Ch 6 — Classical Statistical Mechanics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../thermodynamic-potentials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Thermodynamic Potentials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch06/6.0-foundations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.0 Foundations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch06/6.1-postulate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.1 The Postulate
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch06/6.2-microcanonical-ensemble/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.2 Microcanonical Ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch06/6.4-equipartition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.4 Equipartition Theorem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ch06/6.6-gibbs-paradox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.6 Gibbs Paradox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ch 7 — Canonical & Grand Canonical Ensemble
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Ch 7 — Canonical & Grand Canonical Ensemble
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    7.1 The Canonical Ensemble
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.1 The Canonical Ensemble
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-ensemble-youve-actually-been-using" class="md-nav__link">
+    <span class="md-ellipsis">
+      The ensemble you've actually been using
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-should-you-care" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why should you care?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-bad-intuition-its-just-nve-with-a-thermostat-bolted-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      The bad intuition: "it's just NVE with a thermostat bolted on"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-physical-setup-a-small-system-talks-to-a-big-reservoir" class="md-nav__link">
+    <span class="md-ellipsis">
+      The physical setup: a small system talks to a big reservoir
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-the-boltzmann-factor-comes-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where the Boltzmann factor comes from
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-partition-function-the-most-useful-object-in-physics" class="md-nav__link">
+    <span class="md-ellipsis">
+      The partition function: the most useful object in physics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-the-partition-function-to-all-of-thermodynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      From the partition function to all of thermodynamics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-recipe-and-why-canonical-beats-microcanonical" class="md-nav__link">
+    <span class="md-ellipsis">
+      The recipe (and why canonical beats microcanonical)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-this-means-for-your-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      What this means for your simulation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What this means for your simulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nvt-canonical-ensemble-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      NVT = canonical ensemble sampling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-thermostat-is-the-reservoir" class="md-nav__link">
+    <span class="md-ellipsis">
+      The thermostat IS the reservoir
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-free-energy-is-hard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why free energy is hard
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7.2-energy-fluctuations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.2 Energy Fluctuations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7.3-grand-canonical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.3 Grand Canonical Ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7.4-density-fluctuations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.4 Density Fluctuations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7.5-chemical-potential/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.5 The Chemical Potential
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7.6-equivalence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.6 Equivalence of Ensembles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Practical MD Topics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Practical MD Topics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../brownian-motion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Brownian Motion & Diffusion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uncertainty-sampling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uncertainty & Sampling Quality
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../which-thermostat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Which Thermostat? Which Barostat?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../force-fields/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Your Force Field Is a Lie
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../finite-size/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Finite Size & Periodic Images
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../free-energy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Free Energy Isn't Free
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rdf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The Radial Distribution Function
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../time-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Time Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enhanced-sampling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enhanced Sampling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pressure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pressure in a Box
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-transitions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Phase Transitions in a Box
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../long-range-electrostatics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Long-Range Electrostatics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coarse-graining/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Coarse-Graining
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rare-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rare Events & TST
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../neighbors-cutoffs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Neighbors, Cutoffs & Pair Interactions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../constraints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Constraints & Rigid Bodies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nemd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Non-Equilibrium MD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-ensemble-youve-actually-been-using" class="md-nav__link">
+    <span class="md-ellipsis">
+      The ensemble you've actually been using
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-should-you-care" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why should you care?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-bad-intuition-its-just-nve-with-a-thermostat-bolted-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      The bad intuition: "it's just NVE with a thermostat bolted on"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-physical-setup-a-small-system-talks-to-a-big-reservoir" class="md-nav__link">
+    <span class="md-ellipsis">
+      The physical setup: a small system talks to a big reservoir
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-the-boltzmann-factor-comes-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where the Boltzmann factor comes from
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-partition-function-the-most-useful-object-in-physics" class="md-nav__link">
+    <span class="md-ellipsis">
+      The partition function: the most useful object in physics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-the-partition-function-to-all-of-thermodynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      From the partition function to all of thermodynamics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-recipe-and-why-canonical-beats-microcanonical" class="md-nav__link">
+    <span class="md-ellipsis">
+      The recipe (and why canonical beats microcanonical)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-this-means-for-your-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      What this means for your simulation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What this means for your simulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nvt-canonical-ensemble-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      NVT = canonical ensemble sampling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-thermostat-is-the-reservoir" class="md-nav__link">
+    <span class="md-ellipsis">
+      The thermostat IS the reservoir
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-free-energy-is-hard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why free energy is hard
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="71-the-canonical-ensemble">7.1 The Canonical Ensemble<a class="headerlink" href="#71-the-canonical-ensemble" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Huang, <em>Statistical Mechanics</em> 2ed, Section 7.1</p>
+</div>
+<h2 id="the-ensemble-youve-actually-been-using">The ensemble you've actually been using<a class="headerlink" href="#the-ensemble-youve-actually-been-using" title="Permanent link">&para;</a></h2>
+<p>I have a confession. All of chapter 6, we worked with the microcanonical ensemble. Constant <span class="arithmatex">\(N\)</span>, constant <span class="arithmatex">\(V\)</span>, constant <span class="arithmatex">\(E\)</span>. The isolated system. The stubborn one that refuses to exchange anything with anyone.</p>
+<p>And yeah, that's clean and fundamental. But when was the last time you ran a purely NVE production simulation? If you're like me, you almost always use NVT. You slap on a Nosé-Hoover thermostat, set a target temperature, and let it rip.</p>
+<p>Every time you do that, you're using the <strong>canonical ensemble</strong>. And you deserve to know where it comes from.</p>
+<h2 id="why-should-you-care">Why should you care?<a class="headerlink" href="#why-should-you-care" title="Permanent link">&para;</a></h2>
+<p>The canonical ensemble is the workhorse of statistical mechanics. It describes a system at fixed temperature (not fixed energy), which is how most experiments and most simulations actually work. It gives us:</p>
+<ul>
+<li>The <strong>Boltzmann factor</strong> <span class="arithmatex">\(e^{-\beta E}\)</span>, which tells you how probable each microstate is</li>
+<li>The <strong>partition function</strong> <span class="arithmatex">\(Q_N\)</span>, the single most useful object in all of statistical mechanics</li>
+<li>A direct route to the <strong>Helmholtz free energy</strong> <span class="arithmatex">\(A = -kT \log Q_N\)</span>, from which everything else follows</li>
+</ul>
+<p>If the microcanonical ensemble is the foundation, the canonical ensemble is the building you actually live in.</p>
+<h2 id="the-bad-intuition-its-just-nve-with-a-thermostat-bolted-on">The bad intuition: "it's just NVE with a thermostat bolted on"<a class="headerlink" href="#the-bad-intuition-its-just-nve-with-a-thermostat-bolted-on" title="Permanent link">&para;</a></h2>
+<p>You might think the canonical ensemble is the microcanonical ensemble with some extra device controlling the temperature. Like the thermostat is an add-on, a correction, a hack.</p>
+<p>It's not. The canonical ensemble is a fundamentally different beast. In the microcanonical ensemble, the system has a definite energy. In the canonical ensemble, the energy <em>fluctuates</em>. The system can borrow energy from the heat bath and give it back. At any instant, the system might have more energy than average, or less. What's fixed isn't the energy. It's the <em>temperature</em>.</p>
+<p>That changes everything. The probability of finding the system in a given microstate is no longer "all states equally likely." It's weighted by the Boltzmann factor. And deriving that weight is exactly what Huang does in this section.</p>
+<h2 id="the-physical-setup-a-small-system-talks-to-a-big-reservoir">The physical setup: a small system talks to a big reservoir<a class="headerlink" href="#the-physical-setup-a-small-system-talks-to-a-big-reservoir" title="Permanent link">&para;</a></h2>
+<p>Picture this. You have your system (call it system 1, the one you care about). It's sitting inside a much larger system (system 2, the heat reservoir). Together, they form a composite isolated system with total energy <span class="arithmatex">\(E\)</span>.</p>
+<p>The composite system is isolated, so its total energy is fixed. But the two subsystems can exchange energy freely between each other. At any moment, system 1 has energy <span class="arithmatex">\(E_1\)</span> and the reservoir has energy <span class="arithmatex">\(E_2 = E - E_1\)</span>.</p>
+<p>Here's the key asymmetry: the reservoir is <em>much</em> bigger. <span class="arithmatex">\(N_2 \gg N_1\)</span>. So from the reservoir's perspective, the energy that system 1 borrows is pocket change. The reservoir barely notices. Its temperature stays essentially constant.</p>
+<p>Sound familiar? That's exactly what a thermostat does in your simulation. The Nosé-Hoover thermostat acts as an infinite heat bath. Your simulated atoms are system 1. The thermostat is system 2.</p>
+<div class="admonition note">
+<p class="admonition-title">MD Connection</p>
+<p>When you write <code>fix nvt all nvt temp 300.0 300.0 0.1</code> in LAMMPS, the thermostat is playing the role of system 2. It maintains a constant temperature by adding or removing kinetic energy from your atoms. The coupling constant (0.1 ps in this example) controls how tightly the thermostat grips the system. Too tight and you get artifacts. Too loose and the temperature drifts. The physics of <em>why</em> this produces the right distribution is exactly what we're about to derive.</p>
+</div>
+<h2 id="where-the-boltzmann-factor-comes-from">Where the Boltzmann factor comes from<a class="headerlink" href="#where-the-boltzmann-factor-comes-from" title="Permanent link">&para;</a></h2>
+<p>This is the big one. Let's derive it step by step.</p>
+<p>The composite system (system 1 + reservoir) is isolated, so it lives in the microcanonical ensemble. All microstates of the <em>composite</em> system with total energy <span class="arithmatex">\(E\)</span> are equally likely. We learned that in chapter 6.</p>
+<p>Now ask: what's the probability of finding system 1 in one specific microstate <span class="arithmatex">\((p_1, q_1)\)</span> with energy <span class="arithmatex">\(E_1 = \mathcal{H}_1(p_1, q_1)\)</span>?</p>
+<p>We don't care what the reservoir is doing. We just need the reservoir to have energy <span class="arithmatex">\(E_2 = E - E_1\)</span>. The number of ways the reservoir can arrange itself with that energy is <span class="arithmatex">\(\Gamma_2(E - E_1)\)</span>. More reservoir microstates means more ways to achieve this particular <span class="arithmatex">\(E_1\)</span>, means higher probability.</p>
+<p>So the probability density in phase space for system 1 is:</p>
+<div class="arithmatex">\[\rho(p_1, q_1) \propto \Gamma_2(E - E_1)\]</div>
+<p>That's it. The probability of finding your system in a particular state is proportional to how many options the <em>reservoir</em> has. The reservoir's flexibility determines your system's statistics.</p>
+<p>Now we need to figure out what <span class="arithmatex">\(\Gamma_2(E - E_1)\)</span> looks like. Ready? Let's do this.</p>
+<p>Take the log:</p>
+<div class="arithmatex">\[k \log \Gamma_2(E - E_1) = S_2(E - E_1)\]</div>
+<p>That's just the reservoir's entropy at energy <span class="arithmatex">\(E - E_1\)</span>. Since <span class="arithmatex">\(E_1 \ll E\)</span> (remember, the reservoir is huge), we can Taylor expand around <span class="arithmatex">\(E\)</span>:</p>
+<div class="arithmatex">\[S_2(E - E_1) = S_2(E) - E_1 \frac{\partial S_2}{\partial E_2}\bigg|_{E_2 = E} + \cdots\]</div>
+<p>What's <span class="arithmatex">\(\frac{\partial S_2}{\partial E_2}\)</span>? We derived this in section 6.2. It's <span class="arithmatex">\(\frac{1}{T}\)</span>, where <span class="arithmatex">\(T\)</span> is the reservoir's temperature. So:</p>
+<div class="arithmatex">\[S_2(E - E_1) \approx S_2(E) - \frac{E_1}{T}\]</div>
+<p>Exponentiate both sides:</p>
+<div class="arithmatex">\[\Gamma_2(E - E_1) \approx e^{S_2(E)/k} \cdot e^{-E_1/kT}\]</div>
+<p>The first factor is a constant (it doesn't depend on <span class="arithmatex">\(E_1\)</span> at all, it's just the reservoir being the reservoir). So for the probability:</p>
+<div class="arithmatex">\[\rho(p_1, q_1) \propto e^{-E_1/kT} = e^{-\beta \mathcal{H}_1(p_1, q_1)}\]</div>
+<p>where <span class="arithmatex">\(\beta = 1/kT\)</span>.</p>
+<p>Done. Beautiful.</p>
+<p>That's the <strong>Boltzmann factor</strong>. The probability of finding the system in microstate <span class="arithmatex">\((p, q)\)</span> is proportional to <span class="arithmatex">\(e^{-\beta \mathcal{H}(p,q)}\)</span>.</p>
+<p>High-energy states? Suppressed exponentially. Low-energy states? Favored exponentially. But nothing is forbidden. Every state has <em>some</em> probability. The temperature <span class="arithmatex">\(T\)</span> controls how steep the penalty is: high <span class="arithmatex">\(T\)</span> means the exponential is gentle (all states roughly equal), low <span class="arithmatex">\(T\)</span> means it's brutal (only low-energy states survive).</p>
+<figure>
+  <img alt="Boltzmann factor" src="../../assets/plots/ch07-boltzmann-factor.png" width="600" />
+<br />
+<figcaption>The Boltzmann factor at four temperatures. At 300 K (orange), states up to ~80 meV still have significant weight. At 50 K (blue), anything above ~15 meV is essentially forbidden. Temperature controls how far up the energy ladder the system can reach.</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Key Insight</p>
+<p>The Boltzmann factor isn't a postulate. We <em>derived</em> it from the microcanonical ensemble by asking: "what happens to a small system in contact with a large reservoir?" The answer fell out of a Taylor expansion. The reservoir's entropy decreases when it gives energy to the system, and that decrease is <span class="arithmatex">\(E_1/T\)</span>. The exponential is just the entropy cost, converted to a probability.</p>
+</div>
+<h2 id="the-partition-function-the-most-useful-object-in-physics">The partition function: the most useful object in physics<a class="headerlink" href="#the-partition-function-the-most-useful-object-in-physics" title="Permanent link">&para;</a></h2>
+<p>Now we need to normalize. The total probability over all microstates must equal 1. So we integrate the Boltzmann factor over all of phase space:</p>
+<div class="arithmatex">\[Q_N(V, T) = \frac{1}{N! \, h^{3N}} \int d^{3N}p \, d^{3N}q \; e^{-\beta \mathcal{H}(p,q)}\]</div>
+<p>This is the <strong>partition function</strong>. Don't let the name scare you. It's just a normalization constant. But it turns out to encode <em>all</em> the thermodynamics of the system.</p>
+<p>Notice the <span class="arithmatex">\(N!\)</span> in the denominator? That's our friend from the Gibbs paradox (section 6.6). Correct Boltzmann counting. And the <span class="arithmatex">\(h^{3N}\)</span>? That makes the integral dimensionless. In classical mechanics <span class="arithmatex">\(h\)</span> is just an arbitrary constant. When we get to quantum mechanics, it becomes Planck's constant. For now, it doesn't affect any thermodynamic derivatives, so don't worry about it.</p>
+<h2 id="from-the-partition-function-to-all-of-thermodynamics">From the partition function to all of thermodynamics<a class="headerlink" href="#from-the-partition-function-to-all-of-thermodynamics" title="Permanent link">&para;</a></h2>
+<p>Here's where it gets wild. The Helmholtz free energy is:</p>
+<div class="arithmatex">\[\boxed{A(V, T) = -kT \log Q_N(V, T)}\]</div>
+<p>And from <span class="arithmatex">\(A\)</span>, you get <em>everything</em>:</p>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entropy</td>
+<td><span class="arithmatex">\(S = -\left(\dfrac{\partial A}{\partial T}\right)_V\)</span></td>
+</tr>
+<tr>
+<td>Pressure</td>
+<td><span class="arithmatex">\(P = -\left(\dfrac{\partial A}{\partial V}\right)_T\)</span></td>
+</tr>
+<tr>
+<td>Internal energy</td>
+<td><span class="arithmatex">\(U = A + TS\)</span></td>
+</tr>
+<tr>
+<td>Gibbs free energy</td>
+<td><span class="arithmatex">\(G = A + PV\)</span></td>
+</tr>
+<tr>
+<td>Heat capacity</td>
+<td><span class="arithmatex">\(C_V = \left(\dfrac{\partial U}{\partial T}\right)_V\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>One function. Five thermodynamic quantities. All from computing a single integral.</p>
+<p>Is that actually correct though? Let me show you why <span class="arithmatex">\(A = -kT \log Q_N\)</span> is the right identification. Start from the definition of <span class="arithmatex">\(Q_N\)</span>:</p>
+<div class="arithmatex">\[\frac{1}{N! h^{3N}} \int dp \, dq \; e^{-\beta \mathcal{H}(p,q)} = Q_N = e^{-\beta A}\]</div>
+<p>Which means:</p>
+<div class="arithmatex">\[\frac{1}{N! h^{3N}} \int dp \, dq \; e^{\beta[A - \mathcal{H}(p,q)]} = 1\]</div>
+<p>Differentiate both sides with respect to <span class="arithmatex">\(\beta\)</span> (holding <span class="arithmatex">\(V\)</span> fixed). The right side is just zero. The left side, by the product rule, gives:</p>
+<div class="arithmatex">\[\left\langle A - \mathcal{H} + \beta \frac{\partial A}{\partial \beta} \right\rangle = 0\]</div>
+<p>Since <span class="arithmatex">\(\beta = 1/kT\)</span>, we have <span class="arithmatex">\(\frac{\partial A}{\partial \beta} = \frac{\partial A}{\partial T} \cdot \frac{\partial T}{\partial \beta} = -kT^2 \frac{\partial A}{\partial T}\)</span>, so <span class="arithmatex">\(\beta \frac{\partial A}{\partial \beta} = -T \frac{\partial A}{\partial T}\)</span>. Plugging in:</p>
+<div class="arithmatex">\[A - \langle \mathcal{H} \rangle - T\left(\frac{\partial A}{\partial T}\right)_V = 0\]</div>
+<p>Rearrange:</p>
+<div class="arithmatex">\[\langle \mathcal{H} \rangle = A - T\left(\frac{\partial A}{\partial T}\right)_V = A + TS = U\]</div>
+<p>That's the thermodynamic identity <span class="arithmatex">\(U = A + TS\)</span>. It fell right out. The identification <span class="arithmatex">\(A = -kT \log Q_N\)</span> is self-consistent.</p>
+<p>If you followed that, congratulations. You just proved that the partition function gives the correct thermodynamics. Not bad for a page of algebra.</p>
+<h2 id="the-recipe-and-why-canonical-beats-microcanonical">The recipe (and why canonical beats microcanonical)<a class="headerlink" href="#the-recipe-and-why-canonical-beats-microcanonical" title="Permanent link">&para;</a></h2>
+<p>So here's the practical workflow in the canonical ensemble:</p>
+<ol>
+<li>Write down the Hamiltonian <span class="arithmatex">\(\mathcal{H}(p, q)\)</span></li>
+<li>Compute <span class="arithmatex">\(Q_N = \frac{1}{N! h^{3N}} \int dp \, dq \; e^{-\beta \mathcal{H}}\)</span></li>
+<li>Take <span class="arithmatex">\(A = -kT \log Q_N\)</span></li>
+<li>Get everything else from derivatives of <span class="arithmatex">\(A\)</span></li>
+</ol>
+<p>Compare this to the microcanonical recipe from section 6.3: compute the density of states <span class="arithmatex">\(\omega(E)\)</span> (which requires integrating over an energy <em>shell</em>, a much harder integral), get <span class="arithmatex">\(S = k \log \omega\)</span>, then solve for <span class="arithmatex">\(E(S, V)\)</span>...</p>
+<p>The canonical approach is almost always easier. The integral in <span class="arithmatex">\(Q_N\)</span> runs over <em>all</em> of phase space (no energy constraint to worry about). For most systems, it factors into simple pieces. Huang himself says the microcanonical approach is "clumsy" and that there's "little hope" of using it for anything beyond the ideal gas. The canonical ensemble is where real calculations happen.</p>
+<div class="admonition warning">
+<p class="admonition-title">Common Mistake</p>
+<p>Don't confuse the partition function <span class="arithmatex">\(Q_N\)</span> with the number of microstates <span class="arithmatex">\(\Gamma(E)\)</span>. They measure completely different things. <span class="arithmatex">\(\Gamma(E)\)</span> counts microstates in an energy shell (microcanonical). <span class="arithmatex">\(Q_N\)</span> is a weighted integral over <em>all</em> energies (canonical). They give equivalent thermodynamics in the end (we'll see this in section 7.2 when we show energy fluctuations are tiny), but they're different objects.</p>
+</div>
+<h2 id="what-this-means-for-your-simulation">What this means for your simulation<a class="headerlink" href="#what-this-means-for-your-simulation" title="Permanent link">&para;</a></h2>
+<h3 id="nvt-canonical-ensemble-sampling">NVT = canonical ensemble sampling<a class="headerlink" href="#nvt-canonical-ensemble-sampling" title="Permanent link">&para;</a></h3>
+<p>When you run an NVT simulation with a Nosé-Hoover thermostat, your system is sampling microstates from the canonical distribution. Each frame in your trajectory is drawn (approximately) from <span class="arithmatex">\(\rho(p, q) \propto e^{-\beta \mathcal{H}(p,q)}\)</span>. Low-energy configurations show up more often. High-energy ones are rare but not impossible.</p>
+<p>This is different from NVE, where every microstate on the energy surface is equally likely. In NVT, states are <em>weighted</em>. The Boltzmann factor is the weight.</p>
+<p>Let me show you. I ran the exact same 108-atom argon system twice: once with <code>fix nve</code> (microcanonical) and once with <code>fix nvt</code> at 87 K (canonical). Same atoms, same potential, same box. The only difference is whether energy is conserved or temperature is conserved. Look at the total energy:</p>
+<figure>
+  <img alt="NVE vs NVT energy" src="../../assets/plots/ch07-nve-vs-nvt.png" width="750" />
+<br />
+<figcaption>Total energy over 50 ps of production. NVE (blue) holds energy to within 3.5 meV. NVT (red) fluctuates with a spread of 133 meV, nearly 40 times larger. The histogram on the right shows NVE as a narrow spike and NVT as a broad distribution. That spread is not noise. It's the canonical ensemble doing exactly what it should.</figcaption>
+</figure>
+<p>The NVE energy is a flat line (within numerical precision). The NVT energy is bouncing all over the place, with a spread about 40 times larger. That's not a bug. That's the canonical ensemble. The thermostat is lending and reclaiming energy, and the system is exploring states across a range of energies, weighted by the Boltzmann factor.</p>
+<h3 id="the-thermostat-is-the-reservoir">The thermostat IS the reservoir<a class="headerlink" href="#the-thermostat-is-the-reservoir" title="Permanent link">&para;</a></h3>
+<p>The Nosé-Hoover thermostat isn't just a numerical trick. It's a mathematical implementation of the heat reservoir we used in the derivation. It adds extra degrees of freedom that absorb and release energy, keeping the temperature fluctuating around the target value. The extended system (your atoms + thermostat variables) is microcanonical. Your atoms alone are canonical. Exactly the setup we derived.</p>
+<h3 id="why-free-energy-is-hard">Why free energy is hard<a class="headerlink" href="#why-free-energy-is-hard" title="Permanent link">&para;</a></h3>
+<p>Notice something about the partition function? To compute <span class="arithmatex">\(A = -kT \log Q_N\)</span>, you'd need to evaluate <span class="arithmatex">\(Q_N\)</span> itself, not a derivative of it. But in a simulation, you only sample <em>relative</em> probabilities. You see which states the system visits, but you never know the absolute normalization.</p>
+<p>That's why free energies are hard in MD. You can get <span class="arithmatex">\(U\)</span>, <span class="arithmatex">\(P\)</span>, <span class="arithmatex">\(T\)</span>, <span class="arithmatex">\(C_V\)</span> easily (they're all <em>averages</em> or <em>derivatives</em>). But <span class="arithmatex">\(A\)</span> itself requires knowing <span class="arithmatex">\(Q_N\)</span>, and you can't get that from a straightforward simulation. That's why we need tricks like thermodynamic integration, free energy perturbation, and umbrella sampling. All of those are clever workarounds for the fact that <span class="arithmatex">\(Q_N\)</span> is inaccessible to direct simulation.</p>
+<div class="admonition note">
+<p class="admonition-title">MD Connection</p>
+<p>Every time someone says "free energy calculations are expensive," this is the fundamental reason. Temperature? Average the kinetic energy. Pressure? Average the virial. Free energy? You need the partition function itself, not just averages computed from it. That's a fundamentally harder problem, and the entire field of enhanced sampling exists because of it.</p>
+</div>
+<h2 id="takeaway">Takeaway<a class="headerlink" href="#takeaway" title="Permanent link">&para;</a></h2>
+<p>Put a small system in contact with a big heat bath. The reservoir's entropy cost for lending energy <span class="arithmatex">\(E\)</span> to the system is <span class="arithmatex">\(E/T\)</span>. That cost becomes the Boltzmann factor <span class="arithmatex">\(e^{-\beta E}\)</span>. Sum it over all states and you get the partition function <span class="arithmatex">\(Q_N\)</span>. Take the log and you get the Helmholtz free energy. From there, every thermodynamic quantity is one derivative away. That's the canonical ensemble. That's what your NVT thermostat has been sampling all along.</p>
+<details class="question">
+<summary>Check Your Understanding</summary>
+<ol>
+<li>We Taylor-expanded the reservoir's entropy and tossed out the second-order term. When would that be a bad idea? Think about what kind of "reservoir" would make that approximation blow up.</li>
+<li>There's an arbitrary constant <span class="arithmatex">\(h\)</span> hiding in <span class="arithmatex">\(Q_N\)</span>. You can set it to anything you want. So why doesn't it mess up the pressure, entropy, or any other thermodynamic quantity you compute from <span class="arithmatex">\(A = -kT \log Q_N\)</span>?</li>
+<li>You can measure <span class="arithmatex">\(U = \langle \mathcal{H} \rangle\)</span> by just averaging over your trajectory. But you can't get <span class="arithmatex">\(A = -kT \log Q_N\)</span> the same way. What's fundamentally different about <span class="arithmatex">\(A\)</span> that makes a single trajectory useless?</li>
+<li>You scale your argon box from 108 atoms to 10,000 atoms (same density, same temperature). Do the NVT energy fluctuations get bigger or smaller relative to the mean energy? By roughly how much?</li>
+</ol>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/crisnapatel" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

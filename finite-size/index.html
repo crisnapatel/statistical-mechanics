@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://crisnapatel.github.io/statistical-mechanics/reading-order/">
+        <link rel="canonical" href="https://crisnapatel.github.io/statistical-mechanics/finite-size/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../force-fields/">
       
       
-        <link rel="next" href="../ch04/">
+        <link rel="next" href="../free-energy/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Reading Order - Statistical Mechanics — But Make It Make Sense</title>
+        <title>Finite Size & Periodic Images - Statistical Mechanics — But Make It Make Sense</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reading-order-for-md-practitioners" class="md-skip">
+        <a href="#finite-size-periodic-images-and-the-ghosts-in-your-box" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reading Order
+              Finite Size & Periodic Images
             
           </span>
         </div>
@@ -279,32 +279,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Reading Order
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../reading-order/" class="md-nav__link">
         
   
   
@@ -315,53 +293,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-idea" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Idea
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#suggested-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      Suggested Path
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#or-just-follow-the-book" class="md-nav__link">
-    <span class="md-ellipsis">
-      Or Just Follow the Book
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -917,8 +848,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -929,13 +862,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
@@ -951,7 +882,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Practical MD Topics
@@ -1054,10 +985,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../finite-size/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Finite Size & Periodic Images
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1068,6 +1021,149 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#your-simulation-box-is-lying-to-you-about-being-infinite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your simulation box is lying to you about being infinite.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-periodic-boundary-conditions-actually-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      What periodic boundary conditions actually do
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-minimum-image-convention" class="md-nav__link">
+    <span class="md-ellipsis">
+      The minimum image convention
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ghosts-what-periodic-images-actually-look-like" class="md-nav__link">
+    <span class="md-ellipsis">
+      The ghosts: what periodic images actually look like
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finite-size-effects-the-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finite-size effects: the catalog
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Finite-size effects: the catalog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-cutoff-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Cutoff artifacts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-self-interaction-through-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Self-interaction through images
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-concentration-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Concentration artifacts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-suppressed-long-wavelength-fluctuations" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Suppressed long-wavelength fluctuations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-transport-property-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Transport property artifacts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-check-for-finite-size-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to check for finite-size effects
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#long-range-corrections-in-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Long-range corrections in practice
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1383,27 +1479,123 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-idea" class="md-nav__link">
+  <a href="#your-simulation-box-is-lying-to-you-about-being-infinite" class="md-nav__link">
     <span class="md-ellipsis">
-      The Idea
+      Your simulation box is lying to you about being infinite.
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#suggested-path" class="md-nav__link">
+  <a href="#what-periodic-boundary-conditions-actually-do" class="md-nav__link">
     <span class="md-ellipsis">
-      Suggested Path
+      What periodic boundary conditions actually do
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#or-just-follow-the-book" class="md-nav__link">
+  <a href="#the-minimum-image-convention" class="md-nav__link">
     <span class="md-ellipsis">
-      Or Just Follow the Book
+      The minimum image convention
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ghosts-what-periodic-images-actually-look-like" class="md-nav__link">
+    <span class="md-ellipsis">
+      The ghosts: what periodic images actually look like
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finite-size-effects-the-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finite-size effects: the catalog
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Finite-size effects: the catalog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-cutoff-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Cutoff artifacts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-self-interaction-through-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Self-interaction through images
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-concentration-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Concentration artifacts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-suppressed-long-wavelength-fluctuations" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Suppressed long-wavelength fluctuations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-transport-property-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Transport property artifacts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-check-for-finite-size-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to check for finite-size effects
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#long-range-corrections-in-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Long-range corrections in practice
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
     </span>
   </a>
   
@@ -1428,125 +1620,119 @@
   
 
 
-<h1 id="reading-order-for-md-practitioners">Reading Order for MD Practitioners<a class="headerlink" href="#reading-order-for-md-practitioners" title="Permanent link">&para;</a></h1>
-<p>Huang's book follows the standard graduate course order. That's fine if you're taking a course. But if you're coming from <strong>molecular dynamics simulations</strong> and want to understand the physics underneath what you're already doing, here's a suggested path.</p>
-<h2 id="the-idea">The Idea<a class="headerlink" href="#the-idea" title="Permanent link">&para;</a></h2>
-<p>Start from what your simulation computes. Build outward to the theory.</p>
-<h2 id="suggested-path">Suggested Path<a class="headerlink" href="#suggested-path" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Step</th>
-<th>Topic</th>
-<th>Huang Chapters</th>
-<th>Why this order</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>What is statistical mechanics?</td>
-<td>Ch 6 intro</td>
-<td>Frame the whole subject</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Phase space &amp; microstates</td>
-<td>Ch 6.0–6.2</td>
-<td>"What your simulation is actually computing"</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Velocity initialization</td>
-<td>Ch 4.2</td>
-<td>"Where your atom velocities come from"</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Ensembles</td>
-<td>Ch 6–7</td>
-<td>"What your thermostat/barostat enforces"</td>
-</tr>
-<tr>
-<td>4b</td>
-<td>Which thermostat? Which barostat?</td>
-<td><a href="../which-thermostat/">Thermostat page</a></td>
-<td>"Which <code>fix</code> for which job?"</td>
-</tr>
-<tr>
-<td>4c</td>
-<td>Your force field is a lie</td>
-<td><a href="../force-fields/">Force Field page</a></td>
-<td>"What <code>pair_coeff</code> actually means"</td>
-</tr>
-<tr>
-<td>4d</td>
-<td>Finite size &amp; periodic images</td>
-<td><a href="../finite-size/">Finite Size page</a></td>
-<td>"What <code>boundary p p p</code> really means"</td>
-</tr>
-<tr>
-<td>4e</td>
-<td>Free energy isn't free</td>
-<td><a href="../free-energy/">Free Energy page</a></td>
-<td>"Why <span class="arithmatex">\(\Delta G\)</span> is so hard to compute"</td>
-</tr>
-<tr>
-<td>4f</td>
-<td>The radial distribution function</td>
-<td><a href="../rdf/">RDF page</a></td>
-<td>"Your simulation's fingerprint"</td>
-</tr>
-<tr>
-<td>5</td>
-<td>The partition function</td>
-<td>Ch 7</td>
-<td>The one function that generates everything</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Thermodynamic potentials</td>
-<td><a href="../thermodynamic-potentials/">Potentials page</a></td>
-<td>"Which energy is my simulation minimizing?"</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Connecting to thermodynamics</td>
-<td>Ch 7–8</td>
-<td>Bridge micro → macro</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Brownian motion &amp; diffusion</td>
-<td><a href="../brownian-motion/">Brownian Motion page</a></td>
-<td>"Why does <code>compute msd</code> work?"</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Uncertainty &amp; sampling</td>
-<td><a href="../uncertainty-sampling/">Uncertainty page</a></td>
-<td>"Are my error bars honest?"</td>
-</tr>
-<tr>
-<td>10</td>
-<td>Ideal gas</td>
-<td>Ch 8</td>
-<td>First real calculation</td>
-</tr>
-<tr>
-<td>11</td>
-<td>Interacting systems</td>
-<td>Later chapters</td>
-<td>Where MD actually lives</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is a suggestion, not a rule. Every chapter page also shows its Huang chapter number so you can follow the book's order if you prefer.</p>
+<h1 id="finite-size-periodic-images-and-the-ghosts-in-your-box">Finite Size, Periodic Images, and the Ghosts in Your Box<a class="headerlink" href="#finite-size-periodic-images-and-the-ghosts-in-your-box" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Practical MD topic — no specific Huang chapter. This is the stuff you realize matters after your first 'real' project.</p>
 </div>
-<h2 id="or-just-follow-the-book">Or Just Follow the Book<a class="headerlink" href="#or-just-follow-the-book" title="Permanent link">&para;</a></h2>
-<p>Each chapter page maps directly to Huang's chapters. If you're reading the book alongside this site, just go chapter by chapter — every page tells you exactly where in the book it corresponds to.</p>
+<h2 id="your-simulation-box-is-lying-to-you-about-being-infinite">Your simulation box is lying to you about being infinite.<a class="headerlink" href="#your-simulation-box-is-lying-to-you-about-being-infinite" title="Permanent link">&para;</a></h2>
+<p>Here's a fun thought experiment. You set up a nice 10 nm box of liquid argon. 4,000 atoms. Periodic boundary conditions. You run it, compute <span class="arithmatex">\(g(r)\)</span>, get a beautiful curve, and move on with your life.</p>
+<p>But wait. How big is 10 nm? About 30 atomic diameters across. That's it. Your "bulk liquid" is 30 atoms wide. And every atom in that box is interacting not just with its neighbors, but with an infinite lattice of periodic copies of itself. The "bulk" behavior you're measuring is actually the behavior of a tiny crystal of simulation boxes, tiled to infinity.</p>
+<p>Is that OK? Usually, yes. Sometimes, catastrophically no. And knowing the difference is what separates simulation results you can publish from simulation results that belong in the trash.</p>
+<p>Let's go.</p>
+<h2 id="what-periodic-boundary-conditions-actually-do">What periodic boundary conditions actually do<a class="headerlink" href="#what-periodic-boundary-conditions-actually-do" title="Permanent link">&para;</a></h2>
+<p>Strip away the implementation details, and PBC is a simple trick: when an atom exits the box on one side, it re-enters on the opposite side. The box has no walls. No surfaces. No edges. Topologically, it's a 3D torus.</p>
+<p>Why do we need this? Because we're trying to simulate a bulk material. Bulk means no surfaces. But a finite box has surfaces. Those surfaces introduce artifacts: atoms near the boundary behave differently from atoms in the interior. For a 10 nm box, the surface-to-volume ratio is enormous. Most of your atoms would be "surface" atoms.</p>
+<p>PBC eliminates surfaces entirely. Every atom sees the same environment in every direction. There's no "edge" of the simulation. From any atom's perspective, the universe looks the same.</p>
+<div class="admonition tip">
+<p class="admonition-title">Key Insight</p>
+<p>PBC doesn't simulate an infinite system. It simulates a <strong>small system repeated infinitely</strong>. That's a very different thing. Your atoms interact with their periodic images, and the box length becomes a physical parameter of the system. If the box is too small, the periodic images interact with each other in ways that have nothing to do with real physics.</p>
+</div>
+<h2 id="the-minimum-image-convention">The minimum image convention<a class="headerlink" href="#the-minimum-image-convention" title="Permanent link">&para;</a></h2>
+<p>Here's the practical question: atom <span class="arithmatex">\(i\)</span> is at position <span class="arithmatex">\(\mathbf{r}_i\)</span> and atom <span class="arithmatex">\(j\)</span> is at <span class="arithmatex">\(\mathbf{r}_j\)</span>. But <span class="arithmatex">\(j\)</span> also has images at <span class="arithmatex">\(\mathbf{r}_j + n\mathbf{L}\)</span> for every integer vector <span class="arithmatex">\(n\)</span>. Which copy of <span class="arithmatex">\(j\)</span> should <span class="arithmatex">\(i\)</span> interact with?</p>
+<p>The <strong>minimum image convention</strong> says: interact with the closest copy. In a cubic box of side <span class="arithmatex">\(L\)</span>:</p>
+<div class="arithmatex">\[\Delta x = x_j - x_i - L \cdot \text{round}\!\left(\frac{x_j - x_i}{L}\right)\]</div>
+<p>Same for <span class="arithmatex">\(y\)</span> and <span class="arithmatex">\(z\)</span>. This wraps the displacement vector so that <span class="arithmatex">\(|\Delta x| \leq L/2\)</span>. Simple. Fast. And it has one critical consequence:</p>
+<p><strong>Your interaction cutoff must be less than <span class="arithmatex">\(L/2\)</span>.</strong></p>
+<p>If <span class="arithmatex">\(r_\text{cut} &gt; L/2\)</span>, an atom could interact with two copies of the same neighbor (the "real" one and its image). That's unphysical. It also means the force on atom <span class="arithmatex">\(i\)</span> depends on which image of <span class="arithmatex">\(j\)</span> you happen to find first, which is a recipe for energy conservation disasters.</p>
+<div class="admonition warning">
+<p class="admonition-title">Common Mistake</p>
+<p>Setting a cutoff of 12 Å in a box that's 20 Å across. The cutoff (12) is greater than <span class="arithmatex">\(L/2\)</span> (10). LAMMPS will warn you about this, but not all codes do. If you see <code>WARNING: Pair cutoff &gt; half of box length</code>, your simulation is broken. Either increase the box or decrease the cutoff.</p>
+</div>
+<h2 id="the-ghosts-what-periodic-images-actually-look-like">The ghosts: what periodic images actually look like<a class="headerlink" href="#the-ghosts-what-periodic-images-actually-look-like" title="Permanent link">&para;</a></h2>
+<p>Imagine you could zoom out and see not just your simulation box, but all its periodic copies. In 2D, it would look like a tiled floor. Your 256 atoms become 256 <span class="arithmatex">\(\times \infty\)</span> atoms, arranged in a pattern that repeats every <span class="arithmatex">\(L\)</span> in each direction.</p>
+<p>Now here's the subtle part. Those image atoms aren't independent. When atom 42 moves to the right by 0.1 Å, every copy of atom 42 in every image box also moves to the right by 0.1 Å. Simultaneously. Because they're not real atoms. They're ghosts. Echoes of the original.</p>
+<p>This means your system has exactly <span class="arithmatex">\(N\)</span> degrees of freedom, not <span class="arithmatex">\(\infty\)</span>. The periodic images add no new information. They just provide a way to compute interactions without surfaces.</p>
+<p>But they do impose a constraint: <strong>your system cannot support any fluctuation with a wavelength longer than <span class="arithmatex">\(L\)</span></strong>. Density waves, sound waves, long-wavelength phonons, anything with <span class="arithmatex">\(\lambda &gt; L\)</span> is killed by the periodicity. The box acts as a high-pass filter on fluctuations.</p>
+<p>For most liquid-state properties at moderate conditions, this doesn't matter. The correlation length is a few atomic diameters, well within the box. But near a phase transition, where correlation lengths diverge? Or for properties that depend on long-wavelength fluctuations (like the compressibility near the critical point)? The box size becomes the dominant source of error.</p>
+<div class="admonition note">
+<p class="admonition-title">MD Connection</p>
+<p>In LAMMPS, periodic boundary conditions are set with <code>boundary p p p</code>. The <code>p</code> means periodic in that dimension. You can also use <code>f</code> (fixed) or <code>s</code> (shrink-wrapped) for non-periodic boundaries. For bulk simulations, always use <code>p p p</code>.</p>
+</div>
+<h2 id="finite-size-effects-the-catalog">Finite-size effects: the catalog<a class="headerlink" href="#finite-size-effects-the-catalog" title="Permanent link">&para;</a></h2>
+<p>Not all finite-size effects are created equal. Here's what can go wrong, ranked by how often it bites people.</p>
+<h3 id="1-cutoff-artifacts">1. Cutoff artifacts<a class="headerlink" href="#1-cutoff-artifacts" title="Permanent link">&para;</a></h3>
+<p>The most basic finite-size issue. If your box is too small relative to the interaction range, the cutoff truncation removes a significant fraction of the total interaction energy. For LJ with <span class="arithmatex">\(r_\text{cut} = 2.5\sigma\)</span> in a box of <span class="arithmatex">\(5\sigma\)</span>, you're cutting off interactions that would contribute meaningfully to the energy and pressure.</p>
+<p>The fix: <strong>long-range corrections</strong>. For a uniform liquid, the contribution of interactions beyond <span class="arithmatex">\(r_\text{cut}\)</span> can be estimated analytically. For the LJ potential:</p>
+<div class="arithmatex">\[U_\text{tail} = \frac{8\pi N \rho \epsilon \sigma^3}{3} \left[ \frac{1}{3}\left(\frac{\sigma}{r_\text{cut}}\right)^9 - \left(\frac{\sigma}{r_\text{cut}}\right)^3 \right]\]</div>
+<div class="arithmatex">\[P_\text{tail} = \frac{16\pi \rho^2 \epsilon \sigma^3}{3} \left[ \frac{2}{3}\left(\frac{\sigma}{r_\text{cut}}\right)^9 - \left(\frac{\sigma}{r_\text{cut}}\right)^3 \right]\]</div>
+<p>These assume <span class="arithmatex">\(g(r) = 1\)</span> beyond the cutoff, which is good for liquids far from phase transitions and terrible near interfaces or phase boundaries.</p>
+<p>In LAMMPS: <code>pair_modify tail yes</code>. Two words. But they can shift your pressure by 10-20% for typical LJ cutoffs. Always turn this on for homogeneous systems.</p>
+<h3 id="2-self-interaction-through-images">2. Self-interaction through images<a class="headerlink" href="#2-self-interaction-through-images" title="Permanent link">&para;</a></h3>
+<p>Your solute molecule interacts with its own periodic image. For a small molecule in a large box, the image is far away and the interaction is negligible. For a protein in a 6 nm box, the protein-image distance might be only 2 nm. The protein "feels" its own ghost.</p>
+<p>This is especially bad for charged systems. Coulomb interactions decay as <span class="arithmatex">\(1/r\)</span>, which means even distant images contribute significantly. The interaction energy of a charge with its own periodic images scales as <span class="arithmatex">\(q^2/L\)</span>, and for a typical protein simulation, this artifact can be comparable to the solvation free energy you're trying to compute.</p>
+<p>The rule of thumb: keep at least 1-1.5 nm of solvent between the solute and the box edge. For charged systems, you may need more, or you may need finite-size corrections (Makov-Payne, Hummer-Hunenberger-Pratt).</p>
+<h3 id="3-concentration-artifacts">3. Concentration artifacts<a class="headerlink" href="#3-concentration-artifacts" title="Permanent link">&para;</a></h3>
+<p>You put one solute molecule in your periodic box. You think you're simulating dilute solution. But you're not. You're simulating a solution at concentration <span class="arithmatex">\(c = 1/(N_A V_\text{box})\)</span>. For a 5 nm cubic box, that's about 5 mM. Not dilute. And because of PBC, your system is actually a crystal of solute molecules, spaced <span class="arithmatex">\(L\)</span> apart.</p>
+<p>For most liquid-state properties this doesn't matter. But for properties that depend on solute-solute interactions (osmotic pressure, activity coefficients, binding thermodynamics at low concentrations), the effective concentration matters.</p>
+<h3 id="4-suppressed-long-wavelength-fluctuations">4. Suppressed long-wavelength fluctuations<a class="headerlink" href="#4-suppressed-long-wavelength-fluctuations" title="Permanent link">&para;</a></h3>
+<p>This is the subtle one. Near a phase transition (liquid-gas critical point, crystallization, demixing), the correlation length diverges. When <span class="arithmatex">\(\xi &gt; L\)</span>, the box literally cannot contain the critical fluctuations. The result: shifted transition temperatures, suppressed susceptibilities, wrong critical exponents.</p>
+<p>Even away from phase transitions, the compressibility <span class="arithmatex">\(\kappa_T\)</span> involves long-wavelength density fluctuations. In a small box, these are suppressed, and <span class="arithmatex">\(\kappa_T\)</span> is systematically underestimated.</p>
+<h3 id="5-transport-property-artifacts">5. Transport property artifacts<a class="headerlink" href="#5-transport-property-artifacts" title="Permanent link">&para;</a></h3>
+<p>We already met this on the <a href="../brownian-motion/">Brownian motion page</a>. The diffusion coefficient in a periodic box has a finite-size correction:</p>
+<div class="arithmatex">\[D_\text{PBC} = D_\infty - \frac{k_B T \xi}{6\pi \eta L}\]</div>
+<p>where <span class="arithmatex">\(\xi \approx 2.837\)</span> is a lattice constant for cubic PBC and <span class="arithmatex">\(\eta\)</span> is the shear viscosity. For a typical water box of 4 nm, this correction is 10-15% of <span class="arithmatex">\(D\)</span>. Not small.</p>
+<p>Viscosity has its own finite-size effects, though they're typically smaller. The general pattern: transport properties in periodic boxes are system-size dependent, and the dependence goes as <span class="arithmatex">\(1/L\)</span>.</p>
+<h2 id="how-to-check-for-finite-size-effects">How to check for finite-size effects<a class="headerlink" href="#how-to-check-for-finite-size-effects" title="Permanent link">&para;</a></h2>
+<p>Here's the embarrassingly simple answer: <strong>run two system sizes and compare.</strong></p>
+<p>Double the box (which means 8x the atoms in 3D). Compute your observable at both sizes. If they agree within statistical uncertainty, the smaller box is probably fine. If they don't, you need the bigger box (or you need finite-size corrections).</p>
+<p>This sounds expensive, and it is. But it's the only way to be sure. Theoretical estimates of finite-size effects exist for specific observables (the Yeh-Hummer correction for diffusion, analytic tail corrections for energy), but they don't cover every case. The two-size test is your safety net.</p>
+<p>For a quick sanity check:</p>
+<ul>
+<li><strong><span class="arithmatex">\(g(r)\)</span></strong>: Should go to 1.0 at <span class="arithmatex">\(r = L/2\)</span>. If it's still oscillating, your box is too small (or your density is too high for that box size).</li>
+<li><strong>Energy</strong>: Compute with and without tail corrections (<code>pair_modify tail yes/no</code>). If the difference is &gt; 1% of the total, your cutoff might be too short.</li>
+<li><strong>Pressure</strong>: Same test. Pressure is more sensitive to tail corrections than energy.</li>
+<li><strong>Diffusion</strong>: Compare to a larger box. Apply Yeh-Hummer. If the correction is &gt; 5%, consider whether your box is adequate.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Key Insight</p>
+<p>The question isn't "is my box big enough?" The question is "is my box big enough for <strong>this</strong> property?" A box that's perfectly adequate for <span class="arithmatex">\(g(r)\)</span> might be too small for diffusion. A box that's fine for liquid-state properties might be way too small for a phase transition study.</p>
+</div>
+<h2 id="long-range-corrections-in-practice">Long-range corrections in practice<a class="headerlink" href="#long-range-corrections-in-practice" title="Permanent link">&para;</a></h2>
+<p>For LJ interactions in homogeneous systems, tail corrections are straightforward and always worth applying. The formulas above assume <span class="arithmatex">\(g(r) \approx 1\)</span> beyond the cutoff. This works for:</p>
+<ul>
+<li>Bulk liquids at moderate conditions</li>
+<li>Dense fluids away from interfaces</li>
+<li>Any system where the structure is isotropic beyond <span class="arithmatex">\(r_\text{cut}\)</span></li>
+</ul>
+<p>It fails for:</p>
+<ul>
+<li>Vapor-liquid interfaces (density isn't uniform)</li>
+<li>Adsorption on surfaces</li>
+<li>Systems near phase coexistence</li>
+<li>Anything with long-range structure beyond the cutoff</li>
+</ul>
+<p>For electrostatic interactions (<span class="arithmatex">\(1/r\)</span> decay), truncation is never acceptable. You need Ewald summation or one of its grid-based variants (PPPM, PME). That's a whole separate topic, covered on the <a href="../long-range-electrostatics/">electrostatics page</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">MD Connection</p>
+<p>In LAMMPS, the key commands are:</p>
+<ul>
+<li><code>pair_modify tail yes</code> — apply analytic tail corrections for LJ energy and pressure. Two words that can shift your pressure by 10-20%.</li>
+<li><code>kspace_style pppm 1e-4</code> — PPPM for long-range electrostatics. The <code>1e-4</code> is the relative force accuracy. Always use this (or <code>ewald</code>) for charged systems.</li>
+<li><code>pair_modify shift yes</code> — shift the potential so <span class="arithmatex">\(U(r_\text{cut}) = 0\)</span>. This removes the energy discontinuity at the cutoff but changes the effective potential. Use for dynamics (avoids force discontinuity), but note that the thermodynamic properties now correspond to the shifted potential, not the original.</li>
+</ul>
+</div>
+<h2 id="takeaway">Takeaway<a class="headerlink" href="#takeaway" title="Permanent link">&para;</a></h2>
+<p>Periodic boundary conditions eliminate surfaces but create a system that repeats every <span class="arithmatex">\(L\)</span>. Your box length is a physical parameter: too small, and finite-size artifacts contaminate your results. The minimum image convention requires <span class="arithmatex">\(r_\text{cut} &lt; L/2\)</span>. Long-range LJ corrections (<code>pair_modify tail yes</code>) are nearly free and always worth applying for homogeneous systems. For electrostatics, truncation is never OK. The definitive test for finite-size effects is running two system sizes, but for known artifacts (diffusion, tail corrections), analytic formulas exist. Always ask: is my box big enough for <em>this</em> property?</p>
+<details class="question">
+<summary>Check Your Understanding</summary>
+<ol>
+<li>You run a liquid argon simulation in a 20 Å cubic box with <code>pair_style lj/cut 12.0</code>. LAMMPS prints a warning. Your labmate says "it's just a warning, ignore it." What exactly goes wrong if you ignore it, and what are your two options to fix it?</li>
+<li>You compute <span class="arithmatex">\(g(r)\)</span> and it flattens out at 0.95 instead of 1.0 at large <span class="arithmatex">\(r\)</span>. Is this a finite-size effect, a normalization bug, or something else? How would you diagnose it?</li>
+<li>Someone simulates a protein in a 5 nm box with periodic boundaries. The protein's longest dimension is 4 nm. They claim the results represent "dilute solution" behavior. What's wrong with this claim, and what specific artifact will contaminate their free energy calculations?</li>
+<li>You add <code>pair_modify tail yes</code> to your LJ simulation and the pressure jumps from <span class="arithmatex">\(-50\)</span> bar to <span class="arithmatex">\(+200\)</span> bar. Is that reasonable, or did you break something? What determines the size of the tail correction?</li>
+<li>Your computed diffusion coefficient is 15% lower than the experimental value. Before blaming the force field, what finite-size check should you do first?</li>
+</ol>
+</details>
 
 
 

@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://crisnapatel.github.io/statistical-mechanics/reading-order/">
+        <link rel="canonical" href="https://crisnapatel.github.io/statistical-mechanics/rare-events/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../coarse-graining/">
       
       
-        <link rel="next" href="../ch04/">
+        <link rel="next" href="../neighbors-cutoffs/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Reading Order - Statistical Mechanics — But Make It Make Sense</title>
+        <title>Rare Events & TST - Statistical Mechanics — But Make It Make Sense</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reading-order-for-md-practitioners" class="md-skip">
+        <a href="#rare-events-and-transition-state-theory" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reading Order
+              Rare Events & TST
             
           </span>
         </div>
@@ -279,32 +279,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Reading Order
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../reading-order/" class="md-nav__link">
         
   
   
@@ -315,53 +293,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-idea" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Idea
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#suggested-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      Suggested Path
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#or-just-follow-the-book" class="md-nav__link">
-    <span class="md-ellipsis">
-      Or Just Follow the Book
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -917,8 +848,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -929,13 +862,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
@@ -951,7 +882,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Practical MD Topics
@@ -1261,10 +1192,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../rare-events/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Rare Events & TST
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1275,6 +1228,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#most-of-the-time-nothing-interesting-happens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Most of the time, nothing interesting happens.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-free-energy-barrier" class="md-nav__link">
+    <span class="md-ellipsis">
+      The free energy barrier
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#computing-rates-from-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computing rates from simulation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Computing rates from simulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#direct-counting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Direct counting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#free-energy-tst" class="md-nav__link">
+    <span class="md-ellipsis">
+      Free energy + TST
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transition-path-sampling-tps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transition path sampling (TPS)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-reaction-coordinate-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      The reaction coordinate problem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1383,27 +1434,78 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-idea" class="md-nav__link">
+  <a href="#most-of-the-time-nothing-interesting-happens" class="md-nav__link">
     <span class="md-ellipsis">
-      The Idea
+      Most of the time, nothing interesting happens.
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#suggested-path" class="md-nav__link">
+  <a href="#the-free-energy-barrier" class="md-nav__link">
     <span class="md-ellipsis">
-      Suggested Path
+      The free energy barrier
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#or-just-follow-the-book" class="md-nav__link">
+  <a href="#computing-rates-from-simulation" class="md-nav__link">
     <span class="md-ellipsis">
-      Or Just Follow the Book
+      Computing rates from simulation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Computing rates from simulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#direct-counting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Direct counting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#free-energy-tst" class="md-nav__link">
+    <span class="md-ellipsis">
+      Free energy + TST
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transition-path-sampling-tps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transition path sampling (TPS)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-reaction-coordinate-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      The reaction coordinate problem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
     </span>
   </a>
   
@@ -1428,125 +1530,63 @@
   
 
 
-<h1 id="reading-order-for-md-practitioners">Reading Order for MD Practitioners<a class="headerlink" href="#reading-order-for-md-practitioners" title="Permanent link">&para;</a></h1>
-<p>Huang's book follows the standard graduate course order. That's fine if you're taking a course. But if you're coming from <strong>molecular dynamics simulations</strong> and want to understand the physics underneath what you're already doing, here's a suggested path.</p>
-<h2 id="the-idea">The Idea<a class="headerlink" href="#the-idea" title="Permanent link">&para;</a></h2>
-<p>Start from what your simulation computes. Build outward to the theory.</p>
-<h2 id="suggested-path">Suggested Path<a class="headerlink" href="#suggested-path" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Step</th>
-<th>Topic</th>
-<th>Huang Chapters</th>
-<th>Why this order</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>What is statistical mechanics?</td>
-<td>Ch 6 intro</td>
-<td>Frame the whole subject</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Phase space &amp; microstates</td>
-<td>Ch 6.0–6.2</td>
-<td>"What your simulation is actually computing"</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Velocity initialization</td>
-<td>Ch 4.2</td>
-<td>"Where your atom velocities come from"</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Ensembles</td>
-<td>Ch 6–7</td>
-<td>"What your thermostat/barostat enforces"</td>
-</tr>
-<tr>
-<td>4b</td>
-<td>Which thermostat? Which barostat?</td>
-<td><a href="../which-thermostat/">Thermostat page</a></td>
-<td>"Which <code>fix</code> for which job?"</td>
-</tr>
-<tr>
-<td>4c</td>
-<td>Your force field is a lie</td>
-<td><a href="../force-fields/">Force Field page</a></td>
-<td>"What <code>pair_coeff</code> actually means"</td>
-</tr>
-<tr>
-<td>4d</td>
-<td>Finite size &amp; periodic images</td>
-<td><a href="../finite-size/">Finite Size page</a></td>
-<td>"What <code>boundary p p p</code> really means"</td>
-</tr>
-<tr>
-<td>4e</td>
-<td>Free energy isn't free</td>
-<td><a href="../free-energy/">Free Energy page</a></td>
-<td>"Why <span class="arithmatex">\(\Delta G\)</span> is so hard to compute"</td>
-</tr>
-<tr>
-<td>4f</td>
-<td>The radial distribution function</td>
-<td><a href="../rdf/">RDF page</a></td>
-<td>"Your simulation's fingerprint"</td>
-</tr>
-<tr>
-<td>5</td>
-<td>The partition function</td>
-<td>Ch 7</td>
-<td>The one function that generates everything</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Thermodynamic potentials</td>
-<td><a href="../thermodynamic-potentials/">Potentials page</a></td>
-<td>"Which energy is my simulation minimizing?"</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Connecting to thermodynamics</td>
-<td>Ch 7–8</td>
-<td>Bridge micro → macro</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Brownian motion &amp; diffusion</td>
-<td><a href="../brownian-motion/">Brownian Motion page</a></td>
-<td>"Why does <code>compute msd</code> work?"</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Uncertainty &amp; sampling</td>
-<td><a href="../uncertainty-sampling/">Uncertainty page</a></td>
-<td>"Are my error bars honest?"</td>
-</tr>
-<tr>
-<td>10</td>
-<td>Ideal gas</td>
-<td>Ch 8</td>
-<td>First real calculation</td>
-</tr>
-<tr>
-<td>11</td>
-<td>Interacting systems</td>
-<td>Later chapters</td>
-<td>Where MD actually lives</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is a suggestion, not a rule. Every chapter page also shows its Huang chapter number so you can follow the book's order if you prefer.</p>
+<h1 id="rare-events-and-transition-state-theory">Rare Events and Transition State Theory<a class="headerlink" href="#rare-events-and-transition-state-theory" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Practical MD topic — connects to <a href="../enhanced-sampling/">Enhanced Sampling</a> and <a href="../free-energy/">Free Energy Isn't Free</a>. This is the framework for understanding why things happen slowly.</p>
 </div>
-<h2 id="or-just-follow-the-book">Or Just Follow the Book<a class="headerlink" href="#or-just-follow-the-book" title="Permanent link">&para;</a></h2>
-<p>Each chapter page maps directly to Huang's chapters. If you're reading the book alongside this site, just go chapter by chapter — every page tells you exactly where in the book it corresponds to.</p>
+<h2 id="most-of-the-time-nothing-interesting-happens">Most of the time, nothing interesting happens.<a class="headerlink" href="#most-of-the-time-nothing-interesting-happens" title="Permanent link">&para;</a></h2>
+<p>Think about what your simulation actually does, step by step. The atoms vibrate. They bounce around. They explore the local free energy basin. For 99.999% of the trajectory, the system is doing the molecular equivalent of pacing in a room.</p>
+<p>Then, rarely, something happens. A bond rotates. A barrier is crossed. A molecule detaches. A crystal nucleates. The system transitions from one metastable state to another. These <strong>rare events</strong> determine the rates of chemical reactions, phase transitions, protein folding, diffusion in solids, and essentially every dynamical process that matters.</p>
+<p>The problem: if the event happens once per microsecond, and your simulation runs for nanoseconds, you'll never see it. Brute-force MD samples the boring parts beautifully and misses the interesting parts entirely.</p>
+<p>Transition state theory (TST) provides a way to calculate the rate without simulating the event directly. Let me show you how.</p>
+<h2 id="the-free-energy-barrier">The free energy barrier<a class="headerlink" href="#the-free-energy-barrier" title="Permanent link">&para;</a></h2>
+<p>Every rare event can be described (at least approximately) as crossing a free energy barrier along some reaction coordinate <span class="arithmatex">\(q\)</span>. The system starts in basin A, crosses a barrier at <span class="arithmatex">\(q^\ddagger\)</span> (the transition state), and ends in basin B.</p>
+<p>The rate of crossing, from TST:</p>
+<div class="arithmatex">\[k_\text{TST} = \frac{k_B T}{2\pi m^\ddagger} \frac{e^{-\beta F(q^\ddagger)}}{\int_{A} e^{-\beta F(q)} \, dq}\]</div>
+<p>More intuitively: the rate is proportional to the probability of being at the transition state, times the velocity of crossing. The exponential factor <span class="arithmatex">\(e^{-\beta \Delta F^\ddagger}\)</span> (where <span class="arithmatex">\(\Delta F^\ddagger = F(q^\ddagger) - F_A\)</span>) dominates everything. A barrier of 20 <span class="arithmatex">\(k_BT\)</span> means the transition state is visited <span class="arithmatex">\(e^{-20} \approx 2 \times 10^{-9}\)</span> as often as the basin minimum.</p>
+<p>TST has one major assumption: every trajectory that reaches the transition state from A continues to B (no recrossing). In reality, many trajectories cross the dividing surface and immediately come back. The <strong>transmission coefficient</strong> <span class="arithmatex">\(\kappa\)</span> corrects for this:</p>
+<div class="arithmatex">\[k_\text{true} = \kappa \cdot k_\text{TST}, \quad 0 &lt; \kappa \leq 1\]</div>
+<p>For reactions in solution, <span class="arithmatex">\(\kappa\)</span> is often 0.1-0.5 (most attempted crossings fail due to solvent friction). This is Kramers' correction.</p>
+<div class="admonition tip">
+<p class="admonition-title">Key Insight</p>
+<p>TST says: if you know the free energy profile along the reaction coordinate, you know the rate. You don't need to simulate the actual crossing event. This is why free energy methods (<a href="../free-energy/">TI, FEP, umbrella sampling</a>) are so important: they give you the barrier height, which determines the rate through the exponential.</p>
+</div>
+<h2 id="computing-rates-from-simulation">Computing rates from simulation<a class="headerlink" href="#computing-rates-from-simulation" title="Permanent link">&para;</a></h2>
+<p>Three approaches, from simplest to most rigorous:</p>
+<h3 id="direct-counting">Direct counting<a class="headerlink" href="#direct-counting" title="Permanent link">&para;</a></h3>
+<p>If the event happens on your simulation timescale, just count transitions. Watch <span class="arithmatex">\(q(t)\)</span>. Count how many times it goes from A to B. Rate = <span class="arithmatex">\(n_\text{transitions} / t_\text{simulation}\)</span>.</p>
+<p>This only works for barriers <span class="arithmatex">\(\lesssim 10 \, k_BT\)</span> (events faster than ~100 ns). For larger barriers, you'll never see a transition in a standard simulation.</p>
+<h3 id="free-energy-tst">Free energy + TST<a class="headerlink" href="#free-energy-tst" title="Permanent link">&para;</a></h3>
+<p>Compute <span class="arithmatex">\(F(q)\)</span> along the reaction coordinate using umbrella sampling, metadynamics, or TI. Read off <span class="arithmatex">\(\Delta F^\ddagger\)</span>. Plug into the TST formula. Compute <span class="arithmatex">\(\kappa\)</span> from a separate short simulation that starts configurations at the transition state and watches whether they commit to A or B.</p>
+<p>This works for any barrier height (enhanced sampling gives you <span class="arithmatex">\(F(q)\)</span>) but requires choosing a good reaction coordinate. If the coordinate doesn't capture the true bottleneck, the rate will be wrong.</p>
+<h3 id="transition-path-sampling-tps">Transition path sampling (TPS)<a class="headerlink" href="#transition-path-sampling-tps" title="Permanent link">&para;</a></h3>
+<p>The most rigorous approach. Don't assume a reaction coordinate at all. Instead, harvest an ensemble of actual reactive trajectories, paths that start in A and end in B, by shooting from existing trajectories and accepting/rejecting based on whether the new path is reactive.</p>
+<p>TPS gives you the true rate, the mechanism, and the transition state ensemble without ever choosing a reaction coordinate. The downside: it's computationally demanding and complex to implement.</p>
+<h2 id="the-reaction-coordinate-problem">The reaction coordinate problem<a class="headerlink" href="#the-reaction-coordinate-problem" title="Permanent link">&para;</a></h2>
+<p>Choosing the right reaction coordinate is the hardest part. For a simple bond rotation, it's the dihedral angle. For protein folding, it could be anything (RMSD, radius of gyration, native contacts, some combination).</p>
+<p>A bad reaction coordinate leads to:</p>
+<ul>
+<li><strong>Wrong TST rate</strong> (the barrier along the wrong coordinate doesn't correspond to the true bottleneck)</li>
+<li><strong>Low transmission coefficient</strong> (many recrossings because the coordinate doesn't capture the true dividing surface)</li>
+<li><strong>Misleading free energy profiles</strong> (apparent barriers that aren't real barriers, hidden barriers that don't show up)</li>
+</ul>
+<p>The committor analysis is the gold standard for validating a reaction coordinate. Start configurations along <span class="arithmatex">\(q\)</span>. Run short, unbiased simulations. Measure the probability of reaching B before A (the committor <span class="arithmatex">\(p_B\)</span>). At the true transition state, <span class="arithmatex">\(p_B = 0.5\)</span>. If the committor doesn't change smoothly from 0 to 1 along your coordinate, you've chosen wrong.</p>
+<div class="admonition warning">
+<p class="admonition-title">Common Mistake</p>
+<p>Computing a free energy profile along an intuitive reaction coordinate and assuming the barrier height gives the correct rate. If the true reaction involves a motion orthogonal to your coordinate (a "hidden" barrier), your <span class="arithmatex">\(\Delta F^\ddagger\)</span> underestimates the true barrier, and your predicted rate is too fast. Always check the committor or the transmission coefficient.</p>
+</div>
+<h2 id="takeaway">Takeaway<a class="headerlink" href="#takeaway" title="Permanent link">&para;</a></h2>
+<p>Rare events (barrier crossings) determine reaction rates, phase transition kinetics, and all the slow processes in molecular systems. Transition state theory connects the rate to the free energy barrier height through <span class="arithmatex">\(k \propto e^{-\beta \Delta F^\ddagger}\)</span>. Computing the barrier requires free energy methods; the barrier height is the single most important number. The reaction coordinate choice determines whether your barrier is meaningful: a bad coordinate gives wrong rates. Committor analysis validates the coordinate. For barriers beyond ~10 <span class="arithmatex">\(k_BT\)</span>, brute-force MD can't see the event; you need enhanced sampling or TST-based rate calculations.</p>
+<details class="question">
+<summary>Check Your Understanding</summary>
+<ol>
+<li>A reaction has <span class="arithmatex">\(\Delta F^\ddagger = 15 \, k_BT\)</span>. The attempt frequency is <span class="arithmatex">\(10^{12}\)</span> s<span class="arithmatex">\(^{-1}\)</span>. What's the TST rate? How long would you need to simulate to see one event? Is brute-force MD feasible?</li>
+<li>You compute <span class="arithmatex">\(\kappa = 0.05\)</span> for a barrier crossing in solution. This means 95% of barrier crossings are recrossings. Is this surprising for a reaction in a dense liquid? What's causing all the recrossings?</li>
+<li>Your free energy profile along coordinate <span class="arithmatex">\(q\)</span> shows a barrier of 8 <span class="arithmatex">\(k_BT\)</span>. But the committor at the top of the barrier is 0.8 (not 0.5). What does this tell you about your reaction coordinate?</li>
+<li>Someone uses umbrella sampling to get <span class="arithmatex">\(\Delta F^\ddagger\)</span> and TST to predict a rate of <span class="arithmatex">\(10^6\)</span> s<span class="arithmatex">\(^{-1}\)</span>. The experimental rate is <span class="arithmatex">\(10^4\)</span> s<span class="arithmatex">\(^{-1}\)</span>. They conclude "TST overestimates by 100x." Is this the right interpretation, or is something else going on?</li>
+<li>Transition path sampling doesn't require choosing a reaction coordinate. So why isn't everyone using it instead of umbrella sampling + TST?</li>
+</ol>
+</details>
 
 
 

@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://crisnapatel.github.io/statistical-mechanics/reading-order/">
+        <link rel="canonical" href="https://crisnapatel.github.io/statistical-mechanics/enhanced-sampling/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../time-integration/">
       
       
-        <link rel="next" href="../ch04/">
+        <link rel="next" href="../pressure/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Reading Order - Statistical Mechanics — But Make It Make Sense</title>
+        <title>Enhanced Sampling - Statistical Mechanics — But Make It Make Sense</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reading-order-for-md-practitioners" class="md-skip">
+        <a href="#enhanced-sampling-when-your-simulation-gets-stuck" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reading Order
+              Enhanced Sampling
             
           </span>
         </div>
@@ -279,32 +279,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Reading Order
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../reading-order/" class="md-nav__link">
         
   
   
@@ -315,53 +293,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-idea" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Idea
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#suggested-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      Suggested Path
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#or-just-follow-the-book" class="md-nav__link">
-    <span class="md-ellipsis">
-      Or Just Follow the Book
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -917,8 +848,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -929,13 +862,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
@@ -951,7 +882,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Practical MD Topics
@@ -1146,10 +1077,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../enhanced-sampling/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Enhanced Sampling
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1160,6 +1113,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#your-simulation-is-lying-to-you-not-because-of-the-force-field-not-because-of-the-thermostat-because-its-stuck" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your simulation is lying to you. Not because of the force field. Not because of the thermostat. Because it's stuck.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-timescale-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      The timescale problem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#replica-exchange-parallel-tempering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Replica exchange (parallel tempering)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadynamics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#umbrella-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Umbrella sampling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-do-you-need-enhanced-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      When do you need enhanced sampling?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1383,27 +1419,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-idea" class="md-nav__link">
+  <a href="#your-simulation-is-lying-to-you-not-because-of-the-force-field-not-because-of-the-thermostat-because-its-stuck" class="md-nav__link">
     <span class="md-ellipsis">
-      The Idea
+      Your simulation is lying to you. Not because of the force field. Not because of the thermostat. Because it's stuck.
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#suggested-path" class="md-nav__link">
+  <a href="#the-timescale-problem" class="md-nav__link">
     <span class="md-ellipsis">
-      Suggested Path
+      The timescale problem
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#or-just-follow-the-book" class="md-nav__link">
+  <a href="#replica-exchange-parallel-tempering" class="md-nav__link">
     <span class="md-ellipsis">
-      Or Just Follow the Book
+      Replica exchange (parallel tempering)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadynamics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#umbrella-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Umbrella sampling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-do-you-need-enhanced-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      When do you need enhanced sampling?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
     </span>
   </a>
   
@@ -1428,125 +1500,85 @@
   
 
 
-<h1 id="reading-order-for-md-practitioners">Reading Order for MD Practitioners<a class="headerlink" href="#reading-order-for-md-practitioners" title="Permanent link">&para;</a></h1>
-<p>Huang's book follows the standard graduate course order. That's fine if you're taking a course. But if you're coming from <strong>molecular dynamics simulations</strong> and want to understand the physics underneath what you're already doing, here's a suggested path.</p>
-<h2 id="the-idea">The Idea<a class="headerlink" href="#the-idea" title="Permanent link">&para;</a></h2>
-<p>Start from what your simulation computes. Build outward to the theory.</p>
-<h2 id="suggested-path">Suggested Path<a class="headerlink" href="#suggested-path" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Step</th>
-<th>Topic</th>
-<th>Huang Chapters</th>
-<th>Why this order</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>What is statistical mechanics?</td>
-<td>Ch 6 intro</td>
-<td>Frame the whole subject</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Phase space &amp; microstates</td>
-<td>Ch 6.0–6.2</td>
-<td>"What your simulation is actually computing"</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Velocity initialization</td>
-<td>Ch 4.2</td>
-<td>"Where your atom velocities come from"</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Ensembles</td>
-<td>Ch 6–7</td>
-<td>"What your thermostat/barostat enforces"</td>
-</tr>
-<tr>
-<td>4b</td>
-<td>Which thermostat? Which barostat?</td>
-<td><a href="../which-thermostat/">Thermostat page</a></td>
-<td>"Which <code>fix</code> for which job?"</td>
-</tr>
-<tr>
-<td>4c</td>
-<td>Your force field is a lie</td>
-<td><a href="../force-fields/">Force Field page</a></td>
-<td>"What <code>pair_coeff</code> actually means"</td>
-</tr>
-<tr>
-<td>4d</td>
-<td>Finite size &amp; periodic images</td>
-<td><a href="../finite-size/">Finite Size page</a></td>
-<td>"What <code>boundary p p p</code> really means"</td>
-</tr>
-<tr>
-<td>4e</td>
-<td>Free energy isn't free</td>
-<td><a href="../free-energy/">Free Energy page</a></td>
-<td>"Why <span class="arithmatex">\(\Delta G\)</span> is so hard to compute"</td>
-</tr>
-<tr>
-<td>4f</td>
-<td>The radial distribution function</td>
-<td><a href="../rdf/">RDF page</a></td>
-<td>"Your simulation's fingerprint"</td>
-</tr>
-<tr>
-<td>5</td>
-<td>The partition function</td>
-<td>Ch 7</td>
-<td>The one function that generates everything</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Thermodynamic potentials</td>
-<td><a href="../thermodynamic-potentials/">Potentials page</a></td>
-<td>"Which energy is my simulation minimizing?"</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Connecting to thermodynamics</td>
-<td>Ch 7–8</td>
-<td>Bridge micro → macro</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Brownian motion &amp; diffusion</td>
-<td><a href="../brownian-motion/">Brownian Motion page</a></td>
-<td>"Why does <code>compute msd</code> work?"</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Uncertainty &amp; sampling</td>
-<td><a href="../uncertainty-sampling/">Uncertainty page</a></td>
-<td>"Are my error bars honest?"</td>
-</tr>
-<tr>
-<td>10</td>
-<td>Ideal gas</td>
-<td>Ch 8</td>
-<td>First real calculation</td>
-</tr>
-<tr>
-<td>11</td>
-<td>Interacting systems</td>
-<td>Later chapters</td>
-<td>Where MD actually lives</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is a suggestion, not a rule. Every chapter page also shows its Huang chapter number so you can follow the book's order if you prefer.</p>
+<h1 id="enhanced-sampling-when-your-simulation-gets-stuck">Enhanced Sampling: When Your Simulation Gets Stuck<a class="headerlink" href="#enhanced-sampling-when-your-simulation-gets-stuck" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Practical MD topic — connects to <a href="../free-energy/">Free Energy Isn't Free</a> and <a href="../ch06/6.2-microcanonical-ensemble/">Ergodicity</a>. This is the most common reason simulations give wrong answers.</p>
 </div>
-<h2 id="or-just-follow-the-book">Or Just Follow the Book<a class="headerlink" href="#or-just-follow-the-book" title="Permanent link">&para;</a></h2>
-<p>Each chapter page maps directly to Huang's chapters. If you're reading the book alongside this site, just go chapter by chapter — every page tells you exactly where in the book it corresponds to.</p>
+<h2 id="your-simulation-is-lying-to-you-not-because-of-the-force-field-not-because-of-the-thermostat-because-its-stuck">Your simulation is lying to you. Not because of the force field. Not because of the thermostat. Because it's stuck.<a class="headerlink" href="#your-simulation-is-lying-to-you-not-because-of-the-force-field-not-because-of-the-thermostat-because-its-stuck" title="Permanent link">&para;</a></h2>
+<p>You run a protein simulation for 100 ns. Compute the free energy landscape. Get a nice profile with two basins. Publish the paper.</p>
+<p>But here's what actually happened: the protein started in conformation A. It stayed in conformation A for 100 ns. It never visited conformation B. Your "free energy landscape" is a picture of one basin, not two. Your sampling is incomplete, and your results are wrong. And the error bars? They look great. Because statistical error bars measure how well you've sampled the region you've explored, not whether you've explored the whole landscape.</p>
+<p>This is the sampling problem. It's the most insidious failure mode in MD, because everything looks fine until you realize it isn't. Let me show you why it happens and what to do about it.</p>
+<h2 id="the-timescale-problem">The timescale problem<a class="headerlink" href="#the-timescale-problem" title="Permanent link">&para;</a></h2>
+<p>Here's the physics. Your system sits in a free energy minimum (state A). To reach another minimum (state B), it has to cross a barrier <span class="arithmatex">\(\Delta F^\ddagger\)</span>. The rate of barrier crossing goes as:</p>
+<div class="arithmatex">\[k \sim \nu \, e^{-\Delta F^\ddagger / k_B T}\]</div>
+<p>where <span class="arithmatex">\(\nu\)</span> is an attempt frequency (roughly the vibrational frequency of the relevant coordinate, ~<span class="arithmatex">\(10^{12}\)</span> s<span class="arithmatex">\(^{-1}\)</span>). For a 10 <span class="arithmatex">\(k_BT\)</span> barrier at room temperature, the crossing time is:</p>
+<div class="arithmatex">\[\tau \sim \frac{1}{k} \sim \frac{e^{10}}{10^{12}} \approx 20 \text{ ns}\]</div>
+<p>Doable. But for a 20 <span class="arithmatex">\(k_BT\)</span> barrier:</p>
+<div class="arithmatex">\[\tau \sim \frac{e^{20}}{10^{12}} \approx 500 \text{ µs}\]</div>
+<p>And for a 30 <span class="arithmatex">\(k_BT\)</span> barrier:</p>
+<div class="arithmatex">\[\tau \sim \frac{e^{30}}{10^{12}} \approx 10 \text{ seconds}\]</div>
+<p>See the problem? The exponential makes this brutal. Every additional <span class="arithmatex">\(k_BT\)</span> of barrier height multiplies the required simulation time by <span class="arithmatex">\(e \approx 2.7\)</span>. A protein with a 25 <span class="arithmatex">\(k_BT\)</span> conformational barrier needs microseconds to milliseconds of sampling. Current MD simulations typically reach microseconds on special hardware (Anton) or with massive GPU resources. Most people have nanoseconds to low microseconds.</p>
+<div class="admonition tip">
+<p class="admonition-title">Key Insight</p>
+<p>The sampling problem is not about computational speed. Even if computers get 1000x faster, you gain only <span class="arithmatex">\(\ln(1000) / 1 \approx 7 \, k_BT\)</span> in accessible barrier heights. Exponential problems can't be solved by throwing hardware at them. You need algorithmic solutions. That's what enhanced sampling methods are.</p>
+</div>
+<h2 id="replica-exchange-parallel-tempering">Replica exchange (parallel tempering)<a class="headerlink" href="#replica-exchange-parallel-tempering" title="Permanent link">&para;</a></h2>
+<p>The idea is simple and elegant. High-temperature simulations cross barriers easily (because <span class="arithmatex">\(e^{-\Delta F^\ddagger / k_B T}\)</span> is larger when <span class="arithmatex">\(T\)</span> is large). Low-temperature simulations give you the thermodynamics you want. Connect them.</p>
+<p>Run <span class="arithmatex">\(M\)</span> copies (replicas) of your system, each at a different temperature: <span class="arithmatex">\(T_1 &lt; T_2 &lt; \ldots &lt; T_M\)</span>. Periodically, attempt to swap configurations between adjacent replicas. The swap is accepted with probability:</p>
+<div class="arithmatex">\[P_\text{swap} = \min\left(1, \, e^{(\beta_i - \beta_j)(E_i - E_j)}\right)\]</div>
+<p>This satisfies detailed balance, so each replica still samples its own canonical ensemble. But the swaps allow configurations to "diffuse" up and down the temperature ladder. A configuration that's stuck behind a barrier at low <span class="arithmatex">\(T\)</span> gets swapped to high <span class="arithmatex">\(T\)</span>, crosses the barrier easily, and then diffuses back down.</p>
+<p>The result: enhanced barrier crossing at low temperatures, with correct Boltzmann sampling at every temperature. You get the free energy landscape at <span class="arithmatex">\(T_1\)</span> (your target temperature) but with the exploration rate of <span class="arithmatex">\(T_M\)</span>.</p>
+<p>The catch: you need enough replicas that adjacent temperatures have sufficient energy overlap (otherwise swaps never accept). For a system of <span class="arithmatex">\(N\)</span> atoms, the number of replicas scales as <span class="arithmatex">\(\sqrt{N}\)</span>. For a protein in explicit solvent (50,000+ atoms), you might need 50-100 replicas. That's 50-100x the computational cost.</p>
+<div class="admonition note">
+<p class="admonition-title">MD Connection</p>
+<p>In LAMMPS: <code>fix temper</code> implements replica exchange. You run multiple instances in parallel with <code>mpirun -np &lt;N*M&gt;</code> and LAMMPS handles the swaps. The temperature spacing should give ~20-30% swap acceptance rates. For GROMACS users: <code>gmx mdrun -multidir</code> with a <code>.mdp</code> file for each temperature.</p>
+</div>
+<h2 id="metadynamics">Metadynamics<a class="headerlink" href="#metadynamics" title="Permanent link">&para;</a></h2>
+<p>Different philosophy. Instead of sampling all of phase space at high temperature, metadynamics adds a history-dependent bias that gradually fills in the free energy wells, pushing the system to explore new regions.</p>
+<p>You define a <strong>collective variable</strong> (CV): a low-dimensional function of the atomic coordinates that captures the slow motion you care about (distance between two domains, a dihedral angle, a radius of gyration). The algorithm deposits Gaussian "hills" along the CV trajectory:</p>
+<div class="arithmatex">\[V_\text{bias}(s, t) = \sum_{t' &lt; t} W \exp\left(-\frac{(s - s(t'))^2}{2\delta s^2}\right)\]</div>
+<p>Over time, the bias fills the free energy minima. The system is pushed out of deep wells and over barriers. Eventually, the bias potential converges to the negative of the free energy:</p>
+<div class="arithmatex">\[V_\text{bias}(s, t \to \infty) = -F(s) + C\]</div>
+<p>Beautiful. The biased simulation explores the landscape uniformly, and the accumulated bias is your free energy surface.</p>
+<p>The problem is choosing the right CV. If your CV doesn't capture the slow degrees of freedom, the simulation is still stuck in orthogonal directions. Bad CV choice is the number one failure mode of metadynamics. And there's no foolproof way to verify you've chosen well, short of comparing to an independent method.</p>
+<p><strong>Well-tempered metadynamics</strong> improves convergence by reducing the hill height as the simulation progresses (the hills get smaller as the landscape fills). This avoids the "overfilling" problem of standard metadynamics.</p>
+<h2 id="umbrella-sampling">Umbrella sampling<a class="headerlink" href="#umbrella-sampling" title="Permanent link">&para;</a></h2>
+<p>The oldest enhanced sampling method, and still widely used. The idea: divide your reaction coordinate into windows. In each window, add a harmonic restraint that keeps the system near a target CV value:</p>
+<div class="arithmatex">\[U_\text{bias}(s) = \frac{1}{2} k (s - s_0)^2\]</div>
+<p>Run a simulation in each window. The restraint forces the system to sample regions it would never visit on its own (like the top of a barrier). Then use the <strong>Weighted Histogram Analysis Method (WHAM)</strong> to unbias the results and reconstruct the free energy profile.</p>
+<p>Advantages: each window is an independent, straightforward MD simulation. No complex algorithms. Easy to parallelize. Easy to check convergence (just run each window longer).</p>
+<p>Disadvantages: you need to choose windows that cover the entire reaction coordinate, including the barrier region. Poor overlap between adjacent windows ruins the WHAM analysis. And you need to know the reaction coordinate in advance.</p>
+<h2 id="when-do-you-need-enhanced-sampling">When do you need enhanced sampling?<a class="headerlink" href="#when-do-you-need-enhanced-sampling" title="Permanent link">&para;</a></h2>
+<p>Not always. Here's the decision tree:</p>
+<p><strong>You DON'T need it if:</strong></p>
+<ul>
+<li>You're computing liquid-state properties (RDF, density, diffusion) of a well-equilibrated fluid. The barriers are low and the dynamics explore the relevant phase space naturally.</li>
+<li>Your system is "simple" (noble gas, small molecules, single-phase liquid far from transitions).</li>
+<li>You're computing transport properties, which require natural dynamics anyway (enhanced sampling corrupts dynamical properties).</li>
+</ul>
+<p><strong>You DO need it if:</strong></p>
+<ul>
+<li>You're computing conformational free energy landscapes (protein folding, ligand binding).</li>
+<li>Your system has multiple metastable states separated by barriers &gt; 5-10 <span class="arithmatex">\(k_BT\)</span>.</li>
+<li>Your observable depends on rare events (nucleation, chemical reactions, conformational transitions).</li>
+<li>Your simulation "seems converged" but you haven't verified it crosses all relevant barriers.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Common Mistake</p>
+<p>Using enhanced sampling when you don't need to, and corrupting the dynamics. Replica exchange and metadynamics give you equilibrium thermodynamics (free energies, populations) but NOT correct dynamics (rates, diffusion coefficients, kinetic pathways). If you want dynamics, you need unbiased MD. If you only want thermodynamics, enhance away.</p>
+</div>
+<h2 id="takeaway">Takeaway<a class="headerlink" href="#takeaway" title="Permanent link">&para;</a></h2>
+<p>The exponential dependence of barrier crossing time on barrier height means brute-force MD can't sample rare events. Every extra <span class="arithmatex">\(k_BT\)</span> of barrier multiplies the required time by <span class="arithmatex">\(e\)</span>. Replica exchange uses high-temperature copies to accelerate barrier crossing (scales as <span class="arithmatex">\(\sqrt{N}\)</span> replicas). Metadynamics fills free energy wells with a history-dependent bias (requires choosing a good collective variable). Umbrella sampling restrains the system in windows along a reaction coordinate and uses WHAM to reconstruct the free energy. All three give correct equilibrium thermodynamics but corrupt the dynamics. Use them when barriers &gt; 5-10 <span class="arithmatex">\(k_BT\)</span> make brute-force sampling inadequate.</p>
+<details class="question">
+<summary>Check Your Understanding</summary>
+<ol>
+<li>You run a 500 ns simulation of a protein and compute the average RMSD. It's flat at 2.5 Å for the entire run. Your error bars on the mean are ±0.02 Å. Is the simulation well-converged? What's the one thing those error bars don't tell you?</li>
+<li>Your system has a 15 <span class="arithmatex">\(k_BT\)</span> barrier. You have a 10 µs GPU allocation. The barrier crossing time at your temperature is ~50 µs. Can you solve this by running 50 independent 200 ns replicas and combining the results? Why or why not?</li>
+<li>You run metadynamics with a dihedral angle as the CV. The free energy profile converges nicely. Then your advisor asks: "What if there's a slow motion orthogonal to that dihedral?" How would you check?</li>
+<li>Someone computes a diffusion coefficient from a replica exchange simulation at the lowest temperature. Is this a valid measurement of the diffusion coefficient? What happened to the dynamics?</li>
+<li>You set up umbrella sampling along a distance coordinate with windows every 0.5 Å. Windows 1-8 converge quickly, but window 9 (at the barrier top) shows huge fluctuations even after 100 ns. What's happening, and what should you do?</li>
+</ol>
+</details>
 
 
 

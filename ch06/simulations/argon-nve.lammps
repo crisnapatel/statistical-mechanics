@@ -1,0 +1,72 @@
+# =============================================================================
+# Argon NVE Simulation — Section 6.1: The Postulate
+# 108 Ar atoms (3x3x3 FCC), Lennard-Jones, microcanonical ensemble
+#
+# This script demonstrates:
+#   1. Phase space trajectories (position vs momentum for individual atoms)
+#   2. Energy conservation on a constant-energy surface
+#
+# Usage:
+#   mpirun -np 2 lmp -in argon-nve.lammps
+# =============================================================================
+
+# --- Units and style ---
+units           metal          # eV, Angstrom, ps, K
+atom_style      atomic
+boundary        p p p
+
+# --- Create FCC lattice of argon ---
+# Argon lattice constant ~ 5.26 Angstrom
+# 3x3x3 unit cells = 4 atoms/cell * 27 cells = 108 atoms
+lattice         fcc 5.26
+region          box block 0 3 0 3 0 3
+create_box      1 box
+create_atoms    1 box
+
+# --- Atom properties ---
+mass            1 39.948       # argon atomic mass (g/mol)
+
+# --- Lennard-Jones potential ---
+# epsilon = 0.0104 eV, sigma = 3.4 Angstrom, cutoff = 2.5*sigma
+pair_style      lj/cut 8.5
+pair_coeff      1 1 0.0104 3.4
+
+# --- Initialize velocities at 87 K (near liquid argon temperature) ---
+velocity        all create 87.0 12345 dist gaussian
+
+# --- Timestep ---
+timestep        0.001          # 1 fs = 0.001 ps in metal units
+
+# =============================================================================
+# Phase 1: NVT equilibration (10 ps)
+# Let the system reach thermal equilibrium at 87 K before switching to NVE.
+# =============================================================================
+fix             nvt_eq all nvt temp 87.0 87.0 0.1
+thermo_style    custom step time temp ke pe etotal press
+thermo          1000
+
+run             10000
+unfix           nvt_eq
+
+# Rescale velocities to target temperature for clean NVE start
+velocity        all scale 87.0
+
+# =============================================================================
+# Phase 2: NVE production (50 ps) — the microcanonical ensemble
+# Total energy is conserved. No thermostat. This is the isolated system
+# described in Section 6.1.
+# =============================================================================
+reset_timestep  0
+
+fix             nve_prod all nve
+
+# Thermo output every 50 steps (0.05 ps)
+thermo          50
+
+# Dump UNWRAPPED coordinates every 50 steps for phase space analysis
+dump            traj all custom 50 dump.argon.lammpstrj id xu yu zu vx vy vz
+dump_modify     traj sort id
+
+run             50000
+
+write_data      argon_nve_final.data

@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://crisnapatel.github.io/statistical-mechanics/reading-order/">
+        <link rel="canonical" href="https://crisnapatel.github.io/statistical-mechanics/pressure/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../enhanced-sampling/">
       
       
-        <link rel="next" href="../ch04/">
+        <link rel="next" href="../phase-transitions/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Reading Order - Statistical Mechanics — But Make It Make Sense</title>
+        <title>Pressure in a Box - Statistical Mechanics — But Make It Make Sense</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reading-order-for-md-practitioners" class="md-skip">
+        <a href="#pressure-in-a-box-virial-stress-tensor-and-why-pressure-is-harder-than-you-think" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reading Order
+              Pressure in a Box
             
           </span>
         </div>
@@ -279,32 +279,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Reading Order
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../reading-order/" class="md-nav__link">
         
   
   
@@ -315,53 +293,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-idea" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Idea
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#suggested-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      Suggested Path
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#or-just-follow-the-book" class="md-nav__link">
-    <span class="md-ellipsis">
-      Or Just Follow the Book
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -917,8 +848,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -929,13 +862,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
@@ -951,7 +882,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Practical MD Topics
@@ -1169,10 +1100,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../pressure/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Pressure in a Box
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1183,6 +1136,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#heres-something-that-will-make-you-uncomfortable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Here's something that will make you uncomfortable.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-virial-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      The virial equation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-pressure-fluctuates-so-much" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why pressure fluctuates so much
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-stress-tensor" class="md-nav__link">
+    <span class="md-ellipsis">
+      The stress tensor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tail-corrections-for-pressure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tail corrections for pressure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pressure-and-the-npt-ensemble" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pressure and the NPT ensemble
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1383,27 +1419,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-idea" class="md-nav__link">
+  <a href="#heres-something-that-will-make-you-uncomfortable" class="md-nav__link">
     <span class="md-ellipsis">
-      The Idea
+      Here's something that will make you uncomfortable.
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#suggested-path" class="md-nav__link">
+  <a href="#the-virial-equation" class="md-nav__link">
     <span class="md-ellipsis">
-      Suggested Path
+      The virial equation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#or-just-follow-the-book" class="md-nav__link">
+  <a href="#why-pressure-fluctuates-so-much" class="md-nav__link">
     <span class="md-ellipsis">
-      Or Just Follow the Book
+      Why pressure fluctuates so much
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-stress-tensor" class="md-nav__link">
+    <span class="md-ellipsis">
+      The stress tensor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tail-corrections-for-pressure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tail corrections for pressure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pressure-and-the-npt-ensemble" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pressure and the NPT ensemble
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
     </span>
   </a>
   
@@ -1428,125 +1500,76 @@
   
 
 
-<h1 id="reading-order-for-md-practitioners">Reading Order for MD Practitioners<a class="headerlink" href="#reading-order-for-md-practitioners" title="Permanent link">&para;</a></h1>
-<p>Huang's book follows the standard graduate course order. That's fine if you're taking a course. But if you're coming from <strong>molecular dynamics simulations</strong> and want to understand the physics underneath what you're already doing, here's a suggested path.</p>
-<h2 id="the-idea">The Idea<a class="headerlink" href="#the-idea" title="Permanent link">&para;</a></h2>
-<p>Start from what your simulation computes. Build outward to the theory.</p>
-<h2 id="suggested-path">Suggested Path<a class="headerlink" href="#suggested-path" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Step</th>
-<th>Topic</th>
-<th>Huang Chapters</th>
-<th>Why this order</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>What is statistical mechanics?</td>
-<td>Ch 6 intro</td>
-<td>Frame the whole subject</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Phase space &amp; microstates</td>
-<td>Ch 6.0–6.2</td>
-<td>"What your simulation is actually computing"</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Velocity initialization</td>
-<td>Ch 4.2</td>
-<td>"Where your atom velocities come from"</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Ensembles</td>
-<td>Ch 6–7</td>
-<td>"What your thermostat/barostat enforces"</td>
-</tr>
-<tr>
-<td>4b</td>
-<td>Which thermostat? Which barostat?</td>
-<td><a href="../which-thermostat/">Thermostat page</a></td>
-<td>"Which <code>fix</code> for which job?"</td>
-</tr>
-<tr>
-<td>4c</td>
-<td>Your force field is a lie</td>
-<td><a href="../force-fields/">Force Field page</a></td>
-<td>"What <code>pair_coeff</code> actually means"</td>
-</tr>
-<tr>
-<td>4d</td>
-<td>Finite size &amp; periodic images</td>
-<td><a href="../finite-size/">Finite Size page</a></td>
-<td>"What <code>boundary p p p</code> really means"</td>
-</tr>
-<tr>
-<td>4e</td>
-<td>Free energy isn't free</td>
-<td><a href="../free-energy/">Free Energy page</a></td>
-<td>"Why <span class="arithmatex">\(\Delta G\)</span> is so hard to compute"</td>
-</tr>
-<tr>
-<td>4f</td>
-<td>The radial distribution function</td>
-<td><a href="../rdf/">RDF page</a></td>
-<td>"Your simulation's fingerprint"</td>
-</tr>
-<tr>
-<td>5</td>
-<td>The partition function</td>
-<td>Ch 7</td>
-<td>The one function that generates everything</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Thermodynamic potentials</td>
-<td><a href="../thermodynamic-potentials/">Potentials page</a></td>
-<td>"Which energy is my simulation minimizing?"</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Connecting to thermodynamics</td>
-<td>Ch 7–8</td>
-<td>Bridge micro → macro</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Brownian motion &amp; diffusion</td>
-<td><a href="../brownian-motion/">Brownian Motion page</a></td>
-<td>"Why does <code>compute msd</code> work?"</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Uncertainty &amp; sampling</td>
-<td><a href="../uncertainty-sampling/">Uncertainty page</a></td>
-<td>"Are my error bars honest?"</td>
-</tr>
-<tr>
-<td>10</td>
-<td>Ideal gas</td>
-<td>Ch 8</td>
-<td>First real calculation</td>
-</tr>
-<tr>
-<td>11</td>
-<td>Interacting systems</td>
-<td>Later chapters</td>
-<td>Where MD actually lives</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is a suggestion, not a rule. Every chapter page also shows its Huang chapter number so you can follow the book's order if you prefer.</p>
+<h1 id="pressure-in-a-box-virial-stress-tensor-and-why-pressure-is-harder-than-you-think">Pressure in a Box: Virial, Stress Tensor, and Why Pressure Is Harder Than You Think<a class="headerlink" href="#pressure-in-a-box-virial-stress-tensor-and-why-pressure-is-harder-than-you-think" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Practical MD topic — connects to <a href="../ch07/7.4-density-fluctuations/">Density Fluctuations</a> and <a href="../finite-size/">Finite Size</a>. Pressure is the observable that surprises everyone.</p>
 </div>
-<h2 id="or-just-follow-the-book">Or Just Follow the Book<a class="headerlink" href="#or-just-follow-the-book" title="Permanent link">&para;</a></h2>
-<p>Each chapter page maps directly to Huang's chapters. If you're reading the book alongside this site, just go chapter by chapter — every page tells you exactly where in the book it corresponds to.</p>
+<h2 id="heres-something-that-will-make-you-uncomfortable">Here's something that will make you uncomfortable.<a class="headerlink" href="#heres-something-that-will-make-you-uncomfortable" title="Permanent link">&para;</a></h2>
+<p>Open your LAMMPS log file. Look at the pressure column. Watch it bounce between <span class="arithmatex">\(-2000\)</span> and <span class="arithmatex">\(+3000\)</span> bar. Every single timestep. For a system that's supposedly at 1 atm.</p>
+<p>Not a typo. Not a bug. That's real. The instantaneous pressure in an MD simulation fluctuates by thousands of atmospheres, even when the average is near zero. And if you don't understand why, you'll either (a) think your simulation is broken, or (b) report a pressure with way too many significant digits.</p>
+<p>Pressure in a small box is wild. Let me show you why.</p>
+<h2 id="the-virial-equation">The virial equation<a class="headerlink" href="#the-virial-equation" title="Permanent link">&para;</a></h2>
+<p>In an MD simulation, pressure comes from two contributions: kinetic (atoms moving) and configurational (atoms pushing on each other).</p>
+<div class="arithmatex">\[P = \frac{1}{V}\left[ Nk_BT + \frac{1}{3}\sum_{i&lt;j} \mathbf{r}_{ij} \cdot \mathbf{F}_{ij} \right]\]</div>
+<p>The first term is the ideal gas pressure. Atoms moving around, bouncing off the (virtual) walls. This is always positive.</p>
+<p>The second term is the <strong>virial</strong>. It sums over all pairs: <span class="arithmatex">\(\mathbf{r}_{ij}\)</span> is the separation vector, <span class="arithmatex">\(\mathbf{F}_{ij}\)</span> is the force between atoms <span class="arithmatex">\(i\)</span> and <span class="arithmatex">\(j\)</span>. For repulsive forces (<span class="arithmatex">\(\mathbf{F}\)</span> points along <span class="arithmatex">\(\mathbf{r}\)</span>), the virial is positive, adding to the pressure. For attractive forces (<span class="arithmatex">\(\mathbf{F}\)</span> points opposite to <span class="arithmatex">\(\mathbf{r}\)</span>), the virial is negative, reducing the pressure.</p>
+<p>In a dense liquid, the repulsive and attractive contributions nearly cancel. You're left with a small number (maybe 1 atm = 0.0001 GPa) that's the difference of two large numbers (maybe ±1 GPa each). This is why pressure fluctuates so wildly: small fluctuations in the positions produce large changes in the near-cancellation.</p>
+<div class="admonition tip">
+<p class="admonition-title">Key Insight</p>
+<p>Pressure in a liquid is the small difference of two large, nearly canceling terms: the ideal gas kinetic pressure (always positive) and the virial from interactions (mostly negative for dense liquids). This near-cancellation means the instantaneous pressure is extremely noisy. Relative fluctuations of 1000% are normal. Compare this to energy, where fluctuations are typically &lt; 1%.</p>
+</div>
+<h2 id="why-pressure-fluctuates-so-much">Why pressure fluctuates so much<a class="headerlink" href="#why-pressure-fluctuates-so-much" title="Permanent link">&para;</a></h2>
+<p>Let's put numbers on it. For liquid argon at 100 K with 256 atoms in a box of volume <span class="arithmatex">\(V = (23.3)^3\)</span> Å<span class="arithmatex">\(^3\)</span>:</p>
+<ul>
+<li>Ideal gas pressure: <span class="arithmatex">\(Nk_BT / V \approx 2800\)</span> bar</li>
+<li>Average virial contribution: <span class="arithmatex">\(\approx -2800\)</span> bar (attractive interactions)</li>
+<li>Net average pressure: <span class="arithmatex">\(\approx 0\)</span> bar (for a liquid at its equilibrium density)</li>
+</ul>
+<p>But the virial fluctuates. Hard. Each pair interaction contributes to the sum, and the fluctuations scale as <span class="arithmatex">\(1/\sqrt{N_\text{pairs}}\)</span>. For 256 atoms, that's ~<span class="arithmatex">\(1/\sqrt{32000} \approx 0.5\%\)</span> relative fluctuation in the virial, which translates to ~15 bar fluctuation in the net pressure. In practice, it's even worse because the pairs are correlated.</p>
+<p>The result: instantaneous pressure bounces around by hundreds to thousands of bar. The <em>average</em> pressure converges, but slowly. You need long trajectories (many correlation times) to get a precise mean pressure.</p>
+<div class="admonition warning">
+<p class="admonition-title">Common Mistake</p>
+<p>Reporting pressure to four digits after a 1 ns simulation. Pressure converges much slower than energy or temperature because of the enormous fluctuations. Always compute the standard error of the mean (accounting for correlation time!) before reporting. A typical 256-atom argon simulation needs tens of nanoseconds to converge the mean pressure to ±10 bar.</p>
+</div>
+<h2 id="the-stress-tensor">The stress tensor<a class="headerlink" href="#the-stress-tensor" title="Permanent link">&para;</a></h2>
+<p>Pressure is a scalar. But the full mechanical state is described by the <strong>stress tensor</strong>, a <span class="arithmatex">\(3 \times 3\)</span> symmetric matrix:</p>
+<div class="arithmatex">\[\sigma_{\alpha\beta} = \frac{1}{V}\left[ \sum_i m_i v_{i\alpha} v_{i\beta} + \frac{1}{2}\sum_{i \neq j} r_{ij\alpha} F_{ij\beta} \right]\]</div>
+<p>The diagonal elements (<span class="arithmatex">\(\sigma_{xx}\)</span>, <span class="arithmatex">\(\sigma_{yy}\)</span>, <span class="arithmatex">\(\sigma_{zz}\)</span>) are the normal stresses. The pressure is their average:</p>
+<div class="arithmatex">\[P = \frac{1}{3}(\sigma_{xx} + \sigma_{yy} + \sigma_{zz})\]</div>
+<p>The off-diagonal elements (<span class="arithmatex">\(\sigma_{xy}\)</span>, <span class="arithmatex">\(\sigma_{xz}\)</span>, <span class="arithmatex">\(\sigma_{yz}\)</span>) are the shear stresses. In an isotropic liquid at equilibrium, the average shear stress is zero. But instantaneously, all six independent components fluctuate.</p>
+<p>The stress tensor matters when:</p>
+<ul>
+<li><strong>Computing viscosity</strong>: The Green-Kubo relation uses the autocorrelation of the off-diagonal stress: <span class="arithmatex">\(\eta = \frac{V}{k_BT}\int_0^\infty \langle \sigma_{xy}(0) \sigma_{xy}(t) \rangle \, dt\)</span></li>
+<li><strong>Studying anisotropic systems</strong>: Membranes, interfaces, crystals under load. The surface tension of a planar interface is <span class="arithmatex">\(\gamma = L_z [\langle P_{zz} \rangle - \frac{1}{2}(\langle P_{xx} \rangle + \langle P_{yy} \rangle)]\)</span></li>
+<li><strong>Detecting problems</strong>: If <span class="arithmatex">\(\sigma_{xx} \neq \sigma_{yy} \neq \sigma_{zz}\)</span> in a system that should be isotropic, something is wrong (usually insufficient equilibration or too few atoms)</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">MD Connection</p>
+<p>In LAMMPS: <code>compute pressure</code> gives all six stress tensor components. The <code>thermo_style</code> keyword <code>press</code> reports the scalar pressure. For the full tensor: <code>thermo_style custom step pxx pyy pzz pxy pxz pyz</code>. The surface tension of an interface along <span class="arithmatex">\(z\)</span>: <code>variable gamma equal lz*(pzz-0.5*(pxx+pyy))</code>.</p>
+</div>
+<h2 id="tail-corrections-for-pressure">Tail corrections for pressure<a class="headerlink" href="#tail-corrections-for-pressure" title="Permanent link">&para;</a></h2>
+<p>We covered this on the <a href="../finite-size/">finite size page</a>, but it bears repeating because the effect on pressure is enormous.</p>
+<p>When you truncate the LJ potential at <span class="arithmatex">\(r_\text{cut}\)</span>, you miss the attractive interactions beyond the cutoff. For energy, the correction is a few percent. For pressure, it can be 10-20% or more, because pressure involves the derivative of the potential (which amplifies the cutoff artifact).</p>
+<p>The tail correction for LJ pressure:</p>
+<div class="arithmatex">\[P_\text{tail} = \frac{16\pi \rho^2 \epsilon \sigma^3}{3} \left[ \frac{2}{3}\left(\frac{\sigma}{r_\text{cut}}\right)^9 - \left(\frac{\sigma}{r_\text{cut}}\right)^3 \right]\]</div>
+<p>For argon at liquid density with <span class="arithmatex">\(r_\text{cut} = 2.5\sigma\)</span>: <span class="arithmatex">\(P_\text{tail} \approx -200\)</span> bar. That's the difference between your simulation showing <span class="arithmatex">\(P = +200\)</span> bar (which looks wrong for a liquid at equilibrium) and the corrected <span class="arithmatex">\(P \approx 0\)</span> bar (which is right).</p>
+<p><code>pair_modify tail yes</code>. Always. For homogeneous systems.</p>
+<h2 id="pressure-and-the-npt-ensemble">Pressure and the NPT ensemble<a class="headerlink" href="#pressure-and-the-npt-ensemble" title="Permanent link">&para;</a></h2>
+<p>In an NPT simulation (constant temperature and pressure), the barostat adjusts the box volume to maintain the target pressure. The instantaneous pressure still fluctuates wildly, but the <em>running average</em> is maintained at the target.</p>
+<p>What matters is: the average box volume converges to the equilibrium volume at that temperature and pressure. The density (which is <span class="arithmatex">\(N/V\)</span>) is the physical observable, not the instantaneous pressure.</p>
+<p>For computing transport properties, you take the average volume from NPT, then switch to NVT or NVE at that fixed volume (as discussed on the <a href="../which-thermostat/">thermostat page</a>). This avoids the volume fluctuations contaminating the dynamics.</p>
+<h2 id="takeaway">Takeaway<a class="headerlink" href="#takeaway" title="Permanent link">&para;</a></h2>
+<p>Pressure in MD is the small difference of two large, nearly canceling terms (kinetic + virial), which is why instantaneous pressure fluctuates by thousands of bar even when the average is near zero. Converging the mean pressure requires long simulations and proper error analysis with correlation time correction. The stress tensor has six independent components; the off-diagonal elements give shear stresses needed for viscosity and surface tension. Tail corrections (<code>pair_modify tail yes</code>) can shift the pressure by hundreds of bar and are always worth applying for homogeneous systems. In NPT, the density (average volume) is the physical observable, not the pressure itself.</p>
+<details class="question">
+<summary>Check Your Understanding</summary>
+<ol>
+<li>Your LAMMPS log shows instantaneous pressure bouncing between <span class="arithmatex">\(-1500\)</span> and <span class="arithmatex">\(+2000\)</span> bar. Your target pressure is 1 atm (about 1 bar). Is the simulation broken?</li>
+<li>You compute the average pressure from a 10 ns NVT simulation and get <span class="arithmatex">\(P = 47 \pm 12\)</span> bar (with proper error bars). Should you conclude the system is at positive pressure, or could it be consistent with zero?</li>
+<li>You're computing the surface tension of a liquid-vapor interface using <span class="arithmatex">\(\gamma = L_z [P_{zz} - \frac{1}{2}(P_{xx} + P_{yy})]\)</span>. Why does this formula involve the <em>difference</em> of stress tensor components? What happens to <span class="arithmatex">\(\gamma\)</span> if the interface is perfectly flat vs. curved?</li>
+<li>You add <code>pair_modify tail yes</code> and the pressure drops from +250 bar to <span class="arithmatex">\(-50\)</span> bar. Your labmate says "that can't be right, you just shifted it by 300 bar." Is 300 bar a reasonable tail correction? What determines its magnitude?</li>
+<li>Why does pressure converge so much slower than temperature in an MD simulation? (Hint: think about what each quantity averages over and how much cancellation is involved.)</li>
+</ol>
+</details>
 
 
 

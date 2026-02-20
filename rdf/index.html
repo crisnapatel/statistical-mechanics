@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://crisnapatel.github.io/statistical-mechanics/reading-order/">
+        <link rel="canonical" href="https://crisnapatel.github.io/statistical-mechanics/rdf/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../free-energy/">
       
       
-        <link rel="next" href="../ch04/">
+        <link rel="next" href="../time-integration/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Reading Order - Statistical Mechanics — But Make It Make Sense</title>
+        <title>The Radial Distribution Function - Statistical Mechanics — But Make It Make Sense</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reading-order-for-md-practitioners" class="md-skip">
+        <a href="#the-radial-distribution-function-your-simulations-fingerprint" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reading Order
+              The Radial Distribution Function
             
           </span>
         </div>
@@ -279,32 +279,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Reading Order
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../reading-order/" class="md-nav__link">
         
   
   
@@ -315,53 +293,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-idea" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Idea
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#suggested-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      Suggested Path
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#or-just-follow-the-book" class="md-nav__link">
-    <span class="md-ellipsis">
-      Or Just Follow the Book
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -917,8 +848,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -929,13 +862,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
@@ -951,7 +882,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Practical MD Topics
@@ -1100,10 +1031,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../rdf/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    The Radial Distribution Function
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1114,6 +1067,164 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#youve-already-computed-gr-but-do-you-know-what-it-means" class="md-nav__link">
+    <span class="md-ellipsis">
+      You've already computed \(g(r)\). But do you know what it means?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-gr-actually-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      What \(g(r)\) actually measures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-gr-a-diagnostic-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading \(g(r)\): a diagnostic guide
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-coordination-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      The coordination number
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#three-routes-to-thermodynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Three routes to thermodynamics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Three routes to thermodynamics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-energy-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      The energy equation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-pressure-equation-virial-route" class="md-nav__link">
+    <span class="md-ellipsis">
+      The pressure equation (virial route)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-compressibility-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      The compressibility equation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-structure-factor-grs-fourier-twin" class="md-nav__link">
+    <span class="md-ellipsis">
+      The structure factor: \(g(r)\)'s Fourier twin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-gotchas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical gotchas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical gotchas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bin-width-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bin width matters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximum-r-and-the-box" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maximum \(r\) and the box
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number-of-frames" class="md-nav__link">
+    <span class="md-ellipsis">
+      Number of frames
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1383,27 +1494,138 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-idea" class="md-nav__link">
+  <a href="#youve-already-computed-gr-but-do-you-know-what-it-means" class="md-nav__link">
     <span class="md-ellipsis">
-      The Idea
+      You've already computed \(g(r)\). But do you know what it means?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#suggested-path" class="md-nav__link">
+  <a href="#what-gr-actually-measures" class="md-nav__link">
     <span class="md-ellipsis">
-      Suggested Path
+      What \(g(r)\) actually measures
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#or-just-follow-the-book" class="md-nav__link">
+  <a href="#reading-gr-a-diagnostic-guide" class="md-nav__link">
     <span class="md-ellipsis">
-      Or Just Follow the Book
+      Reading \(g(r)\): a diagnostic guide
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-coordination-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      The coordination number
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#three-routes-to-thermodynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Three routes to thermodynamics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Three routes to thermodynamics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-energy-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      The energy equation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-pressure-equation-virial-route" class="md-nav__link">
+    <span class="md-ellipsis">
+      The pressure equation (virial route)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-compressibility-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      The compressibility equation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-structure-factor-grs-fourier-twin" class="md-nav__link">
+    <span class="md-ellipsis">
+      The structure factor: \(g(r)\)'s Fourier twin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-gotchas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical gotchas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical gotchas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bin-width-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bin width matters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maximum-r-and-the-box" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maximum \(r\) and the box
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number-of-frames" class="md-nav__link">
+    <span class="md-ellipsis">
+      Number of frames
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
     </span>
   </a>
   
@@ -1428,125 +1650,91 @@
   
 
 
-<h1 id="reading-order-for-md-practitioners">Reading Order for MD Practitioners<a class="headerlink" href="#reading-order-for-md-practitioners" title="Permanent link">&para;</a></h1>
-<p>Huang's book follows the standard graduate course order. That's fine if you're taking a course. But if you're coming from <strong>molecular dynamics simulations</strong> and want to understand the physics underneath what you're already doing, here's a suggested path.</p>
-<h2 id="the-idea">The Idea<a class="headerlink" href="#the-idea" title="Permanent link">&para;</a></h2>
-<p>Start from what your simulation computes. Build outward to the theory.</p>
-<h2 id="suggested-path">Suggested Path<a class="headerlink" href="#suggested-path" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Step</th>
-<th>Topic</th>
-<th>Huang Chapters</th>
-<th>Why this order</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>What is statistical mechanics?</td>
-<td>Ch 6 intro</td>
-<td>Frame the whole subject</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Phase space &amp; microstates</td>
-<td>Ch 6.0–6.2</td>
-<td>"What your simulation is actually computing"</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Velocity initialization</td>
-<td>Ch 4.2</td>
-<td>"Where your atom velocities come from"</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Ensembles</td>
-<td>Ch 6–7</td>
-<td>"What your thermostat/barostat enforces"</td>
-</tr>
-<tr>
-<td>4b</td>
-<td>Which thermostat? Which barostat?</td>
-<td><a href="../which-thermostat/">Thermostat page</a></td>
-<td>"Which <code>fix</code> for which job?"</td>
-</tr>
-<tr>
-<td>4c</td>
-<td>Your force field is a lie</td>
-<td><a href="../force-fields/">Force Field page</a></td>
-<td>"What <code>pair_coeff</code> actually means"</td>
-</tr>
-<tr>
-<td>4d</td>
-<td>Finite size &amp; periodic images</td>
-<td><a href="../finite-size/">Finite Size page</a></td>
-<td>"What <code>boundary p p p</code> really means"</td>
-</tr>
-<tr>
-<td>4e</td>
-<td>Free energy isn't free</td>
-<td><a href="../free-energy/">Free Energy page</a></td>
-<td>"Why <span class="arithmatex">\(\Delta G\)</span> is so hard to compute"</td>
-</tr>
-<tr>
-<td>4f</td>
-<td>The radial distribution function</td>
-<td><a href="../rdf/">RDF page</a></td>
-<td>"Your simulation's fingerprint"</td>
-</tr>
-<tr>
-<td>5</td>
-<td>The partition function</td>
-<td>Ch 7</td>
-<td>The one function that generates everything</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Thermodynamic potentials</td>
-<td><a href="../thermodynamic-potentials/">Potentials page</a></td>
-<td>"Which energy is my simulation minimizing?"</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Connecting to thermodynamics</td>
-<td>Ch 7–8</td>
-<td>Bridge micro → macro</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Brownian motion &amp; diffusion</td>
-<td><a href="../brownian-motion/">Brownian Motion page</a></td>
-<td>"Why does <code>compute msd</code> work?"</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Uncertainty &amp; sampling</td>
-<td><a href="../uncertainty-sampling/">Uncertainty page</a></td>
-<td>"Are my error bars honest?"</td>
-</tr>
-<tr>
-<td>10</td>
-<td>Ideal gas</td>
-<td>Ch 8</td>
-<td>First real calculation</td>
-</tr>
-<tr>
-<td>11</td>
-<td>Interacting systems</td>
-<td>Later chapters</td>
-<td>Where MD actually lives</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is a suggestion, not a rule. Every chapter page also shows its Huang chapter number so you can follow the book's order if you prefer.</p>
+<h1 id="the-radial-distribution-function-your-simulations-fingerprint">The Radial Distribution Function: Your Simulation's Fingerprint<a class="headerlink" href="#the-radial-distribution-function-your-simulations-fingerprint" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Practical MD topic — connects to <a href="../ch07/7.2-energy-fluctuations/">Energy Fluctuations</a> and <a href="../ch07/7.4-density-fluctuations/">Density Fluctuations</a>. This is probably the most-computed quantity in all of molecular simulation.</p>
 </div>
-<h2 id="or-just-follow-the-book">Or Just Follow the Book<a class="headerlink" href="#or-just-follow-the-book" title="Permanent link">&para;</a></h2>
-<p>Each chapter page maps directly to Huang's chapters. If you're reading the book alongside this site, just go chapter by chapter — every page tells you exactly where in the book it corresponds to.</p>
+<h2 id="youve-already-computed-gr-but-do-you-know-what-it-means">You've already computed <span class="arithmatex">\(g(r)\)</span>. But do you know what it means?<a class="headerlink" href="#youve-already-computed-gr-but-do-you-know-what-it-means" title="Permanent link">&para;</a></h2>
+<p>Every MD tutorial has you compute the radial distribution function. Plot it. Get the nice peaks. Put it in your report. Move on. But <span class="arithmatex">\(g(r)\)</span> isn't just a pretty plot. It's a complete description of the pairwise structure of your system, and you can extract thermodynamic properties directly from it. Energy, pressure, compressibility, coordination numbers. All from one function.</p>
+<p>Most people treat <span class="arithmatex">\(g(r)\)</span> as a sanity check: "peaks are in the right place, simulation must be working." That's selling it short. Let's actually understand what this function is, how to read it, and what it can tell you about your simulation's physics.</p>
+<p>Let's go.</p>
+<h2 id="what-gr-actually-measures">What <span class="arithmatex">\(g(r)\)</span> actually measures<a class="headerlink" href="#what-gr-actually-measures" title="Permanent link">&para;</a></h2>
+<p>Start with a simple question. Pick any atom in your liquid. Look outward from it. How many atoms do you find at a distance between <span class="arithmatex">\(r\)</span> and <span class="arithmatex">\(r + dr\)</span>?</p>
+<p>In an ideal gas, the answer is easy: <span class="arithmatex">\(\rho \cdot 4\pi r^2 \, dr\)</span>, where <span class="arithmatex">\(\rho = N/V\)</span> is the number density. Atoms are randomly distributed, so the number you find in a thin shell is just the density times the shell volume.</p>
+<p>In a real liquid, the answer is different. There's a shell of nearest neighbors at a preferred distance (the first coordination shell). Then a gap (the "exclusion zone" where atoms can't easily fit). Then a second shell. And so on. The actual number density at distance <span class="arithmatex">\(r\)</span> isn't uniform. It has structure.</p>
+<p>The radial distribution function <span class="arithmatex">\(g(r)\)</span> is the ratio of the actual local density to the ideal gas density:</p>
+<div class="arithmatex">\[g(r) = \frac{\text{actual number of atoms in shell at } r}{\text{number expected from uniform density}} = \frac{n(r)}{\rho \cdot 4\pi r^2 \, dr}\]</div>
+<p>If <span class="arithmatex">\(g(r) = 1\)</span>: the density at distance <span class="arithmatex">\(r\)</span> is exactly what you'd expect from a uniform distribution. No structure.</p>
+<p>If <span class="arithmatex">\(g(r) &gt; 1\)</span>: atoms are <strong>more likely</strong> to be found at distance <span class="arithmatex">\(r\)</span> than random. There's a preferred distance.</p>
+<p>If <span class="arithmatex">\(g(r) &lt; 1\)</span>: atoms are <strong>less likely</strong> to be found there. Something is pushing them away.</p>
+<p>If <span class="arithmatex">\(g(r) = 0\)</span>: no atoms at all. The repulsive core of the potential excludes them completely.</p>
+<div class="admonition tip">
+<p class="admonition-title">Key Insight</p>
+<p><span class="arithmatex">\(g(r)\)</span> is a probability enhancement factor. It tells you: "compared to a random arrangement, how much more (or less) likely am I to find an atom at this distance?" That's why it approaches 1 at large <span class="arithmatex">\(r\)</span>. Far enough away, the liquid looks uniform. The correlations wash out.</p>
+</div>
+<h2 id="reading-gr-a-diagnostic-guide">Reading <span class="arithmatex">\(g(r)\)</span>: a diagnostic guide<a class="headerlink" href="#reading-gr-a-diagnostic-guide" title="Permanent link">&para;</a></h2>
+<p>Here's our liquid argon <span class="arithmatex">\(g(r)\)</span> from a real simulation. Let me show you how to read it.</p>
+<figure>
+  <img alt="Annotated g(r) for liquid argon" src="../assets/plots/gr-annotated.png" width="700" />
+<br />
+<figcaption>The radial distribution function of liquid argon (256 atoms, ~107 K, NVE production). Every feature tells you something about the local structure.</figcaption>
+</figure>
+<p><strong>The exclusion zone</strong> (<span class="arithmatex">\(r &lt; \sigma\)</span>): <span class="arithmatex">\(g(r) \approx 0\)</span>. The repulsive wall of the LJ potential prevents atoms from getting this close. The onset of <span class="arithmatex">\(g(r)\)</span> rising from zero tells you the effective atomic diameter.</p>
+<p><strong>The first peak</strong> (<span class="arithmatex">\(r \approx 3.7\)</span> Å <span class="arithmatex">\(\approx 1.09\sigma\)</span>): This is the nearest-neighbor shell. The height tells you how ordered the local structure is. For a liquid, the first peak is typically 2.5-3.5. For a solid, it's much sharper and taller. For an ideal gas, there's no peak at all.</p>
+<p><strong>The first minimum</strong> (<span class="arithmatex">\(r \approx 5.0\)</span> Å): The gap between the first and second coordination shells. Atoms don't like to sit here because there's no stable packing arrangement at this distance. The depth of this minimum tells you how well-defined the shells are.</p>
+<p><strong>The second peak</strong> (<span class="arithmatex">\(r \approx 7.0\)</span> Å): The second coordination shell. Broader and lower than the first. The structure is washing out. By the third peak (if you can see one), the oscillations are subtle.</p>
+<p><strong>The long-range limit</strong> (<span class="arithmatex">\(r \to \infty\)</span>): <span class="arithmatex">\(g(r) \to 1\)</span>. The liquid is uniform on large length scales. If your <span class="arithmatex">\(g(r)\)</span> doesn't approach 1 at large <span class="arithmatex">\(r\)</span>, something is wrong (normalization bug, box too small, or system not equilibrated).</p>
+<h2 id="the-coordination-number">The coordination number<a class="headerlink" href="#the-coordination-number" title="Permanent link">&para;</a></h2>
+<p>Integrate <span class="arithmatex">\(g(r)\)</span> to get the number of neighbors within a given distance:</p>
+<div class="arithmatex">\[N_\text{coord}(R) = 4\pi \rho \int_0^R r^2 g(r) \, dr\]</div>
+<p>Integrate out to the first minimum, and you get the first-shell coordination number. For liquid argon near the triple point, this is about 12, which is close to the FCC coordination number (also 12). The liquid "remembers" the close-packed structure, even though it's disordered.</p>
+<p>This is useful. If you're studying solvation, the coordination number tells you how many water molecules are in the first shell around an ion. If you're studying nucleation, watching the coordination number evolve with time tells you when local crystalline order emerges.</p>
+<h2 id="three-routes-to-thermodynamics">Three routes to thermodynamics<a class="headerlink" href="#three-routes-to-thermodynamics" title="Permanent link">&para;</a></h2>
+<p>Here's where <span class="arithmatex">\(g(r)\)</span> gets powerful. If you know <span class="arithmatex">\(g(r)\)</span> and the pair potential <span class="arithmatex">\(u(r)\)</span>, you can compute thermodynamic properties directly. Three independent routes:</p>
+<h3 id="the-energy-equation">The energy equation<a class="headerlink" href="#the-energy-equation" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[\frac{E}{N} = \frac{3}{2} k_B T + 2\pi \rho \int_0^\infty r^2 u(r) g(r) \, dr\]</div>
+<p>The first term is kinetic energy. The integral is the average potential energy. This says: the total potential energy is determined by how many atom pairs you find at each distance (<span class="arithmatex">\(g(r)\)</span>), weighted by the interaction energy at that distance (<span class="arithmatex">\(u(r)\)</span>). Makes sense.</p>
+<h3 id="the-pressure-equation-virial-route">The pressure equation (virial route)<a class="headerlink" href="#the-pressure-equation-virial-route" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[\frac{P}{\rho k_B T} = 1 - \frac{2\pi \rho}{3 k_B T} \int_0^\infty r^3 \frac{du(r)}{dr} g(r) \, dr\]</div>
+<p>The "1" is the ideal gas contribution. The integral is the virial correction from interactions. If the potential is attractive (negative <span class="arithmatex">\(du/dr\)</span> at intermediate <span class="arithmatex">\(r\)</span>), the integral reduces the pressure below ideal gas. If repulsive (positive <span class="arithmatex">\(du/dr\)</span> at short range), it increases pressure.</p>
+<h3 id="the-compressibility-equation">The compressibility equation<a class="headerlink" href="#the-compressibility-equation" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[k_B T \left(\frac{\partial \rho}{\partial P}\right)_T = 1 + 4\pi\rho \int_0^\infty [g(r) - 1] r^2 \, dr\]</div>
+<p>This relates the isothermal compressibility to the integral of <span class="arithmatex">\([g(r) - 1]\)</span> over all space. The quantity <span class="arithmatex">\(h(r) = g(r) - 1\)</span> is the <strong>total correlation function</strong>. Its integral tells you the strength of density-density correlations.</p>
+<div class="admonition tip">
+<p class="admonition-title">Key Insight</p>
+<p>For an exact <span class="arithmatex">\(g(r)\)</span> and pair potential, all three routes give the same thermodynamic state. In practice, they don't exactly agree because: (1) your simulation has finite statistics, (2) your <span class="arithmatex">\(g(r)\)</span> has bin-width effects, and (3) many-body correlations mean the pair potential doesn't tell the whole story. The discrepancy between routes is itself a diagnostic for the quality of your force field and sampling.</p>
+</div>
+<h2 id="the-structure-factor-grs-fourier-twin">The structure factor: <span class="arithmatex">\(g(r)\)</span>'s Fourier twin<a class="headerlink" href="#the-structure-factor-grs-fourier-twin" title="Permanent link">&para;</a></h2>
+<p>Experimentalists don't measure <span class="arithmatex">\(g(r)\)</span> directly. They measure the <strong>structure factor</strong> <span class="arithmatex">\(S(q)\)</span> from X-ray or neutron scattering. The two are related by a Fourier transform:</p>
+<div class="arithmatex">\[S(q) = 1 + 4\pi\rho \int_0^\infty [g(r) - 1] \frac{\sin(qr)}{qr} r^2 \, dr\]</div>
+<p>Sharp peaks in <span class="arithmatex">\(g(r)\)</span> (real-space order) produce peaks in <span class="arithmatex">\(S(q)\)</span> (scattering peaks). The first peak of <span class="arithmatex">\(S(q)\)</span> corresponds to the dominant real-space periodicity. For a crystal, <span class="arithmatex">\(S(q)\)</span> has Bragg peaks. For a liquid, broad diffuse peaks. For an ideal gas, <span class="arithmatex">\(S(q) = 1\)</span> everywhere.</p>
+<p>This is why <span class="arithmatex">\(g(r)\)</span> is the bridge between simulation and experiment. You compute <span class="arithmatex">\(g(r)\)</span> from your trajectory. Fourier transform it. Compare to experimental scattering data. If they match, your simulation is producing the right structure.</p>
+<h2 id="practical-gotchas">Practical gotchas<a class="headerlink" href="#practical-gotchas" title="Permanent link">&para;</a></h2>
+<h3 id="bin-width-matters">Bin width matters<a class="headerlink" href="#bin-width-matters" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(g(r)\)</span> is computed by histogramming pairwise distances. The bin width <span class="arithmatex">\(\Delta r\)</span> determines the resolution. Too wide: you smear out the peaks, underestimate their height, lose structural detail. Too narrow: noisy, especially at small <span class="arithmatex">\(r\)</span> where few pairs contribute.</p>
+<p>A reasonable default: <span class="arithmatex">\(\Delta r \approx 0.02\sigma\)</span> to <span class="arithmatex">\(0.05\sigma\)</span> (0.07 to 0.17 Å for argon). Always check that your first peak height doesn't change when you halve the bin width. If it does, your bins are too coarse.</p>
+<h3 id="maximum-r-and-the-box">Maximum <span class="arithmatex">\(r\)</span> and the box<a class="headerlink" href="#maximum-r-and-the-box" title="Permanent link">&para;</a></h3>
+<p>You can only compute <span class="arithmatex">\(g(r)\)</span> out to <span class="arithmatex">\(r = L/2\)</span> (half the box length). Beyond that, the minimum image convention means you're double-counting. And even near <span class="arithmatex">\(L/2\)</span>, the statistics get worse because fewer independent pairs contribute to each bin.</p>
+<p>If your <span class="arithmatex">\(g(r)\)</span> is still oscillating at <span class="arithmatex">\(r = L/2\)</span>, your box is too small to capture the full correlation structure. This matters for computing the compressibility (which integrates <span class="arithmatex">\(g(r) - 1\)</span> to infinity) and the structure factor (which needs <span class="arithmatex">\(g(r)\)</span> at all <span class="arithmatex">\(r\)</span>).</p>
+<h3 id="number-of-frames">Number of frames<a class="headerlink" href="#number-of-frames" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(g(r)\)</span> converges surprisingly fast because it's an average over all atom pairs in all frames. For 256 atoms and 100 frames, you have <span class="arithmatex">\(\sim 256 \times 255 / 2 \times 100 \approx 3.3\)</span> million pair distances. The first peak converges in a few dozen frames. The long-range tail takes longer.</p>
+<p>But don't confuse fast convergence of <span class="arithmatex">\(g(r)\)</span> with fast convergence of properties derived from <span class="arithmatex">\(g(r)\)</span>. The coordination number (integral of <span class="arithmatex">\(g(r)\)</span>) is more robust than the peak height. The pressure (which involves the derivative of <span class="arithmatex">\(u(r)\)</span>, amplifying noise) needs more frames.</p>
+<div class="admonition note">
+<p class="admonition-title">MD Connection</p>
+<p>In LAMMPS: <code>compute myRDF all rdf 200</code> computes <span class="arithmatex">\(g(r)\)</span> with 200 bins out to half the box length. Output it with <code>fix ave/time</code>. For multi-component systems, use <code>compute rdf</code> with type specifications: <code>compute myRDF all rdf 200 1 1 1 2 2 2</code> for all three partial RDFs of a binary system. The partial <span class="arithmatex">\(g_{\alpha\beta}(r)\)</span> tells you the structure around each species.</p>
+</div>
+<h2 id="takeaway">Takeaway<a class="headerlink" href="#takeaway" title="Permanent link">&para;</a></h2>
+<p><span class="arithmatex">\(g(r)\)</span> measures the local structure of your fluid: where atoms prefer to sit relative to each other, compared to a random arrangement. The first peak gives the nearest-neighbor distance, its height tells you how ordered the structure is, and integration gives the coordination number. Three thermodynamic routes (energy, pressure, compressibility equations) extract bulk properties directly from <span class="arithmatex">\(g(r)\)</span>. The Fourier transform gives <span class="arithmatex">\(S(q)\)</span>, which is what experiments measure. Always check: does <span class="arithmatex">\(g(r)\)</span> approach 1 at large <span class="arithmatex">\(r\)</span>? Is the first peak converged with respect to bin width? And remember that <span class="arithmatex">\(g(r)\)</span> captures pairwise correlations only. It's the most important single function in liquid-state physics, but it doesn't tell you everything.</p>
+<details class="question">
+<summary>Check Your Understanding</summary>
+<ol>
+<li>You compute <span class="arithmatex">\(g(r)\)</span> for liquid water and see a sharp first peak at 2.8 Å (O-O distance) with height ~3. Then you compute <span class="arithmatex">\(g(r)\)</span> for liquid argon and see a first peak at 3.7 Å with height ~2.7. Which liquid is "more structured"? What determines the peak height?</li>
+<li>Your <span class="arithmatex">\(g(r)\)</span> flattens out at 0.97 instead of 1.0 at large <span class="arithmatex">\(r\)</span>. Three possible causes: normalization error, box too small, or system not equilibrated. How would you diagnose which one?</li>
+<li>You compute the pressure two ways: from the virial in the LAMMPS log file, and from the pressure equation using your computed <span class="arithmatex">\(g(r)\)</span>. They disagree by 5%. Should you be worried? What could cause this?</li>
+<li>You're simulating a mixture of big and small particles. The total <span class="arithmatex">\(g(r)\)</span> shows a broad first peak with a shoulder. Your advisor asks for the partial RDFs <span class="arithmatex">\(g_{11}(r)\)</span>, <span class="arithmatex">\(g_{12}(r)\)</span>, and <span class="arithmatex">\(g_{22}(r)\)</span>. What does each one tell you that the total <span class="arithmatex">\(g(r)\)</span> doesn't?</li>
+<li>A crystal has <span class="arithmatex">\(g(r)\)</span> with sharp delta-function-like peaks at specific distances. A liquid has broad peaks. What does the <span class="arithmatex">\(g(r)\)</span> of a glass look like, and how would you tell it apart from a liquid using only <span class="arithmatex">\(g(r)\)</span>?</li>
+</ol>
+</details>
 
 
 

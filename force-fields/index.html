@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://crisnapatel.github.io/statistical-mechanics/reading-order/">
+        <link rel="canonical" href="https://crisnapatel.github.io/statistical-mechanics/force-fields/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../which-thermostat/">
       
       
-        <link rel="next" href="../ch04/">
+        <link rel="next" href="../finite-size/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Reading Order - Statistical Mechanics — But Make It Make Sense</title>
+        <title>Your Force Field Is a Lie - Statistical Mechanics — But Make It Make Sense</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reading-order-for-md-practitioners" class="md-skip">
+        <a href="#your-force-field-is-a-lie-and-thats-ok" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reading Order
+              Your Force Field Is a Lie
             
           </span>
         </div>
@@ -279,32 +279,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Reading Order
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../reading-order/" class="md-nav__link">
         
   
   
@@ -315,53 +293,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-idea" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Idea
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#suggested-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      Suggested Path
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#or-just-follow-the-book" class="md-nav__link">
-    <span class="md-ellipsis">
-      Or Just Follow the Book
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -917,8 +848,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -929,13 +862,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
@@ -951,7 +882,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Practical MD Topics
@@ -1031,10 +962,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../force-fields/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Your Force Field Is a Lie
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1045,6 +998,116 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#confession-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confession time.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-a-force-field-actually-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      What a force field actually is
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-simplest-lie-lennard-jones" class="md-nav__link">
+    <span class="md-ellipsis">
+      The simplest lie: Lennard-Jones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-force-field-determines-your-physics" class="md-nav__link">
+    <span class="md-ellipsis">
+      The force field determines your physics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-do-the-parameters-come-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where do the parameters come from?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beyond-two-atoms-bonded-interactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beyond two atoms: bonded interactions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mixing-rules-the-other-lie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mixing rules: the other lie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-evaluate-a-force-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to evaluate a force field
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-transferability-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      The transferability problem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1383,27 +1446,90 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-idea" class="md-nav__link">
+  <a href="#confession-time" class="md-nav__link">
     <span class="md-ellipsis">
-      The Idea
+      Confession time.
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#suggested-path" class="md-nav__link">
+  <a href="#what-a-force-field-actually-is" class="md-nav__link">
     <span class="md-ellipsis">
-      Suggested Path
+      What a force field actually is
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#or-just-follow-the-book" class="md-nav__link">
+  <a href="#the-simplest-lie-lennard-jones" class="md-nav__link">
     <span class="md-ellipsis">
-      Or Just Follow the Book
+      The simplest lie: Lennard-Jones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-force-field-determines-your-physics" class="md-nav__link">
+    <span class="md-ellipsis">
+      The force field determines your physics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-do-the-parameters-come-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where do the parameters come from?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beyond-two-atoms-bonded-interactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beyond two atoms: bonded interactions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mixing-rules-the-other-lie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mixing rules: the other lie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-evaluate-a-force-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to evaluate a force field
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-transferability-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      The transferability problem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
     </span>
   </a>
   
@@ -1428,125 +1554,118 @@
   
 
 
-<h1 id="reading-order-for-md-practitioners">Reading Order for MD Practitioners<a class="headerlink" href="#reading-order-for-md-practitioners" title="Permanent link">&para;</a></h1>
-<p>Huang's book follows the standard graduate course order. That's fine if you're taking a course. But if you're coming from <strong>molecular dynamics simulations</strong> and want to understand the physics underneath what you're already doing, here's a suggested path.</p>
-<h2 id="the-idea">The Idea<a class="headerlink" href="#the-idea" title="Permanent link">&para;</a></h2>
-<p>Start from what your simulation computes. Build outward to the theory.</p>
-<h2 id="suggested-path">Suggested Path<a class="headerlink" href="#suggested-path" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Step</th>
-<th>Topic</th>
-<th>Huang Chapters</th>
-<th>Why this order</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>What is statistical mechanics?</td>
-<td>Ch 6 intro</td>
-<td>Frame the whole subject</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Phase space &amp; microstates</td>
-<td>Ch 6.0–6.2</td>
-<td>"What your simulation is actually computing"</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Velocity initialization</td>
-<td>Ch 4.2</td>
-<td>"Where your atom velocities come from"</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Ensembles</td>
-<td>Ch 6–7</td>
-<td>"What your thermostat/barostat enforces"</td>
-</tr>
-<tr>
-<td>4b</td>
-<td>Which thermostat? Which barostat?</td>
-<td><a href="../which-thermostat/">Thermostat page</a></td>
-<td>"Which <code>fix</code> for which job?"</td>
-</tr>
-<tr>
-<td>4c</td>
-<td>Your force field is a lie</td>
-<td><a href="../force-fields/">Force Field page</a></td>
-<td>"What <code>pair_coeff</code> actually means"</td>
-</tr>
-<tr>
-<td>4d</td>
-<td>Finite size &amp; periodic images</td>
-<td><a href="../finite-size/">Finite Size page</a></td>
-<td>"What <code>boundary p p p</code> really means"</td>
-</tr>
-<tr>
-<td>4e</td>
-<td>Free energy isn't free</td>
-<td><a href="../free-energy/">Free Energy page</a></td>
-<td>"Why <span class="arithmatex">\(\Delta G\)</span> is so hard to compute"</td>
-</tr>
-<tr>
-<td>4f</td>
-<td>The radial distribution function</td>
-<td><a href="../rdf/">RDF page</a></td>
-<td>"Your simulation's fingerprint"</td>
-</tr>
-<tr>
-<td>5</td>
-<td>The partition function</td>
-<td>Ch 7</td>
-<td>The one function that generates everything</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Thermodynamic potentials</td>
-<td><a href="../thermodynamic-potentials/">Potentials page</a></td>
-<td>"Which energy is my simulation minimizing?"</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Connecting to thermodynamics</td>
-<td>Ch 7–8</td>
-<td>Bridge micro → macro</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Brownian motion &amp; diffusion</td>
-<td><a href="../brownian-motion/">Brownian Motion page</a></td>
-<td>"Why does <code>compute msd</code> work?"</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Uncertainty &amp; sampling</td>
-<td><a href="../uncertainty-sampling/">Uncertainty page</a></td>
-<td>"Are my error bars honest?"</td>
-</tr>
-<tr>
-<td>10</td>
-<td>Ideal gas</td>
-<td>Ch 8</td>
-<td>First real calculation</td>
-</tr>
-<tr>
-<td>11</td>
-<td>Interacting systems</td>
-<td>Later chapters</td>
-<td>Where MD actually lives</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is a suggestion, not a rule. Every chapter page also shows its Huang chapter number so you can follow the book's order if you prefer.</p>
+<h1 id="your-force-field-is-a-lie-and-thats-ok">Your Force Field Is a Lie (And That's OK)<a class="headerlink" href="#your-force-field-is-a-lie-and-thats-ok" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Practical MD topic — no specific Huang chapter. This is the stuff textbooks don't cover.</p>
 </div>
-<h2 id="or-just-follow-the-book">Or Just Follow the Book<a class="headerlink" href="#or-just-follow-the-book" title="Permanent link">&para;</a></h2>
-<p>Each chapter page maps directly to Huang's chapters. If you're reading the book alongside this site, just go chapter by chapter — every page tells you exactly where in the book it corresponds to.</p>
+<h2 id="confession-time">Confession time.<a class="headerlink" href="#confession-time" title="Permanent link">&para;</a></h2>
+<p>I've been lying to my simulation. Every single run. I tell LAMMPS that argon atoms interact via a Lennard-Jones 12-6 potential with <span class="arithmatex">\(\epsilon = 0.0104\)</span> eV and <span class="arithmatex">\(\sigma = 3.4\)</span> Å. I tell it that's the truth. It's not. It's a <em>model</em>. A cartoon. A mathematically convenient approximation of the real quantum-mechanical interaction between two argon atoms.</p>
+<p>And here's the thing: every observable I compute, every <span class="arithmatex">\(g(r)\)</span>, every diffusion coefficient, every phase diagram, is downstream of that lie. Change the parameters by 10%, and the physics changes. The melting point shifts. The density shifts. The diffusion coefficient shifts. Everything.</p>
+<p>So why does MD work at all? Because the lie is <em>good enough</em>. A well-parameterized force field captures the essential physics, the stuff that matters for the properties you care about. The art is knowing what "good enough" means, and what it doesn't.</p>
+<p>Let's go.</p>
+<h2 id="what-a-force-field-actually-is">What a force field actually is<a class="headerlink" href="#what-a-force-field-actually-is" title="Permanent link">&para;</a></h2>
+<p>Strip away the jargon, and a force field is just a function. You give it the positions of all your atoms, and it gives you back a number: the potential energy <span class="arithmatex">\(U(\mathbf{r}_1, \mathbf{r}_2, \ldots, \mathbf{r}_N)\)</span>.</p>
+<p>That's it. That's the Hamiltonian. And from the Hamiltonian, everything else follows. Forces (<span class="arithmatex">\(\mathbf{F}_i = -\nabla_i U\)</span>), equations of motion (Newton's second law), trajectories (velocity-Verlet integration), and every thermodynamic observable you compute from those trajectories.</p>
+<p>The force field IS the physics of your simulation. It's not a detail. It's not a setting you pick and forget. It's the most important decision you make, and everything downstream is conditioned on it.</p>
+<div class="admonition tip">
+<p class="admonition-title">Key Insight</p>
+<p>Statistical mechanics gives you the framework: ensembles, partition functions, fluctuation formulas. But the force field gives you the <em>Hamiltonian</em> that goes inside that framework. Get the framework right and the Hamiltonian wrong? Wrong answers. Get the Hamiltonian right and the framework wrong? Also wrong answers. You need both.</p>
+</div>
+<h2 id="the-simplest-lie-lennard-jones">The simplest lie: Lennard-Jones<a class="headerlink" href="#the-simplest-lie-lennard-jones" title="Permanent link">&para;</a></h2>
+<p>The Lennard-Jones potential is the "Hello World" of force fields:</p>
+<div class="arithmatex">\[U_\text{LJ}(r) = 4\epsilon \left[ \left(\frac{\sigma}{r}\right)^{12} - \left(\frac{\sigma}{r}\right)^{6} \right]\]</div>
+<p>Two parameters. That's it. <span class="arithmatex">\(\epsilon\)</span> sets the depth of the well (how strongly the atoms attract). <span class="arithmatex">\(\sigma\)</span> sets the size of the atom (where the potential crosses zero). The <span class="arithmatex">\(r^{-6}\)</span> part is the attractive van der Waals interaction. The <span class="arithmatex">\(r^{-12}\)</span> part is Pauli repulsion.</p>
+<figure>
+  <img alt="Lennard-Jones potential curve" src="../assets/plots/lj-potential-annotated.png" width="600" />
+<br />
+<figcaption>The Lennard-Jones potential. Two parameters control everything: $\epsilon$ (well depth, sets the energy scale) and $\sigma$ (atomic diameter, sets the length scale). The minimum is at $r_\text{min} = 2^{1/6}\sigma \approx 1.12\sigma$. Beyond ~$2.5\sigma$, the interaction is negligible.</figcaption>
+</figure>
+<p>Here's the honest truth about that <span class="arithmatex">\(r^{-12}\)</span> term: it has no theoretical justification. The attractive <span class="arithmatex">\(r^{-6}\)</span> comes from real physics (London dispersion forces, induced dipole-dipole interactions). But <span class="arithmatex">\(r^{-12}\)</span>? That's chosen because it's computationally cheap (<span class="arithmatex">\(r^{-12} = (r^{-6})^2\)</span>, one multiplication instead of a separate power). The real repulsion is exponential (<span class="arithmatex">\(\sim e^{-r/\rho}\)</span>), not a power law. We use 12-6 because it's fast and "close enough."</p>
+<p>And for liquid argon? It works shockingly well. With <span class="arithmatex">\(\epsilon/k_B = 120\)</span> K and <span class="arithmatex">\(\sigma = 3.4\)</span> Å, you get densities, diffusion coefficients, and radial distribution functions that match experiment to within a few percent. For a two-parameter model with a fake repulsion term. That's crazy.</p>
+<div class="admonition note">
+<p class="admonition-title">MD Connection</p>
+<p>In LAMMPS: <code>pair_style lj/cut 10.0</code> with <code>pair_coeff 1 1 0.0104 3.4</code>. Those two numbers (<span class="arithmatex">\(\epsilon\)</span> in eV, <span class="arithmatex">\(\sigma\)</span> in Å for <code>metal</code> units) define the entire physics of your argon simulation. Change <span class="arithmatex">\(\epsilon\)</span> by 10%, and your melting point shifts by 10-15 K. That's how sensitive your results are to the force field.</p>
+</div>
+<h2 id="the-force-field-determines-your-physics">The force field determines your physics<a class="headerlink" href="#the-force-field-determines-your-physics" title="Permanent link">&para;</a></h2>
+<p>This isn't abstract. Let me show you.</p>
+<p>I ran our standard liquid argon simulation (256 atoms, 107 K, NVE) and computed the radial distribution function <span class="arithmatex">\(g(r)\)</span>. Then I reran the exact same setup but with <span class="arithmatex">\(\epsilon\)</span> reduced by 40%. Same box. Same temperature. Same number of atoms. Different force field.</p>
+<figure>
+  <img alt="g(r) comparison for different epsilon values" src="../assets/plots/ff-gr-sensitivity.png" width="700" />
+<br />
+<figcaption>The radial distribution function of liquid argon with two different $\epsilon$ values. Same system, same temperature, same density. The only difference is a 40% reduction in the well depth. The first peak drops dramatically. The structure is visibly different. Your force field parameters are not innocent bystanders.</figcaption>
+</figure>
+<p>Look at that. Same temperature, same box, different force field, different structure. The first peak (nearest-neighbor shell) drops and broadens significantly. The second peak (next-nearest neighbors) washes out. The liquid with weaker attractions is less structured, closer to an ideal gas.</p>
+<p>This is the fundamental point: <strong>your simulation doesn't compute properties of argon. It computes properties of the LJ model with your chosen parameters.</strong> If those parameters are good, the results match argon. If they're not, they match... something else.</p>
+<h2 id="where-do-the-parameters-come-from">Where do the parameters come from?<a class="headerlink" href="#where-do-the-parameters-come-from" title="Permanent link">&para;</a></h2>
+<p>Here's the part that surprises people. Force field parameters are not derived from first principles. They're <strong>fitted</strong>. Someone, somewhere, took experimental data (or quantum chemistry calculations) and adjusted the parameters until the model reproduced the target properties.</p>
+<p>For a simple system like argon LJ:</p>
+<ul>
+<li><span class="arithmatex">\(\epsilon\)</span> and <span class="arithmatex">\(\sigma\)</span> are fitted to the experimental second virial coefficient, the liquid density at the boiling point, or the lattice constant of solid argon. Different fitting targets give slightly different parameters.</li>
+</ul>
+<p>For a complex biomolecular force field like AMBER or CHARMM:</p>
+<ul>
+<li>Bond lengths and angles: fitted to gas-phase quantum chemistry (MP2 or DFT optimized geometries)</li>
+<li>Torsional barriers: fitted to QM torsional energy scans</li>
+<li>Partial charges: fitted to reproduce QM electrostatic potentials</li>
+<li>LJ parameters: fitted to reproduce experimental liquid densities and heats of vaporization</li>
+</ul>
+<p>That last point is crucial. The LJ parameters for carbon in OPLS-AA were fitted to reproduce the density of liquid cyclohexane and its heat of vaporization at 298 K and 1 atm. They were NOT fitted to get the right diffusion coefficient, the right viscosity, or the right behavior at 500 K. If those turn out right, great. But there's no guarantee.</p>
+<div class="admonition warning">
+<p class="admonition-title">Common Mistake</p>
+<p>Reporting simulation results to four significant digits when your force field is accurate to maybe 10%. The force field is almost always the dominant source of systematic error. If your LJ parameters are uncertain by 5%, your computed density is uncertain by at least that much, no matter how long you run or how carefully you do your statistics.</p>
+</div>
+<h2 id="beyond-two-atoms-bonded-interactions">Beyond two atoms: bonded interactions<a class="headerlink" href="#beyond-two-atoms-bonded-interactions" title="Permanent link">&para;</a></h2>
+<p>For molecules (as opposed to noble gases), the force field has more terms. The standard decomposition is:</p>
+<div class="arithmatex">\[U = U_\text{bonds} + U_\text{angles} + U_\text{dihedrals} + U_\text{nonbonded}\]</div>
+<p><strong>Bonds</strong>: Harmonic springs between bonded atoms. <span class="arithmatex">\(U = \frac{1}{2}k_b(r - r_0)^2\)</span>. The equilibrium length <span class="arithmatex">\(r_0\)</span> and spring constant <span class="arithmatex">\(k_b\)</span> are fitted to QM bond lengths and vibrational frequencies.</p>
+<p><strong>Angles</strong>: Harmonic springs for bond angles. <span class="arithmatex">\(U = \frac{1}{2}k_\theta(\theta - \theta_0)^2\)</span>. Same idea: fitted to QM geometries and bending frequencies.</p>
+<p><strong>Dihedrals</strong>: Periodic functions for rotation around bonds. <span class="arithmatex">\(U = \sum_n V_n [1 + \cos(n\phi - \gamma_n)]\)</span>. These control the conformational preferences (gauche vs trans, cis vs trans). Fitted to QM torsional scans.</p>
+<p><strong>Nonbonded</strong>: LJ + Coulomb between atoms separated by 3+ bonds (and between different molecules). <span class="arithmatex">\(U = 4\epsilon[(\sigma/r)^{12} - (\sigma/r)^6] + q_iq_j / (4\pi\epsilon_0 r)\)</span>. The charges <span class="arithmatex">\(q_i\)</span> are partial charges, not integers (a carbon in a protein might carry <span class="arithmatex">\(-0.18e\)</span>).</p>
+<p>This is a <strong>Class I</strong> force field. Every term is either harmonic or a simple cosine. No cross-terms. No polarization. OPLS-AA, AMBER, CHARMM, GROMOS are all Class I.</p>
+<p><strong>Class II</strong> force fields (like CFF, COMPASS) add cross-terms: bond-angle coupling, angle-dihedral coupling, etc. More parameters, better vibrational frequencies, rarely used for biomolecules because the parameter fitting is a nightmare.</p>
+<p><strong>Reactive force fields</strong> (ReaxFF) allow bonds to form and break by making the bond order a continuous function of distance. Massively more parameters (thousands). Can model chemical reactions in MD. But the accuracy per interaction is lower, and the parameterization effort is enormous.</p>
+<div class="admonition note">
+<p class="admonition-title">MD Connection</p>
+<p>In LAMMPS, Class I force fields use <code>bond_style harmonic</code>, <code>angle_style harmonic</code>, <code>dihedral_style opls</code> or <code>charmm</code>. The parameters live in the data file or are specified via <code>pair_coeff</code>, <code>bond_coeff</code>, etc. For ReaxFF: <code>pair_style reaxff</code> with a separate parameter file that can be hundreds of lines long.</p>
+</div>
+<h2 id="mixing-rules-the-other-lie">Mixing rules: the other lie<a class="headerlink" href="#mixing-rules-the-other-lie" title="Permanent link">&para;</a></h2>
+<p>When you have two different atom types (say, argon and krypton), you need cross-interaction parameters: <span class="arithmatex">\(\epsilon_{12}\)</span> and <span class="arithmatex">\(\sigma_{12}\)</span>. But you only fitted <span class="arithmatex">\(\epsilon_{11}\)</span>, <span class="arithmatex">\(\sigma_{11}\)</span> and <span class="arithmatex">\(\epsilon_{22}\)</span>, <span class="arithmatex">\(\sigma_{22}\)</span>. What do you do?</p>
+<p>You guess. Systematically.</p>
+<p><strong>Lorentz-Berthelot</strong> (the default in most codes):</p>
+<div class="arithmatex">\[\sigma_{12} = \frac{\sigma_{11} + \sigma_{22}}{2}, \qquad \epsilon_{12} = \sqrt{\epsilon_{11} \cdot \epsilon_{22}}\]</div>
+<p>Arithmetic mean for sizes, geometric mean for energies. Simple. Intuitive. And often wrong by 5-20% for the cross-interaction energy.</p>
+<p><strong>Geometric mixing</strong> (used by OPLS):</p>
+<div class="arithmatex">\[\sigma_{12} = \sqrt{\sigma_{11} \cdot \sigma_{22}}, \qquad \epsilon_{12} = \sqrt{\epsilon_{11} \cdot \epsilon_{22}}\]</div>
+<p><strong>Kong rules</strong>, <strong>Waldman-Hagler</strong>, and others exist. Each gives slightly different cross-interactions. For similar atoms, the differences are small. For very different atoms (small + large, weak + strong), they can be significant.</p>
+<p>The point isn't which rule is "right." The point is that mixing rules are an approximation on top of an approximation. If you're studying a binary mixture and your results are sensitive to the cross-interaction, you should probably fit <span class="arithmatex">\(\epsilon_{12}\)</span> directly rather than trusting a combining rule.</p>
+<h2 id="how-to-evaluate-a-force-field">How to evaluate a force field<a class="headerlink" href="#how-to-evaluate-a-force-field" title="Permanent link">&para;</a></h2>
+<p>So you're starting a new project. How do you choose a force field? Here's the decision tree I actually use:</p>
+<p><strong>Step 1: What has been validated for your system?</strong> Check the literature. Has someone already shown that OPLS-AA / CHARMM36 / whatever reproduces the experimental properties you care about for a similar system? Use what works. Don't reinvent the wheel.</p>
+<p><strong>Step 2: What properties was it fitted to?</strong> If it was fitted to reproduce liquid density and heat of vaporization at 298 K, it will probably get those right. It might get the viscosity wrong. It will probably get the melting point wrong (melting points are notoriously hard for empirical force fields).</p>
+<p><strong>Step 3: Test it yourself.</strong> Run a short simulation and compare against known experimental values. Density. RDF peak positions. Diffusion coefficient. If these are off by more than 10%, either your simulation setup is wrong or the force field isn't appropriate for your system.</p>
+<p><strong>Step 4: Report what you used and acknowledge the limitations.</strong> "We used OPLS-AA parameters for..., which have been validated for liquid-state properties at ambient conditions. We note that these parameters were not fitted to high-pressure behavior and results above 1 GPa should be interpreted with caution."</p>
+<p>That last step costs nothing and saves everyone downstream.</p>
+<div class="admonition warning">
+<p class="admonition-title">Common Mistake</p>
+<p>Mixing force fields. Using AMBER parameters for the protein and OPLS parameters for the solvent. These were fitted in different ecosystems with different philosophies. The cross-interactions are not guaranteed to be consistent. Stick to one force field family for the whole system, or use parameters that were explicitly fitted to work together.</p>
+</div>
+<h2 id="the-transferability-problem">The transferability problem<a class="headerlink" href="#the-transferability-problem" title="Permanent link">&para;</a></h2>
+<p>Here's the deepest issue. You fit LJ parameters for carbon in cyclohexane. Do those same parameters work for carbon in benzene? In graphite? In a protein backbone?</p>
+<p>The hope is yes. That's <strong>transferability</strong>: the idea that atom-type parameters, once fitted for one chemical environment, work in others. Class I force fields rely heavily on this assumption.</p>
+<p>The reality is... mostly yes, within the chemical space the force field was designed for. CHARMM36 works well for proteins, lipids, nucleic acids, and common small molecules. But take it outside that space (exotic metal-organic frameworks, reactive surfaces, extreme conditions) and the transferability breaks down.</p>
+<p>This is why specialized force fields exist. TraPPE for phase equilibria. SPC/E and TIP4P for water. CLAYFF for clay minerals. Each was fitted for a specific domain, and each works well in that domain but may fail outside it.</p>
+<h2 id="takeaway">Takeaway<a class="headerlink" href="#takeaway" title="Permanent link">&para;</a></h2>
+<p>Your force field is a model Hamiltonian with fitted parameters, not a law of nature. It determines every observable your simulation produces. The LJ 12-6 potential has a fake repulsion term but works anyway because it was fitted to real data. Parameters come from fitting to experiments or QM, not from first principles, and they're only reliable for the properties and conditions they were fitted against. Mixing rules for cross-interactions are approximations on top of approximations. Choose a validated force field, test it against experiment, don't mix force field families, and never report more precision than your Hamiltonian deserves.</p>
+<details class="question">
+<summary>Check Your Understanding</summary>
+<ol>
+<li>You compute a diffusion coefficient for liquid argon and get <span class="arithmatex">\(D = 2.43 \times 10^{-5}\)</span> cm<span class="arithmatex">\(^2\)</span>/s. Your force field parameters (<span class="arithmatex">\(\epsilon\)</span>, <span class="arithmatex">\(\sigma\)</span>) are uncertain by about 5%. Is it honest to report all three significant digits? What's the real precision of your result?</li>
+<li>The LJ <span class="arithmatex">\(r^{-12}\)</span> repulsion has no theoretical basis (the real repulsion is exponential). So why does the LJ potential work so well for noble gases? What property of the fitting procedure saves us?</li>
+<li>Your labmate is simulating a protein in water. They use CHARMM36 for the protein and SPC/E for the water "because SPC/E is a better water model." What could go wrong with this mix-and-match approach?</li>
+<li>You're studying a binary Ar-Kr mixture and your results are sensitive to the cross-interaction <span class="arithmatex">\(\epsilon_{\text{Ar-Kr}}\)</span>. The Lorentz-Berthelot rule gives one value; geometric mixing gives another. How do you decide which is right? (Trick question. Neither is "right.")</li>
+<li>A paper reports the melting point of a model system to within <span class="arithmatex">\(\pm 0.5\)</span> K. The force field was parameterized against liquid density at 300 K. Should you trust that melting point?</li>
+</ol>
+</details>
 
 
 

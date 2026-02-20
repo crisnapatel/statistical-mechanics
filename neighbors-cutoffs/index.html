@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://crisnapatel.github.io/statistical-mechanics/reading-order/">
+        <link rel="canonical" href="https://crisnapatel.github.io/statistical-mechanics/neighbors-cutoffs/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../rare-events/">
       
       
-        <link rel="next" href="../ch04/">
+        <link rel="next" href="../constraints/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Reading Order - Statistical Mechanics — But Make It Make Sense</title>
+        <title>Neighbors, Cutoffs & Pair Interactions - Statistical Mechanics — But Make It Make Sense</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reading-order-for-md-practitioners" class="md-skip">
+        <a href="#neighbors-cutoffs-and-the-fine-print-of-pair-interactions" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reading Order
+              Neighbors, Cutoffs & Pair Interactions
             
           </span>
         </div>
@@ -279,32 +279,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Reading Order
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../reading-order/" class="md-nav__link">
         
   
   
@@ -315,53 +293,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-idea" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Idea
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#suggested-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      Suggested Path
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#or-just-follow-the-book" class="md-nav__link">
-    <span class="md-ellipsis">
-      Or Just Follow the Book
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -917,8 +848,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -929,13 +862,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
@@ -951,7 +882,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Practical MD Topics
@@ -1284,10 +1215,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../neighbors-cutoffs/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Neighbors, Cutoffs & Pair Interactions
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1298,6 +1251,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-thing-that-actually-takes-all-the-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      The thing that actually takes all the time.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-neighbor-lists-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How neighbor lists work
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cutoff-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cutoff selection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-shifted-potential-and-the-shifted-force-potential" class="md-nav__link">
+    <span class="md-ellipsis">
+      The shifted potential and the shifted-force potential
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-pairs-1-2-1-3-1-4-exclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special pairs: 1-2, 1-3, 1-4 exclusions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1383,27 +1410,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-idea" class="md-nav__link">
+  <a href="#the-thing-that-actually-takes-all-the-time" class="md-nav__link">
     <span class="md-ellipsis">
-      The Idea
+      The thing that actually takes all the time.
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#suggested-path" class="md-nav__link">
+  <a href="#how-neighbor-lists-work" class="md-nav__link">
     <span class="md-ellipsis">
-      Suggested Path
+      How neighbor lists work
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#or-just-follow-the-book" class="md-nav__link">
+  <a href="#cutoff-selection" class="md-nav__link">
     <span class="md-ellipsis">
-      Or Just Follow the Book
+      Cutoff selection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-shifted-potential-and-the-shifted-force-potential" class="md-nav__link">
+    <span class="md-ellipsis">
+      The shifted potential and the shifted-force potential
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-pairs-1-2-1-3-1-4-exclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special pairs: 1-2, 1-3, 1-4 exclusions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
     </span>
   </a>
   
@@ -1428,125 +1482,81 @@
   
 
 
-<h1 id="reading-order-for-md-practitioners">Reading Order for MD Practitioners<a class="headerlink" href="#reading-order-for-md-practitioners" title="Permanent link">&para;</a></h1>
-<p>Huang's book follows the standard graduate course order. That's fine if you're taking a course. But if you're coming from <strong>molecular dynamics simulations</strong> and want to understand the physics underneath what you're already doing, here's a suggested path.</p>
-<h2 id="the-idea">The Idea<a class="headerlink" href="#the-idea" title="Permanent link">&para;</a></h2>
-<p>Start from what your simulation computes. Build outward to the theory.</p>
-<h2 id="suggested-path">Suggested Path<a class="headerlink" href="#suggested-path" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Step</th>
-<th>Topic</th>
-<th>Huang Chapters</th>
-<th>Why this order</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>What is statistical mechanics?</td>
-<td>Ch 6 intro</td>
-<td>Frame the whole subject</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Phase space &amp; microstates</td>
-<td>Ch 6.0–6.2</td>
-<td>"What your simulation is actually computing"</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Velocity initialization</td>
-<td>Ch 4.2</td>
-<td>"Where your atom velocities come from"</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Ensembles</td>
-<td>Ch 6–7</td>
-<td>"What your thermostat/barostat enforces"</td>
-</tr>
-<tr>
-<td>4b</td>
-<td>Which thermostat? Which barostat?</td>
-<td><a href="../which-thermostat/">Thermostat page</a></td>
-<td>"Which <code>fix</code> for which job?"</td>
-</tr>
-<tr>
-<td>4c</td>
-<td>Your force field is a lie</td>
-<td><a href="../force-fields/">Force Field page</a></td>
-<td>"What <code>pair_coeff</code> actually means"</td>
-</tr>
-<tr>
-<td>4d</td>
-<td>Finite size &amp; periodic images</td>
-<td><a href="../finite-size/">Finite Size page</a></td>
-<td>"What <code>boundary p p p</code> really means"</td>
-</tr>
-<tr>
-<td>4e</td>
-<td>Free energy isn't free</td>
-<td><a href="../free-energy/">Free Energy page</a></td>
-<td>"Why <span class="arithmatex">\(\Delta G\)</span> is so hard to compute"</td>
-</tr>
-<tr>
-<td>4f</td>
-<td>The radial distribution function</td>
-<td><a href="../rdf/">RDF page</a></td>
-<td>"Your simulation's fingerprint"</td>
-</tr>
-<tr>
-<td>5</td>
-<td>The partition function</td>
-<td>Ch 7</td>
-<td>The one function that generates everything</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Thermodynamic potentials</td>
-<td><a href="../thermodynamic-potentials/">Potentials page</a></td>
-<td>"Which energy is my simulation minimizing?"</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Connecting to thermodynamics</td>
-<td>Ch 7–8</td>
-<td>Bridge micro → macro</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Brownian motion &amp; diffusion</td>
-<td><a href="../brownian-motion/">Brownian Motion page</a></td>
-<td>"Why does <code>compute msd</code> work?"</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Uncertainty &amp; sampling</td>
-<td><a href="../uncertainty-sampling/">Uncertainty page</a></td>
-<td>"Are my error bars honest?"</td>
-</tr>
-<tr>
-<td>10</td>
-<td>Ideal gas</td>
-<td>Ch 8</td>
-<td>First real calculation</td>
-</tr>
-<tr>
-<td>11</td>
-<td>Interacting systems</td>
-<td>Later chapters</td>
-<td>Where MD actually lives</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is a suggestion, not a rule. Every chapter page also shows its Huang chapter number so you can follow the book's order if you prefer.</p>
+<h1 id="neighbors-cutoffs-and-the-fine-print-of-pair-interactions">Neighbors, Cutoffs, and the Fine Print of Pair Interactions<a class="headerlink" href="#neighbors-cutoffs-and-the-fine-print-of-pair-interactions" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Practical MD topic — connects to <a href="../force-fields/">Force Fields</a> and <a href="../finite-size/">Finite Size</a>. The neighbor list is the most computationally important data structure in MD.</p>
 </div>
-<h2 id="or-just-follow-the-book">Or Just Follow the Book<a class="headerlink" href="#or-just-follow-the-book" title="Permanent link">&para;</a></h2>
-<p>Each chapter page maps directly to Huang's chapters. If you're reading the book alongside this site, just go chapter by chapter — every page tells you exactly where in the book it corresponds to.</p>
+<h2 id="the-thing-that-actually-takes-all-the-time">The thing that actually takes all the time.<a class="headerlink" href="#the-thing-that-actually-takes-all-the-time" title="Permanent link">&para;</a></h2>
+<p>Your LAMMPS simulation has 10,000 atoms. At each timestep, you need forces on every atom. For pair interactions, that's <span class="arithmatex">\(N(N-1)/2 \approx 50\)</span> million pairs to check. At 1 million timesteps, that's <span class="arithmatex">\(5 \times 10^{13}\)</span> pair evaluations. Even at 1 ns per evaluation, that's 14 hours of wall time just for pair forces.</p>
+<p>But most of those pairs are far apart. If two atoms are 20 Å apart and your cutoff is 10 Å, they don't interact. Why waste time computing a zero force?</p>
+<p>The <strong>neighbor list</strong> is the solution. Instead of checking all <span class="arithmatex">\(N^2\)</span> pairs every step, you build a list of which atoms are close to each other, and only compute forces for those pairs. This reduces the cost from <span class="arithmatex">\(O(N^2)\)</span> to <span class="arithmatex">\(O(N)\)</span> per step (for short-range interactions with a cutoff). It's the single most important algorithmic optimization in MD.</p>
+<h2 id="how-neighbor-lists-work">How neighbor lists work<a class="headerlink" href="#how-neighbor-lists-work" title="Permanent link">&para;</a></h2>
+<p>The basic idea: at some interval (every 10-20 steps), scan all pairs and find which ones are within <span class="arithmatex">\(r_\text{cut} + r_\text{skin}\)</span>. Store these pairs in a list. For the next 10-20 steps, only compute forces for pairs on the list.</p>
+<p>The <strong>skin distance</strong> <span class="arithmatex">\(r_\text{skin}\)</span> is a buffer. Because atoms move between list rebuilds, a pair that was at <span class="arithmatex">\(r_\text{cut} + 0.5\)</span> Å might have moved to <span class="arithmatex">\(r_\text{cut} - 0.1\)</span> Å by the next rebuild. The skin ensures you don't miss any pairs that might come within <span class="arithmatex">\(r_\text{cut}\)</span> before the next rebuild.</p>
+<p>In LAMMPS: <code>neighbor 2.0 bin</code> sets the skin distance to 2.0 Å and uses the binning algorithm. <code>neigh_modify every 10 delay 0 check yes</code> rebuilds every 10 steps, with a safety check that triggers early rebuilds if any atom has moved more than half the skin distance.</p>
+<p>Too small a skin: you miss pairs, get wrong forces, energy conservation breaks. LAMMPS will warn you with "dangerous builds."</p>
+<p>Too large a skin: the neighbor list contains too many non-interacting pairs, wasting time on zero-force calculations.</p>
+<p>A skin of 2.0 Å is reasonable for most systems. For very fast-moving atoms (high temperature, small masses), increase it. For slow, dense systems, you can decrease it.</p>
+<div class="admonition warning">
+<p class="admonition-title">Common Mistake</p>
+<p>Ignoring "dangerous builds" warnings. This means atoms moved far enough between rebuilds that they might have passed through the skin buffer. Your forces are potentially wrong. The fix: rebuild more often (<code>neigh_modify every 1</code>) or increase the skin distance. Never ignore this warning.</p>
+</div>
+<h2 id="cutoff-selection">Cutoff selection<a class="headerlink" href="#cutoff-selection" title="Permanent link">&para;</a></h2>
+<p>The cutoff determines which interactions you include. Too short: you miss significant interactions and your thermodynamics are wrong. Too long: you include too many pairs and the simulation is slow.</p>
+<p>For LJ interactions:</p>
+<ul>
+<li><span class="arithmatex">\(r_\text{cut} = 2.5\sigma\)</span>: the minimum reasonable cutoff. Captures ~98% of the interaction energy. Always use tail corrections (<code>pair_modify tail yes</code>) with this.</li>
+<li><span class="arithmatex">\(r_\text{cut} = 3.5\sigma\)</span>: a safer choice. Tail corrections are smaller. Standard for careful work.</li>
+<li><span class="arithmatex">\(r_\text{cut} = 5.0\sigma\)</span> or more: overkill for most purposes, but necessary for studying structure at larger length scales.</li>
+</ul>
+<p>The cost scales roughly as <span class="arithmatex">\(r_\text{cut}^3\)</span> (because the number of neighbors within the cutoff grows as the volume of the cutoff sphere). Doubling the cutoff increases the cost by 8x.</p>
+<p>For Coulomb: never use a direct cutoff. Use Ewald-based methods (see <a href="../long-range-electrostatics/">Long-Range Electrostatics</a>).</p>
+<h2 id="the-shifted-potential-and-the-shifted-force-potential">The shifted potential and the shifted-force potential<a class="headerlink" href="#the-shifted-potential-and-the-shifted-force-potential" title="Permanent link">&para;</a></h2>
+<p>When you truncate at <span class="arithmatex">\(r_\text{cut}\)</span>, there's a discontinuity: <span class="arithmatex">\(U(r_\text{cut}^-) \neq 0\)</span>. This means:</p>
+<ul>
+<li>
+<p><strong>Unshifted</strong>: <span class="arithmatex">\(U_\text{trunc}(r) = U(r)\)</span> for <span class="arithmatex">\(r &lt; r_\text{cut}\)</span>, <span class="arithmatex">\(0\)</span> for <span class="arithmatex">\(r &gt; r_\text{cut}\)</span>. There's an energy discontinuity. Forces are correct, but energy isn't continuous. This creates small impulsive kicks when atoms enter/leave the cutoff sphere.</p>
+</li>
+<li>
+<p><strong>Shifted potential</strong>: <span class="arithmatex">\(U_\text{shift}(r) = U(r) - U(r_\text{cut})\)</span> for <span class="arithmatex">\(r &lt; r_\text{cut}\)</span>. Energy is continuous at the cutoff. But the force still has a discontinuity (the derivative jumps). In LAMMPS: <code>pair_modify shift yes</code>.</p>
+</li>
+<li>
+<p><strong>Shifted force</strong>: Both potential and force are shifted to be continuous at <span class="arithmatex">\(r_\text{cut}\)</span>. Smoothest behavior. Best energy conservation. But the effective potential is modified from the original, affecting thermodynamics slightly.</p>
+</li>
+</ul>
+<p>For production simulations: shifted potential (<code>pair_modify shift yes</code>) plus tail corrections (<code>pair_modify tail yes</code>) is a good default. The shift makes dynamics smoother, the tail corrections restore the missing long-range thermodynamics.</p>
+<div class="admonition note">
+<p class="admonition-title">MD Connection</p>
+<p>In LAMMPS, key neighbor/cutoff commands:</p>
+<ul>
+<li><code>pair_style lj/cut 10.0</code> — LJ with 10 Å cutoff</li>
+<li><code>pair_modify shift yes tail yes</code> — shift potential, apply tail corrections</li>
+<li><code>neighbor 2.0 bin</code> — 2 Å skin, use spatial binning</li>
+<li><code>neigh_modify every 10 check yes</code> — rebuild every 10 steps with safety check</li>
+<li><code>comm_modify cutoff 14.0</code> — increase communication cutoff (needed when skin is large or for multi-body potentials)</li>
+</ul>
+</div>
+<h2 id="special-pairs-1-2-1-3-1-4-exclusions">Special pairs: 1-2, 1-3, 1-4 exclusions<a class="headerlink" href="#special-pairs-1-2-1-3-1-4-exclusions" title="Permanent link">&para;</a></h2>
+<p>In molecular systems, bonded atoms (1-2 pairs), atoms two bonds apart (1-3 pairs), and atoms three bonds apart (1-4 pairs) are handled specially. Their nonbonded interactions are either excluded entirely or scaled down, because the bonded terms already account for their interaction.</p>
+<ul>
+<li><strong>1-2 excluded</strong>: Always. The bond potential handles atoms directly bonded.</li>
+<li><strong>1-3 excluded</strong>: Almost always. The angle potential handles atoms separated by one intermediate atom.</li>
+<li><strong>1-4 scaled</strong>: Depends on the force field. OPLS and AMBER scale LJ and Coulomb by 0.5 for 1-4 pairs. CHARMM uses different scaling for LJ and Coulomb.</li>
+</ul>
+<p>Getting the exclusions wrong (including full LJ for 1-2 pairs, or using the wrong 1-4 scaling) is a subtle bug that produces plausible but wrong results. Always check that your exclusions match the force field specification.</p>
+<p>In LAMMPS: <code>special_bonds lj/coul 0.0 0.0 0.5</code> excludes 1-2 and 1-3, scales 1-4 by 0.5. This must match your force field.</p>
+<h2 id="takeaway">Takeaway<a class="headerlink" href="#takeaway" title="Permanent link">&para;</a></h2>
+<p>The neighbor list reduces force computation from <span class="arithmatex">\(O(N^2)\)</span> to <span class="arithmatex">\(O(N)\)</span> by only evaluating pairs within <span class="arithmatex">\(r_\text{cut} + r_\text{skin}\)</span>. Cutoff selection balances accuracy against cost: <span class="arithmatex">\(2.5\sigma\)</span> minimum for LJ with tail corrections, never truncate Coulomb. The skin distance must be large enough that no pairs are missed between rebuilds ("dangerous builds" means your skin is too small). Shifted potentials improve energy conservation; tail corrections restore missing long-range thermodynamics. For molecular systems, 1-2/1-3/1-4 exclusions must match the force field specification exactly.</p>
+<details class="question">
+<summary>Check Your Understanding</summary>
+<ol>
+<li>Your LAMMPS log says "Dangerous builds: 47." Your simulation ran for 100,000 steps. Is this a minor issue or a simulation-breaking problem? What are your two fixes?</li>
+<li>You increase <span class="arithmatex">\(r_\text{cut}\)</span> from 10 Å to 15 Å. By what factor does the number of neighbor pairs (approximately) increase? By what factor does the total computational cost increase?</li>
+<li>You add <code>pair_modify shift yes</code> and the average pressure changes by 50 bar. Is the shifted or unshifted pressure more "correct"? (Trick question. Think about what "correct" means when you're using a truncated potential.)</li>
+<li>Your simulation uses OPLS-AA with <code>special_bonds lj 0.0 0.0 0.5</code>. Someone changes it to <code>special_bonds lj 0.0 0.0 1.0</code> by mistake. What kind of error does this introduce, and would you notice it easily?</li>
+<li>Why does the cost of evaluating pair forces scale as <span class="arithmatex">\(r_\text{cut}^3\)</span> rather than <span class="arithmatex">\(r_\text{cut}^2\)</span> or <span class="arithmatex">\(r_\text{cut}\)</span>?</li>
+</ol>
+</details>
 
 
 

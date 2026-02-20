@@ -1,0 +1,1859 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A conversational walkthrough of Kerson Huang's Statistical Mechanics, with MD simulations.">
+      
+      
+      
+        <link rel="canonical" href="https://crisnapatel.github.io/statistical-mechanics/brownian-motion/">
+      
+      
+        <link rel="prev" href="../ch07/7.6-equivalence/">
+      
+      
+        <link rel="next" href="../uncertainty-sampling/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
+    
+    
+      
+        <title>Brownian Motion & Diffusion - Statistical Mechanics — But Make It Make Sense</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#brownian-motion-diffusion" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Statistical Mechanics — But Make It Make Sense" class="md-header__button md-logo" aria-label="Statistical Mechanics — But Make It Make Sense" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Statistical Mechanics — But Make It Make Sense
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Brownian Motion & Diffusion
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/crisnapatel/statistical-mechanics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    crisnapatel/statistical-mechanics
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Statistical Mechanics — But Make It Make Sense" class="md-nav__button md-logo" aria-label="Statistical Mechanics — But Make It Make Sense" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Statistical Mechanics — But Make It Make Sense
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/crisnapatel/statistical-mechanics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    crisnapatel/statistical-mechanics
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reading-order/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reading Order
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ch 4 — Equilibrium State of a Dilute Gas
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Ch 4 — Equilibrium State of a Dilute Gas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch04/4.2-maxwell-boltzmann/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.2 Maxwell-Boltzmann Distribution
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch04/4.3-most-probable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.3 Most Probable Distribution
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ch 6 — Classical Statistical Mechanics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Ch 6 — Classical Statistical Mechanics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thermodynamic-potentials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Thermodynamic Potentials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch06/6.0-foundations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.0 Foundations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch06/6.1-postulate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.1 The Postulate
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch06/6.2-microcanonical-ensemble/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.2 Microcanonical Ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch06/6.4-equipartition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.4 Equipartition Theorem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch06/6.6-gibbs-paradox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.6 Gibbs Paradox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ch 7 — Canonical & Grand Canonical Ensemble
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Ch 7 — Canonical & Grand Canonical Ensemble
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch07/7.1-canonical-ensemble/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.1 The Canonical Ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch07/7.2-energy-fluctuations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.2 Energy Fluctuations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch07/7.3-grand-canonical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.3 Grand Canonical Ensemble
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch07/7.4-density-fluctuations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.4 Density Fluctuations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch07/7.5-chemical-potential/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.5 The Chemical Potential
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ch07/7.6-equivalence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.6 Equivalence of Ensembles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Practical MD Topics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Practical MD Topics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Brownian Motion & Diffusion
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Brownian Motion & Diffusion
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#confession-time-again" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confession time (again).
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-drunkest-walk-youve-ever-seen" class="md-nav__link">
+    <span class="md-ellipsis">
+      The drunkest walk you've ever seen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-really-going-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's really going on
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#einstein-enters-the-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Einstein enters the chat
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-answer-how-far-does-a-particle-wander" class="md-nav__link">
+    <span class="md-ellipsis">
+      The answer: how far does a particle wander?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#two-ways-to-get-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Two ways to get D
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Two ways to get D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#route-1-einstein-msd-slope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Route 1: Einstein (MSD slope)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#route-2-green-kubo-velocity-autocorrelation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Route 2: Green-Kubo (velocity autocorrelation)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-deep-connection-fluctuation-meets-dissipation" class="md-nav__link">
+    <span class="md-ellipsis">
+      The deep connection: fluctuation meets dissipation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The deep connection: fluctuation meets dissipation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-green-kubo-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Green-Kubo connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-about-fix-langevin" class="md-nav__link">
+    <span class="md-ellipsis">
+      What about fix langevin?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perrins-nobel-why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Perrin's Nobel: why this matters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uncertainty-sampling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uncertainty & Sampling Quality
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../which-thermostat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Which Thermostat? Which Barostat?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../force-fields/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Your Force Field Is a Lie
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../finite-size/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Finite Size & Periodic Images
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../free-energy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Free Energy Isn't Free
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rdf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    The Radial Distribution Function
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../time-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Time Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enhanced-sampling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enhanced Sampling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pressure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pressure in a Box
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase-transitions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Phase Transitions in a Box
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../long-range-electrostatics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Long-Range Electrostatics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coarse-graining/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Coarse-Graining
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rare-events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Rare Events & TST
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../neighbors-cutoffs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Neighbors, Cutoffs & Pair Interactions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../constraints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Constraints & Rigid Bodies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nemd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Non-Equilibrium MD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#confession-time-again" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confession time (again).
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-drunkest-walk-youve-ever-seen" class="md-nav__link">
+    <span class="md-ellipsis">
+      The drunkest walk you've ever seen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-really-going-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's really going on
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#einstein-enters-the-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Einstein enters the chat
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-answer-how-far-does-a-particle-wander" class="md-nav__link">
+    <span class="md-ellipsis">
+      The answer: how far does a particle wander?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#two-ways-to-get-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Two ways to get D
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Two ways to get D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#route-1-einstein-msd-slope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Route 1: Einstein (MSD slope)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#route-2-green-kubo-velocity-autocorrelation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Route 2: Green-Kubo (velocity autocorrelation)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-deep-connection-fluctuation-meets-dissipation" class="md-nav__link">
+    <span class="md-ellipsis">
+      The deep connection: fluctuation meets dissipation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The deep connection: fluctuation meets dissipation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-green-kubo-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Green-Kubo connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-about-fix-langevin" class="md-nav__link">
+    <span class="md-ellipsis">
+      What about fix langevin?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perrins-nobel-why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Perrin's Nobel: why this matters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="brownian-motion-diffusion">Brownian Motion &amp; Diffusion<a class="headerlink" href="#brownian-motion-diffusion" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Huang, <em>Introduction to Statistical Physics</em> 2ed, Chapter 10 &amp; LiveCoMS Best Practices for Computing Transport Properties</p>
+</div>
+<h2 id="confession-time-again">Confession time (again).<a class="headerlink" href="#confession-time-again" title="Permanent link">&para;</a></h2>
+<p>I've computed diffusion coefficients. Lots of them. Fire up LAMMPS, add <code>compute msd all msd</code>, run for a while, plot MSD vs time, fit a line, divide by 6. Out pops a number. <span class="arithmatex">\(D = 2.4 \times 10^{-5}\)</span> cm<span class="arithmatex">\(^2\)</span>/s. Done.</p>
+<p>But <em>why</em> does that work? Why does the mean-square displacement grow linearly with time? Why divide by 6? Where does that formula come from? And here's the one that really got me: why does the same physics that makes particles wander aimlessly also create friction when you push them?</p>
+<p>That's what this page is about. We're going back to 1827. A botanist. A microscope. Pollen grains doing something nobody could explain. And we're following that thread all the way to the <code>compute msd</code> command in your LAMMPS input script.</p>
+<p>Let's go.</p>
+<h2 id="the-drunkest-walk-youve-ever-seen">The drunkest walk you've ever seen<a class="headerlink" href="#the-drunkest-walk-youve-ever-seen" title="Permanent link">&para;</a></h2>
+<p>Robert Brown, 1827. He's staring through a microscope at pollen grains suspended in water. And they won't sit still. They jitter. They wander. They stop, reverse, wander off in a completely new direction. No pattern. No purpose. Just perpetual, random motion.</p>
+<p>His first thought: maybe the pollen is alive. So he tried grinding up rocks and suspending the dust. Same behavior. Dead particles, same random jitter. Something invisible was shoving them around.</p>
+<p>Fast forward to Jean Perrin, 1909. He tracked these particles obsessively. Recorded their positions every 30 seconds. Connected the dots. And got a tangled mess.</p>
+<p>But here's what really blew people's minds: if Perrin had recorded positions every <em>second</em> instead of every 30, each straight segment would have been replaced by an equally tangled 30-segment path. Zoom in further? Same thing. The path is <strong>fractal</strong>. Its fractal dimension is <span class="arithmatex">\(D_f = 2\)</span>, meaning it's so crinkly that it effectively fills a 2D surface.</p>
+<figure>
+  <img alt="Brownian trajectory of one argon atom" src="../assets/plots/brownian-trajectory.png" width="600" />
+<br />
+<figcaption>The trajectory of a single argon atom in a liquid, projected onto the x-y plane. 200 ps of NVE dynamics at 107 K. Color encodes time (viridis: dark = early, bright = late). Net displacement: 12 Å. Total path length: 363 Å. The path is 30x longer than the straight-line distance. That's diffusion.</figcaption>
+</figure>
+<p>You can't really define an instantaneous velocity for a Brownian particle. The "velocity" you compute depends on your time resolution, and it diverges as you look at shorter intervals. The path is continuous everywhere, differentiable nowhere. Mathematicians love this object. Physicists find it... unsettling.</p>
+<p>And this apparently useless random jitter? It won Perrin a Nobel Prize in 1926. Because it proved atoms exist.</p>
+<div class="admonition tip">
+<p class="admonition-title">Key Insight</p>
+<p>Brownian motion is caused by random molecular impacts. Each collision delivers a tiny, random kick. The visible particle's trajectory is the cumulative result of billions of these kicks. The resulting path is fractal, random, and (as we're about to see) deeply connected to diffusion, friction, and thermodynamics.</p>
+</div>
+<h2 id="whats-really-going-on">What's really going on<a class="headerlink" href="#whats-really-going-on" title="Permanent link">&para;</a></h2>
+<p>OK, so water molecules are hammering the pollen grain from all sides. Each individual collision is tiny and random. But they don't perfectly cancel. At any instant, there's a slight imbalance, a net force in some random direction. That's the kick. Next instant, another random net force in a different direction. The particle staggers around like a person trying to walk home after one too many.</p>
+<p>This is the physical picture. Hold onto it. Everything that follows is just making this precise.</p>
+<h2 id="einstein-enters-the-chat">Einstein enters the chat<a class="headerlink" href="#einstein-enters-the-chat" title="Permanent link">&para;</a></h2>
+<p>Einstein, 1905. The same year as special relativity. The same year as the photoelectric effect. And tucked in between: a paper about particles stumbling around in water.</p>
+<p>(The man had a productive year.)</p>
+<p>Einstein's approach was brilliant in its simplicity. Don't try to track every molecular collision. That's <span class="arithmatex">\(10^{13}\)</span> collisions per second. Hopeless. Instead, zoom out and ask a statistical question:</p>
+<blockquote>
+<p>If a particle is at position <span class="arithmatex">\(x\)</span> right now, what's the <em>probability</em> that it moves by some displacement <span class="arithmatex">\(\Delta\)</span> during a short time <span class="arithmatex">\(\tau\)</span>?</p>
+</blockquote>
+<p>Call that probability density <span class="arithmatex">\(f_\tau(\Delta)\)</span>. This <strong>transition probability</strong> has two properties that Einstein needed and nothing more:</p>
+<ol>
+<li><strong>Symmetric</strong>: <span class="arithmatex">\(f_\tau(\Delta) = f_\tau(-\Delta)\)</span>. No preferred direction. The kicks are random.</li>
+<li><strong>Normalized</strong>: <span class="arithmatex">\(\int_{-\infty}^{\infty} f_\tau(\Delta)\, d\Delta = 1\)</span>. The particle goes <em>somewhere</em>.</li>
+</ol>
+<p>That's it. He didn't need to know the exact shape of <span class="arithmatex">\(f_\tau\)</span>. Didn't need to model water molecules. Didn't need hydrodynamics. Just symmetry and normalization.</p>
+<p>Here's the key move: Taylor-expand both sides of the particle conservation equation. The symmetry of <span class="arithmatex">\(f_\tau\)</span> kills the first-order term (no preferred direction). The normalization kills the zeroth-order term (cancels on both sides). The only surviving contribution is the second moment <span class="arithmatex">\(\langle \Delta^2 \rangle_\tau\)</span>. Define the <strong>diffusion constant</strong> as <span class="arithmatex">\(D = \langle \Delta^2 \rangle_\tau / 2\tau\)</span>, and you land on the <strong>diffusion equation</strong>:</p>
+<div class="arithmatex">\[\boxed{\frac{\partial n}{\partial t} = D \frac{\partial^2 n}{\partial x^2}}\]</div>
+<p>Done. Beautiful. And notice what happened: the details of <span class="arithmatex">\(f_\tau\)</span> completely dropped out. A random walk with equal step sizes gives the same equation as one with Gaussian steps. The macroscopic behavior (diffusion) doesn't care about microscopic details. That's the central limit theorem doing its thing.</p>
+<div class="admonition warning">
+<p class="admonition-title">Common Mistake</p>
+<p>The diffusion equation assumes the particle has no memory. Each jump is independent of the previous one. This is the <strong>Markov property</strong>. It's a great approximation for a Brownian particle in a fluid (where the velocity decorrelates in picoseconds), but it fails for systems with long-range correlations or confinement. If your system has memory effects, the simple <span class="arithmatex">\(\langle r^2 \rangle \propto t\)</span> law breaks down and you get <strong>anomalous diffusion</strong>: <span class="arithmatex">\(\langle r^2 \rangle \propto t^\alpha\)</span> with <span class="arithmatex">\(\alpha \neq 1\)</span>.</p>
+</div>
+<h2 id="the-answer-how-far-does-a-particle-wander">The answer: how far does a particle wander?<a class="headerlink" href="#the-answer-how-far-does-a-particle-wander" title="Permanent link">&para;</a></h2>
+<p>The diffusion equation has an exact solution: a Gaussian that spreads with time. The particle's position is normally distributed (central limit theorem: billions of random kicks add up to a Gaussian). The mean-square displacement in 1D is <span class="arithmatex">\(\langle x^2 \rangle = 2Dt\)</span>. In three dimensions, each component is independent, so:</p>
+<div class="arithmatex">\[\boxed{\langle r^2 \rangle = \langle x^2 \rangle + \langle y^2 \rangle + \langle z^2 \rangle = 6Dt}\]</div>
+<p>That's the famous Einstein relation for mean-square displacement. Linear in time. Not quadratic (that would be ballistic, free flight). Linear. The factor of 6 is just <span class="arithmatex">\(2 \times 3\)</span> dimensions.</p>
+<p>And <em>that's</em> where the 6 comes from in your MSD analysis. When you compute <code>compute msd all msd</code> in LAMMPS and fit the slope of MSD vs time, you're extracting <span class="arithmatex">\(6D\)</span>. Divide by 6, get <span class="arithmatex">\(D\)</span>. Now you know why.</p>
+<div class="admonition note">
+<p class="admonition-title">MD Connection</p>
+<p>In LAMMPS, <code>compute msd</code> gives you <span class="arithmatex">\(\langle r^2 \rangle\)</span> averaged over all atoms in the group. The output columns are <span class="arithmatex">\(\langle x^2 \rangle\)</span>, <span class="arithmatex">\(\langle y^2 \rangle\)</span>, <span class="arithmatex">\(\langle z^2 \rangle\)</span>, and the total <span class="arithmatex">\(\langle r^2 \rangle\)</span>. For an isotropic system, <span class="arithmatex">\(D_x \approx D_y \approx D_z\)</span>. If they're not roughly equal, something is wrong (anisotropy, bad PBC, or insufficient sampling). That's a free sanity check.</p>
+</div>
+<h2 id="two-ways-to-get-d">Two ways to get D<a class="headerlink" href="#two-ways-to-get-d" title="Permanent link">&para;</a></h2>
+<p>There are exactly two fundamental routes to the self-diffusion coefficient. They look completely different, but they're mathematically equivalent.</p>
+<h3 id="route-1-einstein-msd-slope">Route 1: Einstein (MSD slope)<a class="headerlink" href="#route-1-einstein-msd-slope" title="Permanent link">&para;</a></h3>
+<p>This is the one you already know. Run a simulation, track how far each particle moves from its starting position, average over all particles, and plot <span class="arithmatex">\(\langle r^2 \rangle\)</span> vs <span class="arithmatex">\(t\)</span>. In the diffusive regime, it's a straight line with slope <span class="arithmatex">\(6D\)</span>:</p>
+<div class="arithmatex">\[D = \frac{1}{6} \lim_{t \to \infty} \frac{d}{dt} \langle r^2(t) \rangle\]</div>
+<p>In practice, you fit the slope of the linear region. Not the whole curve, just the part where the log-log slope is 1. At short times (the <strong>ballistic</strong> regime), particles fly freely and MSD grows as <span class="arithmatex">\(t^2\)</span>. You want the long-time <strong>diffusive</strong> regime where MSD grows as <span class="arithmatex">\(t\)</span>.</p>
+<figure>
+  <img alt="MSD vs time showing ballistic and diffusive regimes" src="../assets/plots/brownian-msd-regimes.png" width="700" />
+<br />
+<figcaption>Mean-square displacement of liquid argon (256 atoms, NVE, 107 K) on a log-log scale. At short times (&lt; 0.1 ps), the slope is 2 (ballistic: particles fly freely). At long times (&gt; 1 ps), the slope is 1 (diffusive: random walk). The crossover happens around the velocity decorrelation time. The slope-1 fit gives D = 0.307 Å²/ps.</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">MD Connection</p>
+<p>Two gotchas when extracting <span class="arithmatex">\(D\)</span> from MSD. First: use <strong>unwrapped coordinates</strong> (<code>xu yu zu</code> in your LAMMPS dump). Wrapped coordinates jump at box boundaries and will destroy your MSD. LAMMPS's <code>compute msd</code> handles this internally, but post-processing from dump files requires <code>xu yu zu</code>. Second: your <span class="arithmatex">\(D\)</span> has a <strong>finite-size artifact</strong>. Hydrodynamic self-interactions through periodic images reduce <span class="arithmatex">\(D\)</span> by 10-15% for typical system sizes. The Yeh-Hummer correction adds <span class="arithmatex">\(k_BT\xi/(6\pi\nu L)\)</span> where <span class="arithmatex">\(L\)</span> is the box length and <span class="arithmatex">\(\nu\)</span> is the shear viscosity.</p>
+</div>
+<h3 id="route-2-green-kubo-velocity-autocorrelation">Route 2: Green-Kubo (velocity autocorrelation)<a class="headerlink" href="#route-2-green-kubo-velocity-autocorrelation" title="Permanent link">&para;</a></h3>
+<p>This one is less intuitive but equally powerful. Instead of tracking displacement, track velocities. Specifically, compute the <strong>velocity autocorrelation function</strong> (VACF):</p>
+<div class="arithmatex">\[C_v(t) = \langle \mathbf{v}(t) \cdot \mathbf{v}(0) \rangle\]</div>
+<p>This tells you: if a particle has velocity <span class="arithmatex">\(\mathbf{v}(0)\)</span> right now, how correlated is its velocity at time <span class="arithmatex">\(t\)</span> with that initial value?</p>
+<p>At <span class="arithmatex">\(t = 0\)</span>: <span class="arithmatex">\(C_v(0) = \langle v^2 \rangle = 3k_BT/m\)</span> (equipartition). At long times: <span class="arithmatex">\(C_v(\infty) = 0\)</span>. The particle has forgotten which way it was going. The memory decays.</p>
+<p>The diffusion coefficient is the time integral of this decay:</p>
+<div class="arithmatex">\[D = \frac{1}{3} \int_0^\infty \langle \mathbf{v}(t) \cdot \mathbf{v}(0) \rangle\, dt\]</div>
+<figure>
+  <img alt="VACF and Green-Kubo integral" src="../assets/plots/brownian-vacf-integral.png" width="700" />
+<br />
+<figcaption>Top: Velocity autocorrelation function (normalized). Rapid decay from 1.0 to zero, with a negative dip from backscattering (the "cage effect": neighboring atoms bounce the particle back). Bottom: Running Green-Kubo integral reaches a plateau at D = 0.295 Å²/ps, matching the Einstein (MSD) value of 0.307 Å²/ps within 4%. Same physics, two methods, consistent answer.</figcaption>
+</figure>
+<p>Why does this work? Think about it physically. <span class="arithmatex">\(D\)</span> measures how far a particle wanders. A particle wanders far if its velocity stays correlated for a long time (long memory = long steps in the same direction). If correlations decay instantly, the particle barely moves between randomizations. The integral of the VACF measures exactly this: the total "persistence" of velocity.</p>
+<div class="admonition tip">
+<p class="admonition-title">Key Insight</p>
+<p>The Einstein method asks: "How far did you go?" The Green-Kubo method asks: "How long did you remember which way you were going?" Same physics, different questions. For self-diffusivity, the Einstein (MSD) method is generally more robust and more commonly used. But you should check that both give consistent answers within uncertainty. If they don't, you have a problem.</p>
+</div>
+<h2 id="the-deep-connection-fluctuation-meets-dissipation">The deep connection: fluctuation meets dissipation<a class="headerlink" href="#the-deep-connection-fluctuation-meets-dissipation" title="Permanent link">&para;</a></h2>
+<p>Now for my favorite part of this whole story.</p>
+<p>Imagine pushing a Brownian particle through a fluid with a constant external force <span class="arithmatex">\(\mathbf{F}\)</span>. The particle accelerates briefly, then reaches a terminal drift velocity <span class="arithmatex">\(\mathbf{u}\)</span> where the applied force balances friction:</p>
+<div class="arithmatex">\[\mathbf{F} = \gamma \mathbf{u}\]</div>
+<p>where <span class="arithmatex">\(\gamma\)</span> is the <strong>friction coefficient</strong>. For a sphere of radius <span class="arithmatex">\(a\)</span> in a fluid of shear viscosity <span class="arithmatex">\(\nu\)</span>, Stokes' law gives <span class="arithmatex">\(\gamma = 6\pi a \nu\)</span>. Bigger particle, more friction. More viscous fluid, more friction. Makes sense.</p>
+<p>Now here's where it gets amazing.</p>
+<p>In equilibrium (no external force), the particle diffuses with coefficient <span class="arithmatex">\(D\)</span>. Under an external force, the same particle experiences friction <span class="arithmatex">\(\gamma\)</span>. Einstein showed that <span class="arithmatex">\(D\)</span> and <span class="arithmatex">\(\gamma\)</span> aren't independent. They're locked together:</p>
+<div class="arithmatex">\[\boxed{D = \frac{k_BT}{\gamma}}\]</div>
+<p>This is the <strong>Einstein relation</strong>. Also called the first <strong>fluctuation-dissipation relation</strong>. Read it carefully:</p>
+<ul>
+<li><strong><span class="arithmatex">\(D\)</span> (diffusion)</strong>: random wandering caused by molecular kicks. This is the <strong>fluctuation</strong>.</li>
+<li><strong><span class="arithmatex">\(\gamma\)</span> (friction)</strong>: resistance to directed motion caused by molecular kicks. This is the <strong>dissipation</strong>.</li>
+<li><strong><span class="arithmatex">\(k_BT\)</span></strong>: the thermal energy that connects them.</li>
+</ul>
+<p>The same molecular collisions that make the particle diffuse randomly also resist its directed motion. Fluctuation and dissipation aren't separate phenomena. They're two faces of the same coin: random molecular impacts. That's crazy. And that's the whole foundation of non-equilibrium statistical mechanics in one equation.</p>
+<p>Turn up the temperature? More violent kicks, more diffusion. But <span class="arithmatex">\(\gamma\)</span> doesn't change (it's a hydrodynamic property of the fluid). So higher <span class="arithmatex">\(T\)</span> means proportionally more diffusion. That's why hot liquids have higher diffusion coefficients.</p>
+<p>Where does this come from? The logic is elegant: in equilibrium, particles diffuse away from high-concentration regions (Fick's law: <span class="arithmatex">\(\mathbf{j} = -D\nabla n\)</span>) and simultaneously drift under any external potential (<span class="arithmatex">\(\mathbf{j} = -n\nabla U / \gamma\)</span>). These two currents must balance to give zero net flow. That balance, combined with the Boltzmann distribution (<span class="arithmatex">\(n \propto e^{-U/k_BT}\)</span>), forces <span class="arithmatex">\(D = k_BT/\gamma\)</span>. No other value is consistent with equilibrium.</p>
+<h3 id="the-green-kubo-connection">The Green-Kubo connection<a class="headerlink" href="#the-green-kubo-connection" title="Permanent link">&para;</a></h3>
+<p>Combining <span class="arithmatex">\(D = k_BT/\gamma\)</span> with the VACF integral gives the <strong>fluctuation-dissipation theorem</strong> in its most direct form:</p>
+<div class="arithmatex">\[\frac{1}{\gamma} = \frac{1}{3k_BT} \int_0^\infty \langle \mathbf{v}(t) \cdot \mathbf{v}(0) \rangle\, dt\]</div>
+<p>The left side is inverse friction (dissipation). The right side is an integral of equilibrium velocity correlations (fluctuation). They're equal. The system's response to a perturbation is completely determined by its spontaneous fluctuations. This isn't just true for diffusion. It's a general principle: electrical resistance relates to voltage fluctuations (Nyquist noise), heat capacity relates to energy fluctuations, compressibility relates to density fluctuations.</p>
+<div class="admonition warning">
+<p class="admonition-title">Common Mistake</p>
+<p>The fluctuation-dissipation theorem is a <strong>linear</strong> result. It assumes small deviations from equilibrium and linear response. For strongly driven systems, far-from-equilibrium processes, or systems with very slow relaxation (glasses, protein folding), it may not hold. In MD terms: if your simulation hasn't equilibrated, or if you're driving it hard, don't blindly trust Green-Kubo results.</p>
+</div>
+<h3 id="what-about-fix-langevin">What about <code>fix langevin</code>?<a class="headerlink" href="#what-about-fix-langevin" title="Permanent link">&para;</a></h3>
+<p>If you've used <code>fix langevin</code> in LAMMPS, you've already met the equation that formalizes all of this. The <strong>Langevin equation</strong> writes the force on a Brownian particle as friction plus random kicks:</p>
+<div class="arithmatex">\[m\dot{v} = -\gamma v + \xi(t)\]</div>
+<p>The first term is dissipation (friction opposing motion). The second is fluctuation (random force from molecular impacts). The fluctuation-dissipation theorem tells you the amplitude of <span class="arithmatex">\(\xi(t)\)</span> is not free; it's locked to <span class="arithmatex">\(\gamma\)</span> and <span class="arithmatex">\(T\)</span>. If you get the friction right, the noise amplitude is determined. And vice versa.</p>
+<p>So <code>fix langevin</code> IS Brownian dynamics. It adds explicit friction and random kicks to your particles. Which is exactly why it gives correct <em>equilibrium</em> properties (the Boltzmann distribution is maintained) but incorrect <em>dynamics</em>. The random kicks destroy the natural velocity correlations. Your particles diffuse at the rate dictated by <span class="arithmatex">\(\gamma\)</span>, not by the actual interatomic forces. For computing transport properties, that's fatal.</p>
+<div class="admonition note">
+<p class="admonition-title">MD Connection</p>
+<p><code>fix langevin</code> and Andersen thermostat: great for sampling equilibrium configurations, terrible for transport properties. <code>fix nvt</code> (Nose-Hoover): good for both, as long as the coupling constant is large (<span class="arithmatex">\(\tau \geq 1\)</span> ps). <code>fix nve</code>: the gold standard for dynamics. No thermostat contamination at all. Use the three-step cascade (NPT → NVT → NVE) for production runs when computing <span class="arithmatex">\(D\)</span>.</p>
+</div>
+<h2 id="perrins-nobel-why-this-matters">Perrin's Nobel: why this matters<a class="headerlink" href="#perrins-nobel-why-this-matters" title="Permanent link">&para;</a></h2>
+<p>Let me come back to where we started. Perrin measured Brownian motion. From the MSD of tracked particles, he extracted <span class="arithmatex">\(D\)</span>. From Stokes' law, he knew <span class="arithmatex">\(\gamma = 6\pi a \nu\)</span>. From Einstein's relation <span class="arithmatex">\(D = k_BT / \gamma\)</span>:</p>
+<div class="arithmatex">\[k_B = \frac{D \gamma}{T} = \frac{6\pi a \nu D}{T}\]</div>
+<p>And since <span class="arithmatex">\(k_B = R / N_A\)</span>:</p>
+<div class="arithmatex">\[N_A = \frac{RT}{6\pi a \nu D}\]</div>
+<p>He got <span class="arithmatex">\(N_A = 7.05 \times 10^{23}\)</span> (modern value: <span class="arithmatex">\(6.022 \times 10^{23}\)</span>). Not bad for staring at pollen through a microscope. That result proved atoms are real, not just a useful fiction.</p>
+<p>In Perrin's own words: "It will henceforth be difficult to defend by rational arguments a hostile attitude to molecular hypotheses."</p>
+<p>Brownian motion didn't just prove atoms exist. It connected the random, thermal, microscopic world to measurable, macroscopic quantities. And it gave us the fluctuation-dissipation theorem, arguably the most important idea in statistical mechanics after the Boltzmann distribution.</p>
+<p>Every time you compute a diffusion coefficient from an MD trajectory, you're following the same logical thread that Perrin used to prove the atomic hypothesis. That's wild.</p>
+<h2 id="takeaway">Takeaway<a class="headerlink" href="#takeaway" title="Permanent link">&para;</a></h2>
+<p>Brownian motion is random molecular kicks made visible. Einstein showed that this randomness obeys the diffusion equation, regardless of microscopic details, giving <span class="arithmatex">\(\langle r^2 \rangle = 6Dt\)</span>. The same collisions that cause diffusion (fluctuation) also create friction (dissipation), linked by the Einstein relation <span class="arithmatex">\(D = k_BT/\gamma\)</span>. You can compute <span class="arithmatex">\(D\)</span> from the MSD slope (Einstein) or from integrating the velocity autocorrelation function (Green-Kubo). Both methods rest on the same fluctuation-dissipation connection. Just remember: unwrapped coordinates, fit the diffusive regime, correct for finite size, and never use Langevin dynamics for transport properties.</p>
+<details class="question">
+<summary>Check Your Understanding</summary>
+<ol>
+<li>You compute <span class="arithmatex">\(D\)</span> from both MSD and Green-Kubo, and they agree. Nice. Now your labmate reruns the whole thing with <code>fix langevin</code> instead of <code>fix nve</code>. Both methods still give a number, but one of them is now garbage. Which one, and why?</li>
+<li>On the MSD log-log plot, there's a clean break from slope-2 (ballistic) to slope-1 (diffusive). What's physically happening at that crossover? How long does it take for liquid argon?</li>
+<li>You double the temperature of your system but somehow keep the viscosity the same. What happens to <span class="arithmatex">\(D\)</span>? (The Einstein relation makes this a one-liner.)</li>
+<li>Your <span class="arithmatex">\(D\)</span> has a finite-size artifact that scales as <span class="arithmatex">\(1/L\)</span>. You double the box length (8x more atoms at the same density). Does the error get better or worse, and by how much?</li>
+<li>Here's the paradox: <code>fix langevin</code> gives you the correct Boltzmann distribution (equilibrium is fine), but the diffusion coefficient is wrong (dynamics are ruined). How can the equilibrium be right but the dynamics be wrong? What exactly is Langevin breaking?</li>
+</ol>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/crisnapatel" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
